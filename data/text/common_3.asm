@@ -1,11 +1,17 @@
 _OakText6::
-	text "Now, what did you"
-	line "say your name was?"
+	text "Now, you should"
+	line "introduce"
+	cont "yourself."
+
+	para "Let's start with"
+	line "your name."
 	prompt
 
 _OakText7::
-	text "<PLAYER>, are you"
-	line "ready?"
+	text "That's much better."
+
+	para "Now, <PLAYER>,"
+	line "are you ready?"
 
 	para "Your very own"
 	line "#MON story is"

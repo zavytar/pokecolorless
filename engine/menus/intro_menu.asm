@@ -63,7 +63,7 @@ NewGame:
 	ld [wDebugFlags], a
 	call ResetWRAM
 	call NewGame_ClearTileMapEtc
-	call AreYouABoyOrAreYouAGirl
+;	call AreYouABoyOrAreYouAGirl
 	call OakSpeech
 	call InitializeWorld
 	ld a, 1
@@ -291,7 +291,7 @@ InitializeNPCNames:
 	call CopyBytes
 	ret
 
-.Rival:  db "???@"
+.Rival:  db "RED@"
 .Red:    db "RED@"
 .Green:  db "GREEN@"
 .Mom:    db "MOM@"
@@ -649,7 +649,7 @@ OakSpeech:
 	call RotateThreePalettesRight
 	call ClearTileMap
 
-	ld a, WOOPER
+	ld a, NIDORINO
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	call GetBaseData
@@ -709,7 +709,7 @@ OakText1:
 OakText2:
 	text_far _OakText2
 	text_asm
-	ld a, WOOPER
+	ld a, NIDORINO
 	call PlayMonCry
 	call WaitSFX
 	ld hl, OakText3
