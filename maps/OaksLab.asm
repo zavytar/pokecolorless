@@ -4,6 +4,8 @@
 	const OAKSLAB_SCIENTIST2
 	const OAKSLAB_SCIENTIST3
 	const OAKSLAB_POKEBALL
+	const OAKSLAB_POKEDEX1
+	const OAKSLAB_POKEDEX2
 
 OaksLab_MapScripts:
 	db 3 ; scene scripts
@@ -43,9 +45,23 @@ OaksLab_EeveeBallScript:
 	writetext OaksLab_EeveeBallText
 	waitbutton
 	closetext
+; Oak comes back
+	
+	end
+
+OaksLab_PokedexScript:
+	opentext
+	writetext OaksLab_PokedexText
+	waitbutton
+	closetext
 	end
 
 OaksLab_TryToLeaveScript:
+	opentext
+	writetext OaksLab_CantLeaveText
+	waitbutton
+	closetext
+	applymovement PLAYER, OaksLab_CantLeaveMovement
 	end
 
 Oak:
@@ -128,6 +144,12 @@ OaksLab_IntroText1:
 	cont "loser…"
 	done
 
+OaksLab_CantLeaveText:
+	text "I'm not leaving"
+	line "without getting my"
+	cont "#MON first!"
+	done
+
 OaksLab_OakText1:
 	text "Hello, <PLAYER>!"
 	done
@@ -138,6 +160,16 @@ OaksLab_EeveeBallText:
 	para "I really hope"
 	line "Gramps gives it"
 	cont "to me today."
+	done
+
+OaksLab_PokedexText:
+	text "This must be"
+	line "what Gramps has"
+	cont "been working on."
+
+	para "It's encyclopedia-"
+	line "like, but the"
+	cont "pages are blank."
 	done
 
 OakWelcomeKantoText:
@@ -297,25 +329,30 @@ OaksLabPCText:
 
 	para "…"
 
-	para "PROF.OAK, how is"
-	line "your research"
-	cont "coming along?"
+	para "Calling all"
+	line "#MON trainers!"
 
-	para "I'm still plugging"
-	line "away."
+	para "The elite trainers"
+	line "of #MON LEAGUE"
+	cont "are ready to take"
+	cont "on all comers!"
 
-	para "I heard rumors"
-	line "that <PLAY_G> is"
+	para "Bring your best"
+	line "#MON and see"
+	cont "how you rate as a"
+	cont "trainer!"
 
-	para "getting quite a"
-	line "reputation."
+	para "#MON LEAGUE HQ"
+	line "INDIGO PLATEAU"
 
-	para "I'm delighted to"
-	line "hear that."
-
-	para "ELM in NEW BARK"
-	line "TOWN 8-)"
+	para "PS: PROF. OAK,"
+	line "please visit us!"
+	cont "…"
 	done
+
+OaksLab_CantLeaveMovement:
+	step UP
+	step_end
 
 OaksLab_MapEvents:
 	db 0, 0 ; filler
@@ -346,9 +383,11 @@ OaksLab_MapEvents:
 	bg_event  9,  3, BGEVENT_READ, OaksLabTrashcan
 	bg_event  0,  1, BGEVENT_READ, OaksLabPC
 
-	db 5 ; object events
+	db 7 ; object events
 	object_event  4,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakScript, EVENT_OAK_OUT ;
 	object_event  1,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant1Script, -1
 	object_event  8,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant2Script, -1
-	object_event  1,  4, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1
+	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1
 	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_EeveeBallScript, -1 ;Ball w/ Eevee
+	object_event  2,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_PokedexScript, -1 ;Dex1
+	object_event  3,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_PokedexScript, -1 ;Dex2
