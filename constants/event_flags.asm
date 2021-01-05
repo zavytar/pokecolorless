@@ -272,8 +272,8 @@
 	const EVENT_TIFFANY_GAVE_PINK_BOW
 ; ???
 	const EVENT_OAK_OUT
-	const EVENT_106
-	const EVENT_107
+	const EVENT_RED_OAKS_LAB
+	const EVENT_GOT_EEVEE_FROM_OAK
 	const EVENT_108
 	const EVENT_109
 	const EVENT_10A

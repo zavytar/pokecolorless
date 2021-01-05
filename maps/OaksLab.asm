@@ -6,6 +6,7 @@
 	const OAKSLAB_POKEBALL
 	const OAKSLAB_POKEDEX1
 	const OAKSLAB_POKEDEX2
+	const OAKSLAB_RED
 
 OaksLab_MapScripts:
 	db 3 ; scene scripts
@@ -17,11 +18,16 @@ OaksLab_MapScripts:
 
 .MeetOak:
 	disappear OAKSLAB_OAK
+	disappear OAKSLAB_RED
+	setevent EVENT_OAK_OUT
+	setevent EVENT_RED_OAKS_LAB
 	turnobject PLAYER, UP
 	opentext
 	writetext OaksLab_IntroText1
 	waitbutton
 	special NameRival
+	writetext OaksLab_IntroText2
+	waitbutton
 	closetext
 	setscene SCENE_OAKSLAB_CANT_LEAVE
 	end
@@ -41,12 +47,32 @@ OakScript:
 	end
 
 OaksLab_EeveeBallScript:
+;	pokepic EEVEE
+;	cry EEVEE
+;	waitbutton
+;	closepokepic
 	opentext
 	writetext OaksLab_EeveeBallText
 	waitbutton
 	closetext
+	checkevent EVENT_OAK_OUT
+	iffalse OaksLab_DoNothing
 ; Oak comes back
-	
+	moveobject OAKSLAB_OAK, 4, 7
+	showemote EMOTE_SHOCK, PLAYER, 15
+	special FadeOutMusic
+	pause 15
+	applymovement PLAYER, OaksLab_PlayerMovement1
+	appear OAKSLAB_OAK
+	applymovement OAKSLAB_OAK, OaksLab_OakWalksUp
+	moveobject OAKSLAB_RED, 4, 8
+	turnobject OAKSLAB_OAK, DOWN
+	appear OAKSLAB_RED
+	applymovement OAKSLAB_RED, OaksLab_OakWalksUp
+	clearevent EVENT_OAK_OUT
+	end
+
+OaksLab_DoNothing:
 	end
 
 OaksLab_PokedexScript:
@@ -56,7 +82,12 @@ OaksLab_PokedexScript:
 	closetext
 	end
 
+OaksLab_RedScript:
+	end
+
 OaksLab_TryToLeaveScript:
+	checkevent EVENT_OAK_OUT
+	iffalse OaksLab_DoNothing
 	opentext
 	writetext OaksLab_CantLeaveText
 	waitbutton
@@ -132,22 +163,32 @@ OaksLabPC:
 OaksLab_IntroText1:
 	text "Heh! This is it!"
 
-	para "Today I finally"
-	line "get a #MON"
-	cont "from Gramps!"
+	para "Gramps said he"
+	line "was giving me a"
+	cont "#MON today!"
 
 	para "…"
 
-	para "It seems he's"
-	line "already gone to"
-	cont "look for that"
-	cont "loser…"
+	para "Though he isn't"
+	line "here yet."
+
+	para "And it seems"
+	line "that loser isn't"
+	cont "here either…"
 	done
 
+OaksLab_IntroText2:
+	text "Sigh… Guess it's"
+	line "waiting for me,"
+	cont "then! I hope he"
+	cont "gets back soon!"
+	done
+
+
 OaksLab_CantLeaveText:
-	text "I'm not leaving"
-	line "without getting my"
-	cont "#MON first!"
+	text "I should wait"
+	line "for Gramps to"
+	cont "come back."
 	done
 
 OaksLab_OakText1:
@@ -354,6 +395,22 @@ OaksLab_CantLeaveMovement:
 	step UP
 	step_end
 
+OaksLab_PlayerMovement1:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step UP
+	step_end
+
+OaksLab_OakWalksUp:
+	step UP
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
+
 OaksLab_MapEvents:
 	db 0, 0 ; filler
 
@@ -383,7 +440,7 @@ OaksLab_MapEvents:
 	bg_event  9,  3, BGEVENT_READ, OaksLabTrashcan
 	bg_event  0,  1, BGEVENT_READ, OaksLabPC
 
-	db 7 ; object events
+	db 8 ; object events
 	object_event  4,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakScript, EVENT_OAK_OUT ;
 	object_event  1,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant1Script, -1
 	object_event  8,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant2Script, -1
@@ -391,3 +448,4 @@ OaksLab_MapEvents:
 	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_EeveeBallScript, -1 ;Ball w/ Eevee
 	object_event  2,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_PokedexScript, -1 ;Dex1
 	object_event  3,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_PokedexScript, -1 ;Dex2
+	object_event  4,  3, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_RedScript, -1 ; Red
