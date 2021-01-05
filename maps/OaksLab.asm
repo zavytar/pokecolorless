@@ -70,6 +70,64 @@ OaksLab_EeveeBallScript:
 	appear OAKSLAB_RED
 	applymovement OAKSLAB_RED, OaksLab_OakWalksUp
 	clearevent EVENT_OAK_OUT
+	special RestartMapMusic
+	opentext
+	writetext OaksLab_PlayerText1
+	waitbutton
+	pause 15
+	writetext OaksLab_OakText2
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, PLAYER, 15
+	opentext
+	writetext OaksLab_PlayerText2
+	waitbutton
+	writetext OaksLab_OakText3
+	waitbutton
+	writetext OaksLab_RedText1
+	waitbutton
+	closetext
+; Red goes to get the EEVEE
+	applymovement OAKSLAB_RED, OaksLab_RedMovement1
+	showemote EMOTE_SHOCK, PLAYER, 15
+	pause 15
+	applymovement PLAYER, OaksLab_PlayerMovement2
+	showemote EMOTE_SHOCK, OAKSLAB_RED, 15
+	playsound SFX_TACKLE
+	applymovement OAKSLAB_RED, OaksLab_RedMovement2
+	applymovement PLAYER, OaksLab_PlayerMovement3
+	opentext
+	writetext OaksLab_PlayerText3
+	waitbutton
+	disappear OAKSLAB_POKEBALL
+	setevent EVENT_GOT_EEVEE_FROM_OAK
+	waitsfx
+	writetext OaksLab_ReceivedStarterText
+	playsound SFX_CAUGHT_MON
+	waitsfx
+	buttonsound
+	givepoke EEVEE, 5
+	closetext
+	showemote EMOTE_SHOCK, OAKSLAB_OAK, 15
+	opentext
+	writetext OaksLab_OakText4
+	waitbutton
+	closetext
+	turnobject PLAYER, LEFT
+	opentext
+	writetext OaksLab_PlayerText4
+	waitbutton
+	writetext OaksLab_OakText5
+	waitbutton
+	closetext
+	applymovement OAKSLAB_RED, OaksLab_RedMovement3
+	opentext
+	writetext OaksLab_OakText6
+	waitbutton
+	writetext OaksLab_RivalReceivedPokemonText
+	playsound SFX_CAUGHT_MON
+	waitbutton
+	closetext
 	end
 
 OaksLab_DoNothing:
@@ -83,33 +141,24 @@ OaksLab_PokedexScript:
 	end
 
 OaksLab_RedScript:
+	faceplayer
+	opentext
+	writetext OaksLab_RedText1
+	waitbutton
+	closetext
 	end
 
 OaksLab_TryToLeaveScript:
 	checkevent EVENT_OAK_OUT
 	iffalse OaksLab_DoNothing
+;	checkevent EVENT_BATTLED_RED_OAKSLAB
+;	iftrue OaksLab_DoNothing
 	opentext
 	writetext OaksLab_CantLeaveText
 	waitbutton
 	closetext
 	applymovement PLAYER, OaksLab_CantLeaveMovement
 	end
-
-Oak:
-	faceplayer
-	opentext
-	checkevent EVENT_OPENED_MT_SILVER
-	iftrue .CheckPokedex
-	checkevent EVENT_TALKED_TO_OAK_IN_KANTO
-	iftrue .CheckBadges
-	writetext OakWelcomeKantoText
-	buttonsound
-	setevent EVENT_TALKED_TO_OAK_IN_KANTO
-.CheckBadges:
-	readvar VAR_BADGES
-	ifequal NUM_BADGES, .OpenMtSilver
-	ifequal NUM_JOHTO_BADGES, .Complain
-	sjump .AhGood
 
 .CheckPokedex:
 	writetext OakLabDexCheckText
@@ -119,22 +168,6 @@ Oak:
 	waitbutton
 	closetext
 	end
-
-.OpenMtSilver:
-	writetext OakOpenMtSilverText
-	buttonsound
-	setevent EVENT_OPENED_MT_SILVER
-	sjump .CheckPokedex
-
-.Complain:
-	writetext OakNoKantoBadgesText
-	buttonsound
-	sjump .CheckPokedex
-
-.AhGood:
-	writetext OakYesKantoBadgesText
-	buttonsound
-	sjump .CheckPokedex
 
 OaksAssistant1Script:
 	jumptextfaceplayer OaksAssistant1Text
@@ -192,7 +225,120 @@ OaksLab_CantLeaveText:
 	done
 
 OaksLab_OakText1:
-	text "Hello, <PLAYER>!"
+	text "<PLAYER>…"
+
+	para "You should really"
+	line "be more patient."
+
+	para "Please take good"
+	line "care of EEVEE."
+	done
+
+OaksLab_OakText2:
+	text "OAK: Hmm? <PLAYER>?"
+	line "Why are you here"
+	cont "already?"
+
+	para "I said for you to"
+	line "come by later…"
+
+	para "Ah, whatever!"
+	line "Just wait there."
+
+	para "Look, <RIVAL>! Do"
+	line "you see that ball"
+	cont "on the table?"
+
+	para "It's called a #"
+	line "BALL. It holds a"
+	cont "#MON inside."
+
+	para "You may have it!"
+	line "Go on, take it!"
+	done
+
+OaksLab_OakText3:
+	text "OAK: Be patient,"
+	line "<PLAYER>, I'll give"
+	cont "you one later."
+	done
+
+OaksLab_OakText4:
+	text "OAK: <PLAYER>! What"
+	line "are you doing?"
+	done
+
+OaksLab_OakText5:
+	text "OAK: But, I… Oh,"
+	line "all right then."
+	cont "That #MON is"
+	cont "yours."
+
+	para "I was going to"
+	line "give you one"
+	cont "anyway…"
+
+	para "<RIVAL>, come over"
+	line "here."
+	done
+
+OaksLab_OakText6:
+	text "OAK: <RIVAL>, this"
+	line "is the #MON I"
+	cont "caught earlier."
+
+	para "You can have it."
+	line "I caught it in"
+	cont "the wild and it's"
+	cont "not tame yet."
+	done
+
+OaksLab_RivalReceivedPokemonText:
+	text "<RIVAL> received a"
+	line "PIKACHU!"
+	done
+
+OaksLab_PlayerText1:
+	text "<PLAYER>: Gramps!"
+	line "I'm fed up with"
+	cont "waiting!"
+	done
+
+OaksLab_PlayerText2:
+	text "<PLAYER>: Hey!"
+	line "Gramps! What"
+	cont "about me?"
+	done
+
+OaksLab_PlayerText3:
+	text "<PLAYER>: No way!"
+	line "<RIVAL>, I want"
+	cont "this #MON!"
+	done
+
+OaksLab_PlayerText4:
+	text "<PLAYER>: Gramps, I"
+	line "want this one!"
+	done
+
+OaksLab_PlayerText5:
+	text "<PLAYER>: Wait"
+	line "<RIVAL>!"
+	cont "Let's check out"
+	cont "our #MON!"
+
+	para "Come on, I'll take"
+	line "you on!"
+	done
+
+OaksLab_ReceivedStarterText:
+	text "<PLAYER> snatched"
+	line "the #MON!"
+	done
+
+OaksLab_RedText1:
+	text "<RIVAL>: <……>"
+	line "<……>"
 	done
 
 OaksLab_EeveeBallText:
@@ -213,20 +359,6 @@ OaksLab_PokedexText:
 	cont "pages are blank."
 	done
 
-OakWelcomeKantoText:
-	text "OAK: Ah, <PLAY_G>!"
-	line "It's good of you"
-
-	para "to come all this"
-	line "way to KANTO."
-
-	para "What do you think"
-	line "of the trainers"
-
-	para "out here?"
-	line "Pretty tough, huh?"
-	done
-
 OakLabDexCheckText:
 	text "How is your #-"
 	line "DEX coming?"
@@ -238,84 +370,6 @@ OakLabGoodbyeText:
 	text "If you're in the"
 	line "area, I hope you"
 	cont "come visit again."
-	done
-
-OakOpenMtSilverText:
-	text "OAK: Wow! That's"
-	line "excellent!"
-
-	para "You collected the"
-	line "BADGES of GYMS in"
-	cont "KANTO. Well done!"
-
-	para "I was right in my"
-	line "assessment of you."
-
-	para "Tell you what,"
-	line "<PLAY_G>. I'll make"
-
-	para "arrangements so"
-	line "that you can go to"
-	cont "MT.SILVER."
-
-	para "MT.SILVER is a big"
-	line "mountain that is"
-
-	para "home to many wild"
-	line "#MON."
-
-	para "It's too dangerous"
-	line "for your average"
-
-	para "trainer, so it's"
-	line "off limits. But"
-
-	para "we can make an"
-	line "exception in your"
-	cont "case, <PLAY_G>."
-
-	para "Go up to INDIGO"
-	line "PLATEAU. You can"
-
-	para "reach MT.SILVER"
-	line "from there."
-	done
-
-OakNoKantoBadgesText:
-	text "OAK: Hmm? You're"
-	line "not collecting"
-	cont "KANTO GYM BADGES?"
-
-	para "The GYM LEADERS in"
-	line "KANTO are as tough"
-
-	para "as any you battled"
-	line "in JOHTO."
-
-	para "I recommend that"
-	line "you challenge"
-	cont "them."
-	done
-
-OakYesKantoBadgesText:
-	text "OAK: Ah, you're"
-	line "collecting KANTO"
-	cont "GYM BADGES."
-
-	para "I imagine that"
-	line "it's hard, but the"
-
-	para "experience is sure"
-	line "to help you."
-
-	para "Come see me when"
-	line "you get them all."
-
-	para "I'll have a gift"
-	line "for you."
-
-	para "Keep trying hard,"
-	line "<PLAY_G>!"
 	done
 
 OaksAssistant1Text:
@@ -403,6 +457,40 @@ OaksLab_PlayerMovement1:
 	step UP
 	step_end
 
+OaksLab_PlayerMovement2:
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step_end
+
+OaksLab_PlayerMovement3:
+	step RIGHT
+	turn_head UP
+	step_end
+
+OaksLab_RedMovement1:
+	step DOWN
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head UP
+	step_end
+
+OaksLab_RedMovement2:
+	step RIGHT
+	step_end
+
+OaksLab_RedMovement3:
+	step DOWN
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step UP
+	step UP
+	step_end
+
 OaksLab_OakWalksUp:
 	step UP
 	step UP
@@ -445,7 +533,7 @@ OaksLab_MapEvents:
 	object_event  1,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant1Script, -1
 	object_event  8,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant2Script, -1
 	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1
-	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_EeveeBallScript, -1 ;Ball w/ Eevee
+	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_EeveeBallScript, EVENT_GOT_EEVEE_FROM_OAK ;Ball w/ Eevee
 	object_event  2,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_PokedexScript, -1 ;Dex1
 	object_event  3,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_PokedexScript, -1 ;Dex2
 	object_event  4,  3, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_RedScript, -1 ; Red

@@ -18,9 +18,11 @@ RedsHouse2FN64Text:
 	done
 
 RedsHouse2FPCText:
-	text "It looks like it"
-	line "hasn't been used"
-	cont "in a long time…"
+	text "It's <RIVAL>'s PC."
+
+	para "I got better things"
+	line "to do than to snoop"
+	cont "around."
 	done
 
 RedsHouse2F_MapEvents:

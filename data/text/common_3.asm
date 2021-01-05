@@ -27,8 +27,10 @@ _OakText7::
 	para "with #MON"
 	line "awaits! Let's go!"
 
-	para "I'll be seeing you"
-	line "later!"
+	para "Swing by the LAB"
+	line "and I'll give you"
+	cont "your very first"
+	cont "#MON!"
 	done
 
 UnknownText_0x1c40e6::

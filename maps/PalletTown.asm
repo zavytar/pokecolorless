@@ -34,17 +34,19 @@ PalletTownTeacherText:
 	text "I'm raising #-"
 	line "MON too."
 
-	para "They serve as my"
-	line "private guards."
+	para "When they get"
+	line "strong, they can"
+	cont "protect me!"
 	done
 
 PalletTownFisherText:
 	text "Technology is"
 	line "incredible!"
 
-	para "You can now trade"
-	line "#MON across"
-	cont "time like e-mail."
+	para "You can now store"
+	line "and recall items"
+	cont "and #MON as"
+	cont "data via PC!"
 	done
 
 PalletTownSignText:
@@ -55,7 +57,7 @@ PalletTownSignText:
 	done
 
 RedsHouseSignText:
-	text "RED'S HOUSE"
+	text "<RIVAL>'S HOUSE"
 	done
 
 OaksLabSignText:
@@ -64,7 +66,7 @@ OaksLabSignText:
 	done
 
 BluesHouseSignText:
-	text "BLUE'S HOUSE"
+	text "<PLAYER>'S HOUSE"
 	done
 
 PalletTown_MapEvents:

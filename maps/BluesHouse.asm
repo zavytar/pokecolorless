@@ -64,22 +64,13 @@ DaisyScript:
 	end
 
 DaisyHelloText:
-	text "DAISY: Hi! My kid"
-	line "brother is the GYM"
-
-	para "LEADER in VIRIDIAN"
-	line "CITY."
-
-	para "But he goes out"
-	line "of town so often,"
-
-	para "it causes problems"
-	line "for the trainers."
+	text "DAISY: Hi, <PLAYER>!"
 	done
 
 DaisyOfferGroomingText:
-	text "DAISY: Hi! Good"
-	line "timing. I'm about"
+	text "DAISY: Hi, <PLAYER>!"
+	line "Good timing."
+	cont "I'm about to"
 	cont "to have some tea."
 
 	para "Would you like to"
