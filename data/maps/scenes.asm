@@ -10,7 +10,7 @@ MapScenes::
 	scene_var COLOSSEUM,                                   wColosseumSceneID
 	scene_var TIME_CAPSULE,                                wTimeCapsuleSceneID
 	scene_var OAKS_LAB,                             	     wOaksLabSceneID ; previously wPowerPlantSceneID
-	scene_var CERULEAN_GYM,                                wCeruleanGymSceneID
+	scene_var VIRIDIAN_CITY,                               wViridianCitySceneID ; previously wCeruleanGymSceneID
 	scene_var ROUTE_25,                                    wRoute25SceneID
 	scene_var TRAINER_HOUSE_B1F,                           wTrainerHouseB1FSceneID
 	scene_var VICTORY_ROAD_GATE,                           wVictoryRoadGateSceneID

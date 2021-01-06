@@ -17,14 +17,14 @@ SCENE_FINISHED EQU 1
 
 ; wOaksLabSceneID, previously wPowerPlantSceneID
 	const_def 1
-	const SCENE_OAKSLAB_INTRO									; 0
+	const SCENE_OAKSLAB_INTRO							; 0
 	const SCENE_OAKSLAB_CANT_LEAVE				; 1
 	const SCENE_OAKSLAB_NOTHING						; 2
 
-; wCeruleanGymSceneID
+; wViridianCitySceneID, previously wCeruleanGymSceneID
 	const_def
-	const SCENE_CERULEANGYM_NOTHING        ; 0
-	const SCENE_CERULEANGYM_GRUNT_RUNS_OUT ; 1
+	const SCENE_VIRIDIANCITY_GRAMPS_BLOCK        ; 0
+	const SCENE_VIRIDIANCITY_NOTHING ; 1
 
 ; wRoute25SceneID
 	const_def

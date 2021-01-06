@@ -2579,7 +2579,7 @@ wTradeCenterSceneID::                             db ; d973
 wColosseumSceneID::                               db ; d974
 wTimeCapsuleSceneID::                             db ; d975
 wOaksLabSceneID::                       	        db ; d976 previously wPowerPlantSceneID
-wCeruleanGymSceneID::                             db ; d977
+wViridianCitySceneID::                            db ; d977 previously wCeruleanGymSceneID
 wRoute25SceneID::                                 db ; d978
 wTrainerHouseB1FSceneID::                         db ; d979
 wVictoryRoadGateSceneID::                         db ; d97a

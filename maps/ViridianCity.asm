@@ -3,9 +3,12 @@
 	const VIRIDIANCITY_GRAMPS2
 	const VIRIDIANCITY_FISHER
 	const VIRIDIANCITY_YOUNGSTER
+	const VIRIDIANCITY_COOLTRAINERF
 
 ViridianCity_MapScripts:
 	db 0 ; scene scripts
+;	scene_script .DummyScene0 ; SCENE_VIRIDIANCITY_GRAMPS_BLOCK
+;	scene_script .DummyScene1 ; SCENE_VIRIDIANCITY_NOTHING
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -14,35 +17,49 @@ ViridianCity_MapScripts:
 	setflag ENGINE_FLYPOINT_VIRIDIAN
 	return
 
+.DummyScene0:
+.DummyScene1:
+	end
+
 ViridianCityCoffeeGramps:
 	faceplayer
 	opentext
-	writetext ViridianCityCoffeeGrampsQuestionText
-	yesorno
-	iffalse .no
-	writetext ViridianCityCoffeeGrampsBelievedText
+	writetext ViridianCity_CoffeeGrampsText1
 	waitbutton
 	closetext
 	end
 
-.no:
-	writetext ViridianCityCoffeeGrampsDoubtedText
+ViridianCity_GrampsBlockScript:
+	opentext
+	writetext ViridianCity_CoffeeGrampsText1
 	waitbutton
 	closetext
+	applymovement PLAYER, ViridianCity_PlayerMovement1
+	end
+
+ViridianCity_CooltrainerFScript:
+	opentext
+	writetext ViridianCity_CooltrainerFText1
+	waitbutton
+	faceplayer
+	writetext ViridianCity_CooltrainerFText2
+	waitbutton
+	closetext
+	turnobject VIRIDIANCITY_COOLTRAINERF, RIGHT
 	end
 
 ViridianCityGrampsNearGym:
 	faceplayer
 	opentext
 	checkevent EVENT_BLUE_IN_CINNABAR
-	iftrue .BlueReturned
-	writetext ViridianCityGrampsNearGymText
+	iftrue .LeaderReturned
+	writetext ViridianCity_GrampsNearGymText1
 	waitbutton
 	closetext
 	end
 
-.BlueReturned:
-	writetext ViridianCityGrampsNearGymBlueReturnedText
+.LeaderReturned:
+	writetext ViridianCity_GrampsNearGymText2
 	waitbutton
 	closetext
 	end
@@ -85,63 +102,36 @@ ViridianCityPokecenterSign:
 ViridianCityMartSign:
 	jumpstd martsign
 
-ViridianCityCoffeeGrampsQuestionText:
-	text "Hey, kid! I just"
-	line "had a double shot"
+ViridianCity_CoffeeGrampsText1:
+	text "Y-You can't go"
+	line "through here!"
 
-	para "of espresso, and"
-	line "I am wired!"
-
-	para "I need to talk to"
-	line "someone, so you'll"
-	cont "have to do!"
-
-	para "I might not look"
-	line "like much now, but"
-
-	para "I was an expert at"
-	line "catching #MON."
-
-	para "Do you believe me?"
+	para "This is private"
+	line "property!"
 	done
 
-ViridianCityCoffeeGrampsBelievedText:
-	text "Good, good. Yes, I"
-	line "was something out"
-
-	para "of the ordinary,"
-	line "let me tell you!"
+ViridianCity_CooltrainerFText1:
+	text "Grampa! Don't"
+	line "be so mean!"
 	done
 
-ViridianCityCoffeeGrampsDoubtedText:
-	text "What? You little"
-	line "whelp!"
-
-	para "If I were just a"
-	line "bit younger, I'd"
-
-	para "show you a thing"
-	line "or two. Humph!"
+ViridianCity_CooltrainerFText2:
+	text "I'm sorry. He"
+	line "hasn't had his"
+	cont "coffee yet."
 	done
 
-ViridianCityGrampsNearGymText:
-	text "This GYM didn't"
-	line "have a LEADER"
-	cont "until recently."
+ViridianCity_GrampsNearGymText1:
+	text "This GYM is"
+	line "always empty."
 
-	para "A young man from"
-	line "PALLET became the"
-
-	para "LEADER, but he's"
-	line "often away."
+	para "I wonder who the"
+	line "GYM LEADER is?"
 	done
 
-ViridianCityGrampsNearGymBlueReturnedText:
-	text "Are you going to"
-	line "battle the LEADER?"
-
-	para "Good luck to you."
-	line "You'll need it."
+ViridianCity_GrampsNearGymText2:
+	text "The VIRIDIAN GYM"
+	line "LEADER has returned!"
 	done
 
 ViridianCityDreamEaterFisherText:
@@ -207,11 +197,12 @@ ViridianCityWelcomeSignText:
 	done
 
 TrainerHouseSignText:
-	text "TRAINER HOUSE"
-
-	para "The Club for Top"
-	line "Trainer Battles"
+	text "#MON SCHOOL"
 	done
+
+ViridianCity_PlayerMovement1:
+	step DOWN
+	step_end
 
 ViridianCity_MapEvents:
 	db 0, 0 ; filler
@@ -219,22 +210,23 @@ ViridianCity_MapEvents:
 	db 5 ; warp events
 	warp_event 32,  7, VIRIDIAN_GYM, 1
 	warp_event 21,  9, VIRIDIAN_NICKNAME_SPEECH_HOUSE, 1
-	warp_event 23, 15, TRAINER_HOUSE_1F, 1
+	warp_event 21, 13, TRAINER_HOUSE_1F, 1
 	warp_event 29, 19, VIRIDIAN_MART, 2
 	warp_event 23, 25, VIRIDIAN_POKECENTER_1F, 1
 
-	db 0 ; coord events
+	db 1 ; coord events
+	coord_event 19, 13, SCENE_VIRIDIANCITY_GRAMPS_BLOCK, ViridianCity_GrampsBlockScript ; Gramps won't let you through
 
 	db 6 ; bg events
 	bg_event 17, 17, BGEVENT_READ, ViridianCitySign
 	bg_event 27,  7, BGEVENT_READ, ViridianGymSign
 	bg_event 19,  1, BGEVENT_READ, ViridianCityWelcomeSign
-	bg_event 21, 15, BGEVENT_READ, TrainerHouseSign
+	bg_event 25, 13, BGEVENT_READ, TrainerHouseSign
 	bg_event 24, 25, BGEVENT_READ, ViridianCityPokecenterSign
 	bg_event 30, 19, BGEVENT_READ, ViridianCityMartSign
 
 	db 4 ; object events
-	object_event 18,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGramps, -1
+	object_event 18, 13, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGramps, -1
 	object_event 30,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityGrampsNearGym, -1
 	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityDreamEaterFisher, -1
 	object_event 17, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungsterScript, -1
