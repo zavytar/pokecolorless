@@ -50,9 +50,9 @@ KRIS EQU __enum__
 	const CLAIR1
 
 	trainerclass RIVAL1 ; 9
-	const RIVAL1_1_CHIKORITA
-	const RIVAL1_1_CYNDAQUIL
-	const RIVAL1_1_TOTODILE
+	const RIVAL1_OAKSLAB   ; Battle w/Rival at Oak's Lab
+	const RIVAL1_ROUTE22_1 ; Optional Battle w/Rival at Route 22
+	const RIVAL1_CERULEAN  ; Battle w/Rival at Nugget Bridge
 	const RIVAL1_2_CHIKORITA
 	const RIVAL1_2_CYNDAQUIL
 	const RIVAL1_2_TOTODILE

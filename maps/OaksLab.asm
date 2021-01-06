@@ -87,7 +87,7 @@ OaksLab_EeveeBallScript:
 	writetext OaksLab_RedText1
 	waitbutton
 	closetext
-; Red goes to get the EEVEE
+; Red goes to get the EEVEE but Blue shoves him and snatches it
 	applymovement OAKSLAB_RED, OaksLab_RedMovement1
 	showemote EMOTE_SHOCK, PLAYER, 15
 	pause 15
@@ -128,6 +128,36 @@ OaksLab_EeveeBallScript:
 	playsound SFX_CAUGHT_MON
 	waitbutton
 	closetext
+; Red prepares to leave but Blue challenges him to a battle
+	applymovement OAKSLAB_RED, OaksLab_RedMovement4
+	showemote EMOTE_SHOCK, PLAYER, 15
+	pause 15
+	turnobject OAKSLAB_RED, UP
+	opentext
+	writetext OaksLab_PlayerText5
+	waitbutton
+	closetext
+	applymovement PLAYER, OaksLab_PlayerMovement4
+	winlosstext RedOaksLabWinText, RedOaksLabLossText
+	setlasttalked OAKSLAB_RED
+	loadtrainer RIVAL1, RIVAL1_OAKSLAB
+	loadvar VAR_BATTLETYPE, BATTLETYPE_CANLOSE
+	startbattle
+	dontrestartmapmusic
+	reloadmap
+	playmusic MUSIC_RIVAL_AFTER
+	opentext
+	writetext OaksLab_AfterRivalBattleText
+	waitbutton
+	closetext
+; Blue exits (warp to his house)
+	setscene SCENE_OAKSLAB_NOTHING
+ 	setevent EVENT_BATTLED_RED_OAKSLAB
+	special HealParty
+ 	applymovement PLAYER, OaksLab_PlayerMovement5
+	playmapmusic
+	special FadeOutPalettes
+ 	warp BLUES_HOUSE, 2, 4
 	end
 
 OaksLab_DoNothing:
@@ -322,7 +352,7 @@ OaksLab_PlayerText4:
 	done
 
 OaksLab_PlayerText5:
-	text "<PLAYER>: Wait"
+	text "<PLAYER>: Wait,"
 	line "<RIVAL>!"
 	cont "Let's check out"
 	cont "our #MON!"
@@ -347,6 +377,31 @@ OaksLab_EeveeBallText:
 	para "I really hope"
 	line "Gramps gives it"
 	cont "to me today."
+	done
+
+RedOaksLabWinText:
+	text "<RIVAL>: <……>"
+
+	para "<PLAYER>: Heh!"
+	line "Am I great or"
+	cont "what?"
+	done
+
+RedOaksLabLossText:
+	text "<RIVAL>: <……>"
+
+	para "<PLAYER>: What?"
+	line "I picked the"
+	cont "wrong #MON!"
+	done
+
+OaksLab_AfterRivalBattleText:
+	text "Okay! I'll make my"
+	line "#MON fight to"
+	cont "toughen it up!"
+
+	para "<RIVAL>, Gramps!"
+	line "Smell ya later!"
 	done
 
 OaksLab_PokedexText:
@@ -469,6 +524,23 @@ OaksLab_PlayerMovement3:
 	turn_head UP
 	step_end
 
+OaksLab_PlayerMovement4:
+	step LEFT
+	step LEFT
+	step LEFT
+	step DOWN
+	step DOWN
+	step_end
+
+OaksLab_PlayerMovement5:
+	step RIGHT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
+
 OaksLab_RedMovement1:
 	step DOWN
 	step RIGHT
@@ -489,6 +561,13 @@ OaksLab_RedMovement3:
 	step LEFT
 	step UP
 	step UP
+	step_end
+
+OaksLab_RedMovement4:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step_end
 
 OaksLab_OakWalksUp:
@@ -536,4 +615,4 @@ OaksLab_MapEvents:
 	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_EeveeBallScript, EVENT_GOT_EEVEE_FROM_OAK ;Ball w/ Eevee
 	object_event  2,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_PokedexScript, -1 ;Dex1
 	object_event  3,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_PokedexScript, -1 ;Dex2
-	object_event  4,  3, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_RedScript, -1 ; Red
+	object_event  4,  3, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_RedScript, EVENT_RED_OAKS_LAB ; Red

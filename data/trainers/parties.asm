@@ -75,17 +75,23 @@ ClairGroup:
 Rival1Group:
 	; RIVAL1 (1)
 	db "?@", TRAINERTYPE_NORMAL
-	db  5, CHIKORITA
+	db  5, PIKACHU
 	db -1 ; end
 
 	; RIVAL1 (2)
 	db "?@", TRAINERTYPE_NORMAL
-	db  5, CYNDAQUIL
+	db  7, PIDGEY
+	db  7, MANKEY
+	db  8, PIKACHU
 	db -1 ; end
 
 	; RIVAL1 (3)
 	db "?@", TRAINERTYPE_NORMAL
-	db  5, TOTODILE
+	db  15, BUTTERFREE
+	db  15, MANKEY
+	db  18, PIDGEOTTO
+	db  15, BULBASAUR
+	db  19, PIKACHU
 	db -1 ; end
 
 	; RIVAL1 (4)

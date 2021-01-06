@@ -292,7 +292,7 @@ InitializeNPCNames:
 	ret
 
 .Rival:  db "RED@"
-.Red:    db "RED@"
+.Red:    db "ASD@"
 .Green:  db "GREEN@"
 .Mom:    db "MOM@"
 
