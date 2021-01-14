@@ -74,7 +74,7 @@ Route1_CoolTrainerMText:
 	line "you can jump off"
 	cont "them."
 
-	para "You can use that"
+	para "You can use them"
 	line "to avoid the grass"
 	cont "if you're going"
 	cont "to PALLET TOWN."

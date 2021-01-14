@@ -185,7 +185,7 @@ KantoGrassWildMons:
 	; nite
 	db 2, HOOTHOOT
 	db 2, RATTATA
-	db 3, RATTATA
+	db 3, RATTATA 
 	db 3, HOOTHOOT
 	db 6, RATICATE
 	db 4, HOOTHOOT

@@ -9,9 +9,24 @@ BluesHouse_MapScripts:
 DaisyScript:
 	faceplayer
 	opentext
-	readvar VAR_HOUR
-	ifequal 15, .ThreePM
-	writetext DaisyHelloText
+;	readvar VAR_HOUR
+;	ifequal 15, .ThreePM
+	checkitem TM_RETURN
+	iftrue BluesHouse_AlreadyGotTM
+	writetext BluesHouse_DaisyText1
+	waitbutton
+	verbosegiveitem TM_RETURN
+	iffalse .Done
+	writetext BluesHouse_DaisyText2
+	waitbutton
+	closetext
+	end
+
+.Done:
+	end
+
+BluesHouse_AlreadyGotTM:
+	writetext BluesHouse_DaisyText3
 	waitbutton
 	closetext
 	end
@@ -63,8 +78,50 @@ DaisyScript:
 	closetext
 	end
 
+BluesHouse_DaisyText1:
+	text "DAISY: Hi, <PLAYER>!"
+
+	para "Is that the #MON"
+	line "Grandpa gave you?"
+	cont "It's really cute."
+
+	para "Don't forget to"
+	line "treat it with"
+	cont "loving care."
+
+	para "By the way, here's"
+	line "a gift from me!"
+	done
+
+BluesHouse_DaisyText2:
+	text "That TM will teach"
+	line "RETURN to your"
+	cont "#MON."
+
+	para "The happier the"
+	line "#MON, the more"
+	cont "powerful it is."
+
+	para "TMs are reusable,"
+	line "so keep that in"
+	cont "mind too!"
+	done
+
+BluesHouse_DaisyText3:
+	text "#MON are living"
+	line "beings."
+
+	para "If you see they're"
+	line "tired, please give"
+	cont "them some rest."
+	done
+
 DaisyHelloText:
 	text "DAISY: Hi, <PLAYER>!"
+
+	para "Is that the #MON"
+	line "you got from Grandpa?"
+	cont "It's really cute."
 	done
 
 DaisyOfferGroomingText:

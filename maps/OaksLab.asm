@@ -21,6 +21,7 @@ OaksLab_MapScripts:
 	disappear OAKSLAB_RED
 	setevent EVENT_OAK_OUT
 	setevent EVENT_RED_OAKS_LAB
+	setevent EVENT_VIRIDIAN_GRAMPS_GRUMPY
 	turnobject PLAYER, UP
 	opentext
 	writetext OaksLab_IntroText1
