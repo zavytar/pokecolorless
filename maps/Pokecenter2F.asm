@@ -68,8 +68,8 @@ Script_BattleRoomClosed:
 	end
 
 LinkReceptionistScript_Trade:
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iffalse Script_TradeCenterClosed
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iffalse Script_TradeCenterClosed
 	opentext
 	writetext Text_TradeReceptionistIntro
 	yesorno
@@ -170,8 +170,8 @@ BattleTradeMobile_WalkIn:
 	end
 
 LinkReceptionistScript_Battle:
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iffalse Script_BattleRoomClosed
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iffalse Script_BattleRoomClosed
 	opentext
 	writetext Text_BattleReceptionistIntro
 	yesorno

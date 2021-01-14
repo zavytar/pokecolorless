@@ -17,12 +17,14 @@ OaksLab_MapScripts:
 	db 0 ; callbacks
 
 .MeetOak:
+;	special FadeOutPalettes
 	disappear OAKSLAB_OAK
 	disappear OAKSLAB_RED
 	setevent EVENT_OAK_OUT
 	setevent EVENT_RED_OAKS_LAB
 	setevent EVENT_VIRIDIAN_GRAMPS_GRUMPY
 	turnobject PLAYER, UP
+;	special FadeInPalettes
 	opentext
 	writetext OaksLab_IntroText1
 	waitbutton

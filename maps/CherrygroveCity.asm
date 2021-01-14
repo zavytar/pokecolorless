@@ -113,10 +113,10 @@ CherrygroveSilverSceneNorth:
 	writetext CherrygroveRivalText_Seen
 	waitbutton
 	closetext
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .Totodile
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .Chikorita
+;	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+;	iftrue .Totodile
+;	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+;	iftrue .Chikorita
 	winlosstext SilverCherrygroveWinText, SilverCherrygroveLossText
 	setlasttalked CHERRYGROVECITY_SILVER
 ;	loadtrainer RIVAL1, RIVAL1_1_TOTODILE

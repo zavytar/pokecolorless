@@ -135,12 +135,12 @@ ElmCheckGotEggAgain:
 	iftrue ElmWaitingEggHatchScript
 	checkflag ENGINE_ZEPHYRBADGE
 	iftrue ElmAideHasEggScript
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue ElmStudyingEggScript
-	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-	iftrue ElmAfterTheftScript
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue ElmDescribesMrPokemonScript
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iftrue ElmStudyingEggScript
+;	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+;	iftrue ElmAfterTheftScript
+;	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+;	iftrue ElmDescribesMrPokemonScript
 	writetext ElmText_LetYourMonBattleIt
 	waitbutton
 	closetext
@@ -156,8 +156,8 @@ LabTryToLeaveScript:
 	end
 
 CyndaquilPokeBallScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue LookAtElmPokeBallScript
+;	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+;	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
 	pokepic CYNDAQUIL
@@ -169,7 +169,7 @@ CyndaquilPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL1
-	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+;	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -186,8 +186,8 @@ CyndaquilPokeBallScript:
 	sjump ElmDirectionsScript
 
 TotodilePokeBallScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue LookAtElmPokeBallScript
+;	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+;	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
 	pokepic TOTODILE
@@ -199,7 +199,7 @@ TotodilePokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL2
-	setevent EVENT_GOT_TOTODILE_FROM_ELM
+;	setevent EVENT_GOT_TOTODILE_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -214,8 +214,8 @@ TotodilePokeBallScript:
 	sjump ElmDirectionsScript
 
 ChikoritaPokeBallScript:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue LookAtElmPokeBallScript
+;	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+;	iftrue LookAtElmPokeBallScript
 	turnobject ELMSLAB_ELM, DOWN
 	refreshscreen
 	pokepic CHIKORITA
@@ -227,7 +227,7 @@ ChikoritaPokeBallScript:
 	yesorno
 	iffalse DidntChooseStarterScript
 	disappear ELMSLAB_POKE_BALL3
-	setevent EVENT_GOT_CHIKORITA_FROM_ELM
+;	setevent EVENT_GOT_CHIKORITA_FROM_ELM
 	writetext ChoseStarterText
 	buttonsound
 	waitsfx
@@ -270,7 +270,7 @@ ElmDirectionsScript:
 	writetext ElmDirectionsText3
 	waitbutton
 	closetext
-	setevent EVENT_GOT_A_POKEMON_FROM_ELM
+;	setevent EVENT_GOT_A_POKEMON_FROM_ELM
 	setevent EVENT_RIVAL_CHERRYGROVE_CITY
 	setscene SCENE_ELMSLAB_AIDE_GIVES_POTION
 	setmapscene NEW_BARK_TOWN, SCENE_FINISHED
@@ -291,8 +291,8 @@ LookAtElmPokeBallScript:
 
 ElmsLabHealingMachine:
 	opentext
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue .CanHeal
+;	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+;	iftrue .CanHeal
 	writetext ElmsLabHealingMachineText1
 	waitbutton
 	closetext
@@ -337,7 +337,7 @@ ElmAfterTheftScript:
 	buttonsound
 	writetext ElmAfterTheftText5
 	buttonsound
-	setevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	setevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	setflag ENGINE_MAIN_MENU_MOBILE_CHOICES
 	setmapscene ROUTE_29, SCENE_ROUTE29_CATCH_TUTORIAL
 	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
@@ -517,10 +517,10 @@ ElmsAideScript:
 	opentext
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue AideScript_AfterTheft
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue AideScript_ExplainBalls
-	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-	iftrue AideScript_TheftTestimony
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iftrue AideScript_ExplainBalls
+;	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+;	iftrue AideScript_TheftTestimony
 	writetext AideText_AlwaysBusy
 	waitbutton
 	closetext

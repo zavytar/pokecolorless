@@ -10,8 +10,8 @@ CherrygroveMart_MapScripts:
 
 CherrygroveMartClerkScript:
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .PokeBallsInStock
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iftrue .PokeBallsInStock
 	pokemart MARTTYPE_STANDARD, MART_CHERRYGROVE
 	closetext
 	end
@@ -24,8 +24,8 @@ CherrygroveMartClerkScript:
 CherrygroveMartCooltrainerMScript:
 	faceplayer
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .PokeBallsInStock
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iftrue .PokeBallsInStock
 	writetext CherrygroveMartCooltrainerMText
 	waitbutton
 	closetext

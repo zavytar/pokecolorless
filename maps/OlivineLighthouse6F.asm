@@ -65,7 +65,7 @@ OlivineLighthouseJasmine:
 	writetext JasmineThankYouText
 	waitbutton
 	closetext
-	setevent EVENT_JASMINE_RETURNED_TO_GYM
+;	setevent EVENT_JASMINE_RETURNED_TO_GYM
 	clearevent EVENT_OLIVINE_GYM_JASMINE
 	readvar VAR_FACING
 	ifequal DOWN, .FacingDown
@@ -104,8 +104,8 @@ OlivineLighthouseUnusedDummyScript:
 OlivineLighthouseAmphy:
 	faceplayer
 	opentext
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iftrue .HealthyNow
+;	checkevent EVENT_JASMINE_RETURNED_TO_GYM
+;	iftrue .HealthyNow
 	writetext AmphyPalPalooText
 	setval AMPHAROS
 	special PlaySlowCry

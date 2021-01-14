@@ -3,10 +3,10 @@ MomPhoneCalleeScript:
 	iftrue .bcec5
 	checkevent EVENT_DUDE_TALKED_TO_YOU
 	iftrue MomPhoneLectureScript
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue MomPhoneNoGymQuestScript
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue MomPhoneNoPokedexScript
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iftrue MomPhoneNoGymQuestScript
+;	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+;	iftrue MomPhoneNoPokedexScript
 	sjump MomPhoneNoPokemonScript
 
 .bcec5

@@ -48,8 +48,8 @@ EcruteakCityLass2Script:
 EcruteakCityFisherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iftrue .JasmineReturned
+;	checkevent EVENT_JASMINE_RETURNED_TO_GYM
+;	iftrue .JasmineReturned
 	writetext EcruteakCityFisherText
 	waitbutton
 	closetext

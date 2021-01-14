@@ -17,8 +17,8 @@ IrwinRumorScript:
 	iftrue .RadioTower
 	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
 	iftrue .RocketHideout
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iftrue .JasmineReturned
+;	checkevent EVENT_JASMINE_RETURNED_TO_GYM
+;	iftrue .JasmineReturned
 	checkflag ENGINE_FOGBADGE
 	iftrue .FogBadge
 	checkflag ENGINE_PLAINBADGE

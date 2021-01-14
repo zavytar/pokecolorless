@@ -33,7 +33,7 @@ MrPokemonsHouse_MapScripts:
 	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
-	setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+;	setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
 	blackoutmod CHERRYGROVE_CITY
 	writetext MrPokemonIntroText3
 	buttonsound
@@ -52,8 +52,8 @@ MrPokemonsHouse_MrPokemonScript:
 	opentext
 	checkitem RED_SCALE
 	iftrue .RedScale
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue .AlwaysNewDiscoveries
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iftrue .AlwaysNewDiscoveries
 	writetext MrPokemonText_ImDependingOnYou
 	waitbutton
 	closetext
@@ -128,10 +128,10 @@ MrPokemonsHouse_OakScript:
 	setmapscene ELMS_LAB, SCENE_ELMSLAB_MEET_OFFICER
 	specialphonecall SPECIALCALL_ROBBED
 	clearevent EVENT_COP_IN_ELMS_LAB
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
-	iftrue .RivalTakesChikorita
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
-	iftrue .RivalTakesCyndaquil
+;	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+;	iftrue .RivalTakesChikorita
+;	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+;	iftrue .RivalTakesCyndaquil
 	setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
 	end
 

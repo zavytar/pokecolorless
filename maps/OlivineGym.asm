@@ -62,8 +62,8 @@ OlivineGymGuyScript:
 	faceplayer
 	checkevent EVENT_BEAT_JASMINE
 	iftrue .OlivineGymGuyWinScript
-	checkevent EVENT_JASMINE_RETURNED_TO_GYM
-	iffalse .OlivineGymGuyPreScript
+;	checkevent EVENT_JASMINE_RETURNED_TO_GYM
+;	iffalse .OlivineGymGuyPreScript
 	opentext
 	writetext OlivineGymGuyText
 	waitbutton
