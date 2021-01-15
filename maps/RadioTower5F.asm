@@ -52,8 +52,8 @@ FakeDirectorScript:
 Director:
 	faceplayer
 	opentext
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .TrueDirector
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iftrue .TrueDirector
 	writetext FakeDirectorTextAfter
 	waitbutton
 	closetext
@@ -100,7 +100,7 @@ RadioTower5FRocketBossScene:
 	pause 15
 	special FadeInQuickly
 	setevent EVENT_BEAT_ROCKET_EXECUTIVEM_1
-	setevent EVENT_CLEARED_RADIO_TOWER
+;	setevent EVENT_CLEARED_RADIO_TOWER
 	clearflag ENGINE_ROCKETS_IN_RADIO_TOWER
 	setevent EVENT_GOLDENROD_CITY_ROCKET_SCOUT
 	setevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER

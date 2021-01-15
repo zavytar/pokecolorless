@@ -22,7 +22,8 @@ OaksLab_MapScripts:
 	disappear OAKSLAB_RED
 	setevent EVENT_OAK_OUT
 	setevent EVENT_RED_OAKS_LAB
-	setevent EVENT_VIRIDIAN_GRAMPS_GRUMPY
+	clearevent EVENT_VIRIDIAN_GRAMPS_GRUMPY
+	setevent EVENT_VIRIDIAN_GRAMPS_OKAY
 	turnobject PLAYER, UP
 ;	special FadeInPalettes
 	opentext
@@ -156,10 +157,12 @@ OaksLab_EeveeBallScript:
 ; Blue exits (warp to his house)
 	setscene SCENE_OAKSLAB_NOTHING
  	setevent EVENT_BATTLED_RED_OAKSLAB
+	clearevent EVENT_RED_OAKS_LAB
 	special HealParty
  	applymovement PLAYER, OaksLab_PlayerMovement5
 	playmapmusic
 	special FadeOutPalettes
+	disappear OAKSLAB_RED
  	warp BLUES_HOUSE, 2, 4
 	end
 

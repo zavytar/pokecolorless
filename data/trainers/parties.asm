@@ -1474,9 +1474,11 @@ SkierGroup:
 	db -1 ; end
 
 TeacherGroup:
-	; TEACHER (1)
+	; TEACHER (1) ; trainers school
 	db "COLETTE@", TRAINERTYPE_NORMAL
-	db 36, CLEFAIRY
+	db  4, POLIWAG 
+	db  4, VULPIX
+	db  4, ODDISH
 	db -1 ; end
 
 	; TEACHER (2)

@@ -221,8 +221,8 @@ TrainerPicnickerTiffany:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight2
 .Fight1:
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .LoadFight1
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iftrue .LoadFight1
 .LoadFight0:
 	loadtrainer PICNICKER, TIFFANY3
 	startbattle

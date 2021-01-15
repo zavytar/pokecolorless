@@ -15,13 +15,8 @@ Route1_ClerkScript:
 	iftrue Route1_AlreadyGotPotion
 	writetext Route1_ClerkText1
 	waitbutton
-	verbosegiveitem POTION
-	iffalse .BagFull
+	giveitem POTION
 	setevent EVENT_ROUTE_1_GOT_POTION
-	closetext
-	end
-
-.BagFull:
 	closetext
 	end
 
@@ -63,7 +58,7 @@ Route1_ClerkText2:
 	text "We also have #"
 	line "BALLS for catching"
 	cont "#MON!"
-	end
+	done
 
 Route1_CoolTrainerMText:
 	text "See those ledges"
@@ -78,7 +73,7 @@ Route1_CoolTrainerMText:
 	line "to avoid the grass"
 	cont "if you're going"
 	cont "to PALLET TOWN."
-	end
+	done
 
 Route1SignText:
 	text "ROUTE 1"
@@ -98,6 +93,6 @@ Route1_MapEvents:
 	bg_event  7, 27, BGEVENT_READ, Route1Sign
 
 	db 3 ; object events
-	object_event  4, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, ObjectEvent, -1
-	object_event 12, 14, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, ObjectEvent, -1
+	object_event  4, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 4, Route1_ClerkScript, -1
+	object_event 12, 14, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 2, Route1_CoolTrainerMScript, -1
 	object_event  3,  7, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route1FruitTree, -1

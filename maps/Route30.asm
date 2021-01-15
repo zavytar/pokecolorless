@@ -78,8 +78,8 @@ TrainerYoungsterJoey:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
 .Fight3:
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .LoadFight3
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iftrue .LoadFight3
 .Fight2:
 	checkflag ENGINE_FLYPOINT_OLIVINE
 	iftrue .LoadFight2

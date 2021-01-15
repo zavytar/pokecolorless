@@ -35,8 +35,8 @@ BlackthornSuperNerdScript:
 	opentext
 	checkevent EVENT_BEAT_CLAIR
 	iftrue .BeatClair
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .ClearedRadioTower
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iftrue .ClearedRadioTower
 	writetext Text_ClairIsOut
 	waitbutton
 	closetext
@@ -63,8 +63,8 @@ BlackthornGramps2Script:
 BlackthornBlackBeltScript:
 	faceplayer
 	opentext
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .ClearedRadioTower
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iftrue .ClearedRadioTower
 	writetext BlackBeltText_WeirdRadio
 	waitbutton
 	closetext

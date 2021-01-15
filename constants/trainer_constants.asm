@@ -318,7 +318,7 @@ KRIS EQU __enum__
 	const CLARISSA
 
 	trainerclass TEACHER ; 22
-	const COLETTE
+	const COLETTE ;trainer school 
 	const HILLARY
 	const SHIRLEY
 

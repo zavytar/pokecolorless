@@ -341,8 +341,8 @@ TrainerPicnickerLiz1:
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .LoadFight4
 .Fight3:
-	checkevent EVENT_CLEARED_RADIO_TOWER
-	iftrue .LoadFight3
+;	checkevent EVENT_CLEARED_RADIO_TOWER
+;	iftrue .LoadFight3
 .Fight2:
 	checkevent EVENT_CLEARED_ROCKET_HIDEOUT
 	iftrue .LoadFight2
