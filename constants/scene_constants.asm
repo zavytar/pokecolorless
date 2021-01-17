@@ -20,6 +20,7 @@ SCENE_FINISHED EQU 1
 	const SCENE_OAKSLAB_INTRO							; 0
 	const SCENE_OAKSLAB_CANT_LEAVE				; 1
 	const SCENE_OAKSLAB_NOTHING						; 2
+	const SCENE_OAKSLAB_GET_POKEDEX				; 3
 
 ; wViridianCitySceneID, previously wCeruleanGymSceneID
 	const_def

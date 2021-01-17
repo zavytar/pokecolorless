@@ -13,6 +13,7 @@ OaksLab_MapScripts:
 	scene_script .MeetOak ; SCENE_OAKSLAB_INTRO
 	scene_script .DummyScene1 ; SCENE_OAKSLAB_CANT_LEAVE
 	scene_script .DummyScene2 ; SCENE_OAKSLAB_NOTHING
+	scene_script .DummyScene3 ; SCENE_OAKSLAB_GET_POKEDEX
 
 	db 0 ; callbacks
 
@@ -40,6 +41,9 @@ OaksLab_MapScripts:
 	end
 
 .DummyScene2:
+	end
+
+.DummyScene3:
 	end
 
 OakScript:

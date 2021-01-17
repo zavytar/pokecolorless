@@ -22,14 +22,13 @@ TrainerHouse1F_TeacherScript:
 	winlosstext TrainerHouse1F_TeacherWinText, 0
 	setlasttalked TRAINERHOUSE1F_TEACHER
 	loadtrainer TEACHER, COLETTE
+	loadvar VAR_BATTLETYPE, BATTLETYPE_NORMAL
 	startbattle
-	dontrestartmapmusic
-	reloadmap
-	waitbutton
+	reloadmapafterbattle
+	setevent EVENT_BEAT_TEACHER_COLETTE
 	opentext
 	writetext TrainerHouse1F_TeacherText3
 	waitbutton
-	setevent EVENT_BEAT_TEACHER_COLETTE
 	setevent EVENT_RED_OAKS_LAB
 	closetext
 	end

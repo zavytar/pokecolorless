@@ -73,19 +73,19 @@ ClairGroup:
 	db -1 ; end
 
 Rival1Group:
-	; RIVAL1 (1)
+	; RIVAL1 (1) ; Oaks Lab
 	db "?@", TRAINERTYPE_NORMAL
 	db  5, PIKACHU
 	db -1 ; end
 
-	; RIVAL1 (2)
+	; RIVAL1 (2) ; Route 22
 	db "?@", TRAINERTYPE_NORMAL
 	db  7, PIDGEY
 	db  7, MANKEY
 	db  8, PIKACHU
 	db -1 ; end
 
-	; RIVAL1 (3)
+	; RIVAL1 (3) ; Nugget Bridge
 	db "?@", TRAINERTYPE_NORMAL
 	db  15, BUTTERFREE
 	db  15, MANKEY
@@ -94,25 +94,34 @@ Rival1Group:
 	db  19, PIKACHU
 	db -1 ; end
 
-	; RIVAL1 (4)
+	; RIVAL1 (4) ; SS Anne
 	db "?@", TRAINERTYPE_NORMAL
-	db 12, GASTLY
-	db 14, ZUBAT
-	db 16, BAYLEEF
+	db 12, BUTTERFREE
+	db 14, PIDGEOTTO
+	db 15, MANKEY
+	db 16, CHARMANDER
+	db 16, BULBASAUR
+	db 18, PIKACHU
 	db -1 ; end
 
-	; RIVAL1 (5)
+	; RIVAL1 (5) ; Pokemon Tower
 	db "?@", TRAINERTYPE_NORMAL
-	db 12, GASTLY
-	db 14, ZUBAT
-	db 16, QUILAVA
+	db 12, BUTTERFREE
+	db 14, PIDGEOTTO
+	db 15, SQUIRTLE
+	db 16, CHARMANDER
+	db 16, IVYSAUR
+	db 18, PIKACHU
 	db -1 ; end
 
-	; RIVAL1 (6)
+	; RIVAL1 (6) ; Silph Co
 	db "?@", TRAINERTYPE_NORMAL
-	db 12, GASTLY
-	db 14, ZUBAT
-	db 16, CROCONAW
+	db 12, PIDGEOTTO
+	db 14, SNORLAX
+	db 15, WARTORTLE
+	db 16, CHARMELEON
+	db 16, IVYSAUR
+	db 18, PIKACHU
 	db -1 ; end
 
 	; RIVAL1 (7)
@@ -1476,7 +1485,7 @@ SkierGroup:
 TeacherGroup:
 	; TEACHER (1) ; trainers school
 	db "COLETTE@", TRAINERTYPE_NORMAL
-	db  4, POLIWAG 
+	db  4, POLIWAG
 	db  4, VULPIX
 	db  4, ODDISH
 	db -1 ; end
