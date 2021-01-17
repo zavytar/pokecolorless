@@ -29,6 +29,7 @@ PewterGymBrockScript:
 	setflag ENGINE_BOULDERBADGE
 	writetext BrockBoulderBadgeText
 	waitbutton
+; TM_HEADBUTT 	
 	closetext
 	end
 
