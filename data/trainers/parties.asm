@@ -283,11 +283,8 @@ ChampionGroup:
 BrockGroup:
 	; BROCK (1)
 	db "BROCK@", TRAINERTYPE_MOVES
-	db 41, GRAVELER,   DEFENSE_CURL, ROCK_SLIDE, ROLLOUT, EARTHQUAKE
-	db 41, RHYHORN,    FURY_ATTACK, SCARY_FACE, EARTHQUAKE, HORN_DRILL
-	db 42, OMASTAR,    BITE, SURF, PROTECT, SPIKE_CANNON
-	db 44, ONIX,       BIND, ROCK_SLIDE, BIDE, SANDSTORM
-	db 42, KABUTOPS,   SLASH, SURF, ENDURE, GIGA_DRAIN
+	db 12, GEODUDE,   DEFENSE_CURL, TACKLE, ROCK_THROW, HEADBUTT
+	db 14, ONIX,      BIND, ROCK_THROW, HEADBUTT, SCREECH
 	db -1 ; end
 
 MistyGroup:
@@ -701,9 +698,10 @@ BirdKeeperGroup:
 	db -1 ; end
 
 LassGroup:
-	; LASS (1)
-	db "CARRIE@", TRAINERTYPE_MOVES
-	db 18, SNUBBULL,   SCARY_FACE, CHARM, BITE, LICK
+	; LASS (1) ; Viridian Forest
+	db "CARRIE@", TRAINERTYPE_NORMAL
+	db 6, NIDORAN_F
+	db 6, NIDORAN_M
 	db -1 ; end
 
 	; LASS (2)
@@ -1510,31 +1508,29 @@ SabrinaGroup:
 	db -1 ; end
 
 BugCatcherGroup:
-	; BUG_CATCHER (1)
-	db "DON@", TRAINERTYPE_NORMAL
-	db  3, CATERPIE
-	db  3, CATERPIE
+	; BUG_CATCHER (1) ; Viridian Forest 1
+	db "RICK@", TRAINERTYPE_NORMAL
+	db  6, WEEDLE
+	db  6, CATERPIE
 	db -1 ; end
 
-	; BUG_CATCHER (2)
-	db "ROB@", TRAINERTYPE_NORMAL
-	db 32, BEEDRILL
-	db 32, BUTTERFREE
+	; BUG_CATCHER (2) ; Viridian Forest 2
+	db "DOUG@", TRAINERTYPE_NORMAL
+	db  7, WEEDLE
+	db  7, KAKUNA
+	db  7, WEEDLE 
 	db -1 ; end
 
-	; BUG_CATCHER (3)
-	db "ED@", TRAINERTYPE_NORMAL
-	db 30, BEEDRILL
-	db 30, BEEDRILL
-	db 30, BEEDRILL
+	; BUG_CATCHER (3) ; Viridian Forest 3
+	db "CHARLIE@", TRAINERTYPE_NORMAL
+	db  7, METAPOD
+	db  7, CATERPIE
+	db  7, METAPOD
 	db -1 ; end
 
-	; BUG_CATCHER (4)
-	db "WADE@", TRAINERTYPE_NORMAL
-	db  2, CATERPIE
-	db  2, CATERPIE
-	db  3, WEEDLE
-	db  2, CATERPIE
+	; BUG_CATCHER (4) ; Viridian Forest 4
+	db "SAMMY@", TRAINERTYPE_NORMAL
+	db  9, WEEDLE
 	db -1 ; end
 
 	; BUG_CATCHER (5)

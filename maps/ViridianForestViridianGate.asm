@@ -3,14 +3,18 @@ ViridianForestViridianGate_MapScripts:
 
 	db 0 ; callbacks
 
+TrainerBugCatcherRob:
 
+TrainerBugCatcherEd:
+
+TrainerBugCatcherDoug:
 
 ViridianForestViridianGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  9,  5, INDIGO_PLATEAU_POKECENTER_1F, 1
-	warp_event 10,  5, INDIGO_PLATEAU_POKECENTER_1F, 2
+	warp_event  9,  5, ROUTE_2, 6
+	warp_event 10,  5, ROUTE_2, 6
 	warp_event  0,  3, VIRIDIAN_FOREST, 1
 	warp_event  0,  4, VIRIDIAN_FOREST, 2
 
