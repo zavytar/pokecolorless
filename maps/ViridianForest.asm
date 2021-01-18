@@ -91,21 +91,95 @@ ViridianForest_Sign1:
 	jumptext ViridianForest_Sign1Text
 
 BugCatcher1SeenText:
+	text "Hey! You have"
+	line "#MON! Come on!"
+	cont "Let's battle 'em!"
+	done
+
 BugCatcher2SeenText:
+	text "Yo! You can't jam"
+	line "out if you're a"
+	cont "#MON trainer!"
+	done
+
 BugCatcher3SeenText:
+	text "I'm gonna be the"
+	line "best. You just"
+	cont "can't beat me!"
+	done
+
 BugCatcher4SeenText:
+	text "Hey, wait up!"
+	line "What's the hurry?"
+	done
+
 Lass1SeenText:
+	text "Hi, do you have a"
+	line "PIKACHU?"
+	done
+
 BugCatcher1BeatenText:
+	text "No! CATERPIE"
+	line "can't cut it!"
+	done
+
 BugCatcher2BeatenText:
+	text "Huh?"
+	line "I ran out of"
+	cont "#MON!"
+	done
+
 BugCatcher3BeatenText:
+	text "After"
+	line "all I did..."
+	done
+
 BugCatcher4BeatenText:
+	text "I give! You're"
+	line "good at this!"
+	done
+
 Lass1BeatenText:
+	text "Oh no,"
+	line "really?"
+	done
+
 BugCatcher1AfterBattleText:
+	text "Ssh! You'll scare"
+	line "the bugs away!"
+	done
+
 BugCatcher2AfterBattleText:
+	text "Darn! I'm going"
+	line "to catch some"
+	cont "stronger ones!"
+	done
+
 BugCatcher3AfterBattleText:
+	text "A METAPOD is cool"
+	line "because its"
+	cont "attack is its"
+	cont "defense!"
+	done
+
 BugCatcher4AfterBattleText:
+	text "Sometimes, you"
+	line "can find stuff on"
+	cont "the ground!"
+
+	para "I'm looking for"
+	line "the stuff I"
+	cont "dropped!"
+	done
+
 Lass1AfterBattleText:
-	text "asd"
+	text "I looked forever,"
+	line "but I never found"
+	cont "a PIKACHU here!"
+
+	para "I heard it's very"
+	line "rare to find,"
+	cont "but it's so cute!"
 	done
 
 ViridianForest_BugCatcherText:
