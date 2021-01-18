@@ -1,4 +1,4 @@
-object_const_def ; object_event constants
+	object_const_def ; object_event constants
 	const VIRIDIANFOREST_BUG_CATCHER1
 	const VIRIDIANFOREST_BUG_CATCHER2
 	const VIRIDIANFOREST_BUG_CATCHER3
@@ -9,7 +9,7 @@ object_const_def ; object_event constants
 	const VIRIDIANFOREST_POKE_BALL1
 	const VIRIDIANFOREST_POKE_BALL2
 	const VIRIDIANFOREST_POKE_BALL3
-	const
+
 
 ViridianForest_MapScripts:
 	db 0 ; scene scripts
@@ -86,6 +86,13 @@ ViridianForest_YoungsterScript:
 	waitbutton
 	closetext
 	end
+
+ViridianForestPotion:
+ViridianForestPotion2:
+	itemball POTION
+
+ViridianForestPokeball
+	itemball POKE_BALL
 
 ViridianForest_Sign1:
 	jumptext ViridianForest_Sign1Text
@@ -203,8 +210,9 @@ ViridianForest_YoungsterText:
 	done
 
 ViridianForest_Sign1Text:
-	text "VIRIDIAN FOREST"
-	line "NORTH EXIT"
+	text "LEAVING"
+	line "VIRIDIAN FOREST"
+	para "PEWTER CITY AHEAD"
 	done
 
 ViridianForest_MapEvents:
@@ -218,18 +226,18 @@ ViridianForest_MapEvents:
 
 	db 0 ; coord events
 
-	db 2 ; bg events
+	db 1 ; bg events
 	bg_event  3,  3, BGEVENT_READ, ViridianForest_Sign1
-	bg_event 16, 41, BGEVENT_ITEM, ViridianForestHiddenAntidote
+;	bg_event 16, 41, BGEVENT_ITEM, ViridianForestHiddenAntidote
 
 	db 10 ; object events
-	object_event 29, 18, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherRob, -1 ;bug catcher 1
-	object_event  2, 12, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherEd, -1  ;bug catcher 2
-	object_event 27, 27, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDoug, -1  ;bug catcher 3
-	object_event 11,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcher, -1  ;bug catcher 4
+	object_event 29, 18, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcher1, -1 ;bug catcher 1
+	object_event  2, 12, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcher2, -1  ;bug catcher 2
+	object_event 27, 27, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcher3, -1  ;bug catcher 3
+	object_event 11,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcher4, -1  ;bug catcher 4
 	object_event 27, 36, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 3, ViridianForest_BugCatcherScript, -1  ;bug catcher 5
 	object_event 14, 42, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 3, ViridianForest_YoungsterScript, -1  ;youngster
-	object_event  2, 42, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerLass, -1		;lass
+	object_event  2, 42, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerLass1, -1		;lass
 	object_event 31, 42, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPotion, -1
 	object_event  2, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPokeball, -1
 	object_event 11, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPotion2, -1
