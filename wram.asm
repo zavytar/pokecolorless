@@ -1906,7 +1906,6 @@ wItemsPocketCursor::    db
 wKeyItemsPocketCursor:: db
 wBallsPocketCursor::    db
 wTMHMPocketCursor::     db
-wBerryPocketCursor::    db
 
 wPCItemsScrollPosition::        db
 wPartyMenuScrollPosition::      db ; unused
@@ -1914,7 +1913,6 @@ wItemsPocketScrollPosition::    db
 wKeyItemsPocketScrollPosition:: db
 wBallsPocketScrollPosition::    db
 wTMHMPocketScrollPosition::     db
-wBerryPocketScrollPosition::    db
 
 wSwitchMon::
 wSwitchItem::
@@ -2303,7 +2301,6 @@ wDudeNumItems:: db
 wDudeItems:: ds 2 * 4
 wDudeItemsEnd:: db
 
-wDudeNumBerries::
 wDudeNumKeyItems:: db ; d292
 wDudeKeyItems:: ds 18
 wDudeKeyItemsEnd:: db
@@ -2459,7 +2456,7 @@ wObjectStructsEnd:: ; d6de
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
 
-;	ds 40
+	ds 40
 
 wMapObjects:: ; d71e
 wPlayerObject:: map_object wPlayer
@@ -2547,10 +2544,6 @@ wKeyItemsEnd::
 wNumBalls:: db ; d8d7
 wBalls:: ds MAX_BALLS * 2 + 1 ; d8d8
 wBallsEnd::
-
-wNumBerries:: db
-wBerries:: ds MAX_BERRIES * 2 + 1
-wBerriesEnd::
 
 wNumPCItems:: db
 wPCItems:: ds MAX_PC_ITEMS * 2 + 1 ; d8f1
