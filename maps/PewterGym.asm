@@ -29,10 +29,6 @@ PewterGymBrockScript:
 	setflag ENGINE_BOULDERBADGE
 	writetext BrockBoulderBadgeText
 	waitbutton
-	giveitem TM_HEADBUTT
-	waitbutton
-	writetext BrockGotTMText
-	waitbutton
 	closetext
 	end
 
@@ -78,34 +74,41 @@ PewterGymStatue:
 	jumpstd gymstatue2
 
 BrockIntroText:
-	text "So, you're here!"
+	text "BROCK: Wow, it's"
+	line "not often that we"
 
-	para "I'm BROCK."
+	para "get a challenger"
+	line "from JOHTO."
 
-	para "I'm PEWTER CITY's"
-	line "GYM LEADER."
+	para "I'm BROCK, the"
+	line "PEWTER GYM LEADER."
 
-	para "I believe in rock"
-	line "hard defense and"
-	cont "determination."
+	para "I'm an expert on"
+	line "rock-type #MON."
 
-	para "That's why my"
-	line "#MON are all"
-	cont "ROCK-type!"
+	para "My #MON are im-"
+	line "pervious to most"
 
-	para "Do you still want"
-	line "to challenge me?"
-	cont "Fine! Show me"
-	cont "your best!"
+	para "physical attacks."
+	line "You'll have a hard"
+
+	para "time inflicting"
+	line "any damage."
+
+	para "Come on!"
 	done
 
 BrockWinLossText:
-	text "BROCK: I took"
-	line "you for granted…"
+	text "BROCK: Your #-"
+	line "MON's powerful at-"
+	cont "tacks overcame my"
+	cont "rock-hard defense…"
 
-	para "As proof of your"
-	line "victory, here's the"
-	cont "BOULDERBADGE."
+	para "You're stronger"
+	line "than I expected…"
+
+	para "Go ahead--take"
+	line "this BADGE."
 	done
 
 ReceivedBoulderBadgeText:
@@ -114,73 +117,62 @@ ReceivedBoulderBadgeText:
 	done
 
 BrockBoulderBadgeText:
-	text "BROCK: That's an"
-	line "official #MON"
-	cont "LEAGUE BADGE."
+	text "BROCK: <PLAY_G>,"
+	line "thanks. I enjoyed"
 
-	para "Its bearer's #MON"
-	line "become more powerful."
+	para "battling you, even"
+	line "though I am a bit"
+	cont "upset."
 
-	para "The technique FLASH"
-	line "can now be used"
-	cont "anytime!"
+	para "That BOULDERBADGE"
+	line "will make your"
 
-	para "Wait! Take this"
-	line "with you!"
-	done
-
-BrockGotTMText:
-	text "A TM contains a"
-	line "technique you can"
-	cont "teach to #MON."
-
-	para "You can use it"
-	line "over and over."
-
-	para "TM02 contains"
-	line "HEADBUTT."
-
-	para "It can make your"
-	line "opponent flinch!"
-	cont "Also, try using it"
-	cont "on the trees in"
-	cont "VIRIDIAN FOREST!"
+	para "#MON even more"
+	line "powerful."
 	done
 
 BrockFightDoneText:
-	text "BROCK: There are"
-	line "all kinds of trainers"
-	cont "in the world."
+	text "BROCK: The world"
+	line "is huge. There are"
 
-	para "You appear to be"
-	line "a gifted one, so"
-	cont "here's a suggestion."
+	para "still many strong"
+	line "trainers like you."
 
-	para "Go to the GYM in"
-	line "CERULEAN CITY and"
-	cont "test your abilities!"
+	para "Just wait and see."
+	line "I'm going to be-"
+	cont "come a lot strong-"
+	cont "er too."
 	done
 
 CamperJerrySeenText:
-	text "Stop right there!"
+	text "The trainers of"
+	line "this GYM use rock-"
+	cont "type #MON."
 
-	para "You're still light"
-	line "years from facing"
-	cont "BROCK!"
+	para "The rock-type has"
+	line "high DEFENSE."
+
+	para "Battles could end"
+	line "up going a long"
+
+	para "time. Are you"
+	line "ready for this?"
 	done
 
 CamperJerryBeatenText:
-	text "Darn!"
-
-	para "Light years isn't"
-	line "time! It measures"
-	cont "distance!"
+	text "I have to win"
+	line "these battles…"
 	done
 
 CamperJerryAfterBattleText:
-	text "You're pretty hot,"
-	line "but not as hot"
-	cont "as BROCK!"
+	text "Hey, you! Trainer"
+	line "from JOHTO! BROCK"
+
+	para "is tough. He'll"
+	line "punish you if you"
+
+	para "don't take him"
+	line "seriously."
 	done
 
 PewterGymGuyText:

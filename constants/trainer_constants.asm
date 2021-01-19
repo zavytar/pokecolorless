@@ -171,7 +171,7 @@ KRIS EQU __enum__
 	const VANCE3
 
 	trainerclass LASS ; 19
-	const CARRIE ; Viridian Forest 
+	const CARRIE
 	const BRIDGET
 	const ALICE
 	const KRISE
@@ -318,7 +318,7 @@ KRIS EQU __enum__
 	const CLARISSA
 
 	trainerclass TEACHER ; 22
-	const COLETTE ;trainer school
+	const COLETTE ;trainer school 
 	const HILLARY
 	const SHIRLEY
 
@@ -326,10 +326,10 @@ KRIS EQU __enum__
 	const SABRINA1
 
 	trainerclass BUG_CATCHER ; 24
-	const DON ; Bug Catcher 1, Viridian Forest
-	const ROB ; Bug Catcher 2, Viridian Forest
-	const ED	; Bug Catcher 3, Viridian Forest
-	const WADE1	; Bug Catcher 4, Viridian Forest
+	const DON
+	const ROB
+	const ED
+	const WADE1
 	const BUG_CATCHER_BENNY
 	const AL
 	const JOSH

@@ -212,8 +212,6 @@ Route40BattleTowerGate_Blocks:
 Route2Gate_Blocks:
 Route29Route46Gate_Blocks:
 Route5SaffronGate_Blocks:
-ViridianForestPewterGate_Blocks:
-ViridianForestViridianGate_Blocks:
 	INCBIN "maps/NorthSouthGate.blk"
 
 BetaEcruteakCity_Blocks:
@@ -1047,8 +1045,3 @@ BetaBlank_Blocks:
 
 GoldenrodDeptStoreRoof_Blocks:
 	INCBIN "maps/GoldenrodDeptStoreRoof.blk"
-
-SECTION "Map Blocks 4", ROMX
-
-ViridianForest_Blocks:
-	INCBIN "maps/ViridianForest.blk"
