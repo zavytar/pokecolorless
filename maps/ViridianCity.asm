@@ -7,9 +7,10 @@
 	const VIRIDIANCITY_COOLTRAINERF
 
 ViridianCity_MapScripts:
-	db 0 ; scene scripts
-;	scene_script .DummyScene0 ; SCENE_VIRIDIANCITY_GRAMPS_BLOCK
-;	scene_script .DummyScene1 ; SCENE_VIRIDIANCITY_NOTHING
+	db 3 ; scene scripts
+	scene_script .DummyScene0 ; SCENE_VIRIDIANCITY_GRAMPS_BLOCK
+	scene_script .DummyScene1 ; SCENE_VIRIDIANCITY_GYM_LOCKED
+	scene_script .DummyScene2 ; SCENE_VIRIDIANCITY_NOTHING
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -20,6 +21,7 @@ ViridianCity_MapScripts:
 
 .DummyScene0:
 .DummyScene1:
+.DummyScene2:
 	end
 
 ViridianCityCoffeeGramps:
@@ -80,6 +82,15 @@ ViridianCityDreamEaterFisher:
 	waitbutton
 .NoRoomForDreamEater:
 	closetext
+	end
+
+ViridianCity_GymLockedScript:
+	turnobject PLAYER, UP
+	opentext
+	writetext ViridianCity_GymLockedText
+	waitbutton
+	closetext
+	applymovement PLAYER, ViridianCity_PlayerMovement1
 	end
 
 ViridianCityYoungsterScript:
@@ -201,6 +212,11 @@ TrainerHouseSignText:
 	text "#MON SCHOOL"
 	done
 
+ViridianCity_GymLockedText:
+	text "The GYM doors"
+	line "are locked…"
+	done
+
 ViridianCity_PlayerMovement1:
 	step DOWN
 	step_end
@@ -215,8 +231,10 @@ ViridianCity_MapEvents:
 	warp_event 29, 19, VIRIDIAN_MART, 2
 	warp_event 23, 25, VIRIDIAN_POKECENTER_1F, 1
 
-	db 1 ; coord events
+	db 2 ; coord events
 	coord_event 19, 13, SCENE_VIRIDIANCITY_GRAMPS_BLOCK, ViridianCity_GrampsBlockScript ; Gramps won't let you through
+	coord_event 32,  8, SCENE_VIRIDIANCITY_GYM_LOCKED, ViridianCity_GymLockedScript
+
 
 	db 6 ; bg events
 	bg_event 17, 17, BGEVENT_READ, ViridianCitySign

@@ -23,15 +23,13 @@ TrainerHouse1F_TeacherScript:
 	setlasttalked TRAINERHOUSE1F_TEACHER
 	loadtrainer TEACHER, COLETTE
 	startbattle
-	dontrestartmapmusic
-	reloadmap
-	waitbutton
+	reloadmapafterbattle
+	setevent EVENT_BEAT_TEACHER_COLETTE
 	opentext
 	writetext TrainerHouse1F_TeacherText3
 	waitbutton
-	setevent EVENT_BEAT_TEACHER_COLETTE
-	setevent EVENT_RED_OAKS_LAB
 	closetext
+	setevent EVENT_RED_OAKS_LAB
 	end
 
 .RefusedBattle:
@@ -56,6 +54,19 @@ TrainerHouse1FGentlemanScript:
 	jumptextfaceplayer TrainerHouse1F_GentlemanText
 
 TrainerHouse1F_Blackboard:
+	opentext
+	writetext TrainerHouse1F_Placeholder
+	waitbutton
+	closetext
+	end
+
+TrainerHouse1F_Placeholder:
+	text "It's a blackboard"
+	line "listing status"
+	cont "conditions."
+	done
+
+TrainerHouse1F_Blackboard2:
 	opentext
 	writetext TrainerHouse1F_BlackboardText
 .Loop:
@@ -137,44 +148,47 @@ TrainerHouseIllegibleBook:
 	jumptext TrainerHouseIllegibleText
 
 TrainerHouse1F_TeacherText1:
-	text "Welcome to TRAINER"
-	line "HOUSE, the newest"
+	text "Welcome to the"
+	line "TRAINER SCHOOL!"
 
 	para "…Oh?"
 
 	para "You're PROF. OAK's"
-	line "grandson! <PLAYER>,"
+	line "grandson!"
+	cont "<PLAYER>,"
 	cont "is that correct?"
-	cont "What brings you here?"
+	cont "What brings you"
+	cont "here?"
 
 	para "…"
 
 	para "You're on a"
-	line "#MON journey? That's"
-	cont "amazing!"
+	line "#MON journey?"
+	cont "That's great!"
 
 	para "Please, allow me"
-	line "to test your skills"
-	cont "in a battle."
+	line "to test your"
+	cont "battle skills."
 	done
 
 TrainerHouse1F_TeacherText2:
-	text "Let's see how well"
-	line "you know your"
+	text "Let's see how"
+	line "well you know"
 	cont "type matchups."
 	done
 
 TrainerHouse1F_TeacherText3:
-	text "You're very skilled"
-	line "indeed, <PLAYER>."
+	text "Wow, you're very"
+	line "talented, <PLAYER>."
 
 	para "You have a bright"
-	line "future ahead of you."
+	line "future ahead."
 
 	para "Your #MON looks"
-	line "stronger already."
-	cont "Why don't you show"
-	cont "it to your Grandpa?"
+	line "stronger, too."
+	cont "Why don't you"
+	cont "show your Grandpa"
+	cont "how it's grown?"
 	done
 
 TrainerHouse1F_TeacherText4:
@@ -192,12 +206,13 @@ TrainerHouse1F_TeacherText5:
 	text "Hello, <PLAYER>!"
 
 	para "Have you been"
-	line "training your #MON?"
+	line "training your"
+	cont "#MON?"
 	done
 
 TrainerHouse1F_TeacherWinText:
-	text "You know them well!"
-	line "Ha!"
+	text "You know them"
+	line "well! Ha!"
 	done
 
 TrainerHouse1F_Student1Text:
@@ -222,11 +237,14 @@ TrainerHouse1F_Student2Text:
 	done
 
 TrainerHouse1F_GentlemanText:
-	text "Hello, young man!"
+	text "#MON will"
+	line "become tame if you"
+	cont "treat them nicely."
 
-	para "It's always good to"
-	line "see the young eager"
-	cont "to learn!"
+	para "Some are said to"
+	line "evolve if they"
+	cont "grow friendly"
+	cont "enough."
 	done
 
 TrainerHouse1F_BlackboardText:
@@ -376,19 +394,19 @@ TrainerHouse1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2, 13, VIRIDIAN_CITY, 3
-	warp_event  3, 13, VIRIDIAN_CITY, 3
+	warp_event  4,  9, VIRIDIAN_CITY, 3
+	warp_event  5,  9, VIRIDIAN_CITY, 3
 
 	db 0 ; coord events
 
 	db 4 ; bg events
-	bg_event  5,  0, BGEVENT_READ, TrainerHouse1F_Blackboard
-	bg_event  7,  0, BGEVENT_READ, TrainerHouse1F_Blackboard
-	bg_event  7, 10, BGEVENT_READ, TrainerHouseNotes
-	bg_event  9, 10, BGEVENT_READ, TrainerHouseIllegibleBook
+	bg_event  3,  0, BGEVENT_READ, TrainerHouse1F_Blackboard
+	bg_event  4,  0, BGEVENT_READ, TrainerHouse1F_Blackboard
+	bg_event  3,  4, BGEVENT_READ, TrainerHouseNotes
+	bg_event  7,  4, BGEVENT_READ, TrainerHouseIllegibleBook
 
 	db 4 ; object events
-	object_event  0, 11, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrainerHouse1F_TeacherScript, -1
-	object_event  7, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerHouse1F_Student1Script, -1
-	object_event  6,  2, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerHouse1F_Student2Script, -1
-	object_event  2,  4, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FGentlemanScript, -1
+	object_event  5,  1, SPRITE_RECEPTIONIST, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, TrainerHouse1F_TeacherScript, -1
+	object_event  7,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerHouse1F_Student1Script, -1
+	object_event  3,  5, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, TrainerHouse1F_Student2Script, -1
+	object_event  1,  6, SPRITE_GENTLEMAN, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerHouse1FGentlemanScript, -1

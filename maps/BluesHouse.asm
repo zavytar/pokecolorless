@@ -81,8 +81,8 @@ BluesHouse_AlreadyGotTM:
 BluesHouse_DaisyText1:
 	text "DAISY: Hi, <PLAYER>!"
 
-	para "Is that the #MON"
-	line "Grandpa gave you?"
+	para "Did Grampa give"
+	line "you that #MON?"
 	cont "It's really cute."
 
 	para "Don't forget to"
@@ -114,14 +114,6 @@ BluesHouse_DaisyText3:
 	para "If you see they're"
 	line "tired, please give"
 	cont "them some rest."
-	done
-
-DaisyHelloText:
-	text "DAISY: Hi, <PLAYER>!"
-
-	para "Is that the #MON"
-	line "you got from Grandpa?"
-	cont "It's really cute."
 	done
 
 DaisyOfferGroomingText:

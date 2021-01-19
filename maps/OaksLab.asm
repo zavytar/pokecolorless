@@ -9,10 +9,11 @@
 	const OAKSLAB_RED
 
 OaksLab_MapScripts:
-	db 3 ; scene scripts
-	scene_script .MeetOak ; SCENE_OAKSLAB_INTRO
+	db 4 ; scene scripts
+	scene_script .MeetOak 		; SCENE_OAKSLAB_INTRO
 	scene_script .DummyScene1 ; SCENE_OAKSLAB_CANT_LEAVE
 	scene_script .DummyScene2 ; SCENE_OAKSLAB_NOTHING
+	scene_script .DummyScene3 ; SCENE_OAKSLAB_POKEDEX
 
 	db 0 ; callbacks
 
