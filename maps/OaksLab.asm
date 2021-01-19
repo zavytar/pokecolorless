@@ -25,6 +25,7 @@ OaksLab_MapScripts:
 	clearevent EVENT_VIRIDIAN_GRAMPS_GRUMPY
 	setevent EVENT_VIRIDIAN_GRAMPS_OKAY
 	turnobject PLAYER, UP
+;	pause 20
 ;	special FadeInPalettes
 	opentext
 	writetext OaksLab_IntroText1
@@ -37,9 +38,8 @@ OaksLab_MapScripts:
 	end
 
 .DummyScene1:
-	end
-
 .DummyScene2:
+.DummyScene3: ;might change to full scene where Player walks up to Oak
 	end
 
 OakScript:
@@ -51,10 +51,11 @@ OakScript:
 	end
 
 OaksLab_EeveeBallScript:
-;	pokepic EEVEE
-;	cry EEVEE
-;	waitbutton
-;	closepokepic
+	refreshscreen
+	pokepic EEVEE
+	cry EEVEE
+	waitbutton
+	closepokepic
 	opentext
 	writetext OaksLab_EeveeBallText
 	waitbutton
