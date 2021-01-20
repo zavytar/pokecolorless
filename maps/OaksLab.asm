@@ -13,7 +13,7 @@ OaksLab_MapScripts:
 	scene_script .MeetOak 		; SCENE_OAKSLAB_INTRO
 	scene_script .DummyScene1 ; SCENE_OAKSLAB_CANT_LEAVE
 	scene_script .DummyScene2 ; SCENE_OAKSLAB_NOTHING
-	scene_script .DummyScene3 ; SCENE_OAKSLAB_POKEDEX
+	scene_script .DummyScene3	; SCENE_OAKSLAB_POKEDEX
 
 	db 0 ; callbacks
 
@@ -40,7 +40,30 @@ OaksLab_MapScripts:
 
 .DummyScene1:
 .DummyScene2:
-.DummyScene3: ;might change to full scene where Player walks up to Oak
+.DummyScene3:
+	end
+
+OaksLab_GetDexScriptR:
+	opentext
+	writetext OaksLab_PlayerText6
+	waitbutton
+	closetext
+	applymovement PLAYER, OaksLab_PlayerMovement6 ;step LEFT
+	sjump OaksLab_GetDexScript
+
+OaksLab_GetDexScriptL:
+	opentext
+	writetext OaksLab_PlayerText6
+	waitbutton
+	closetext
+OaksLab_GetDexScript:
+	turnobject OAKSLAB_RED, UP
+	applymovement PLAYER, OaksLab_PlayerMovement7
+	opentext
+	writetext OaksLab_PlayerText7
+	waitbutton
+	closetext
+	setscene SCENE_OAKSLAB_NOTHING
 	end
 
 OakScript:
@@ -64,14 +87,14 @@ OaksLab_EeveeBallScript:
 	checkevent EVENT_OAK_OUT
 	iffalse OaksLab_DoNothing
 ; Oak comes back
-	moveobject OAKSLAB_OAK, 4, 7
+	moveobject OAKSLAB_OAK, 5, 7
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
 	pause 15
 	applymovement PLAYER, OaksLab_PlayerMovement1
 	appear OAKSLAB_OAK
 	applymovement OAKSLAB_OAK, OaksLab_OakWalksUp
-	moveobject OAKSLAB_RED, 4, 8
+	moveobject OAKSLAB_RED, 5, 8
 	turnobject OAKSLAB_OAK, DOWN
 	appear OAKSLAB_RED
 	applymovement OAKSLAB_RED, OaksLab_OakWalksUp
@@ -369,6 +392,102 @@ OaksLab_PlayerText5:
 	line "you on!"
 	done
 
+OaksLab_PlayerText6:
+	text "<PLAYER>: Gramps!"
+	done
+
+OaksLab_PlayerText7:
+	text "<PLAYER>: Gramps,"
+	line "my #MON has"
+	cont "grown stronger!"
+	cont "Check it out!"
+	done
+
+OaksLab_PlayerText8:
+	text "<PLAYER>: Alright"
+	line "Gramps! Leave it"
+	cont "all to me!"
+	done
+
+OaksLab_PlayerText9:
+	text "<RIVAL>, I hate to"
+	line "say it, but I"
+	cont "don't need you!"
+
+	para "I know! I'll"
+	line "borrow a TOWN MAP"
+	cont "from my sis!"
+
+	para "I'll tell her not"
+	line "to lend you one,"
+	cont "<RIVAL>! Hahaha!"
+
+OaksLab_OakText7:
+	text "OAK: Ah, <PLAYER>,"
+	line "good timing!"
+
+	para "I needed to ask"
+	line "both of you to do"
+	cont "something for me."
+	done
+
+OaksLab_OakText8:
+	text "On the desk there"
+	line "is my invention,"
+	cont "the #DEX!"
+
+	para "It automatically"
+	line "records data on"
+	cont "#MON you've"
+	cont "seen or caught!"
+
+	para "It's a hi-tech"
+	line "encyclopedia"
+	done
+
+OaksLab_OakText9:
+	text "OAK: <RIVAL> and"
+	line "<PLAYER>! Take"
+	cont "these with you!"
+	done
+
+OaksLab_OakText10:
+	text "And here, use these"
+	line "to catch #MON!"
+	done
+
+OaksLab_OakText11:
+	text "To make a complete"
+	line "guide on all the"
+	cont "#MON in the"
+	cont "world"
+
+	para "That was my dream!"
+
+	para "But, I'm too old!"
+	line "I can't do it!"
+
+	para "So, I want you two"
+	line "to fulfill my"
+	cont "dream for me!"
+
+	para "Get moving, you"
+	line "two!"
+
+	para "This is a great"
+	line "undertaking in"
+	cont "#MON history!"
+	done
+
+
+
+OaksLab_GotDexText:
+	text "<PLAYER> got"
+	line "#DEX from OAK!"
+	done
+
+
+
 OaksLab_ReceivedStarterText:
 	text "<PLAYER> snatched"
 	line "the #MON!"
@@ -516,13 +635,11 @@ OaksLab_PlayerMovement1:
 	step LEFT
 	step LEFT
 	step LEFT
-	step LEFT
 	step UP
 	step_end
 
 OaksLab_PlayerMovement2:
 	step DOWN
-	step RIGHT
 	step RIGHT
 	step RIGHT
 	step_end
@@ -535,13 +652,12 @@ OaksLab_PlayerMovement3:
 OaksLab_PlayerMovement4:
 	step LEFT
 	step LEFT
-	step LEFT
 	step DOWN
 	step DOWN
 	step_end
 
 OaksLab_PlayerMovement5:
-	step RIGHT
+	step LEFT
 	step DOWN
 	step DOWN
 	step DOWN
@@ -549,9 +665,19 @@ OaksLab_PlayerMovement5:
 	step DOWN
 	step_end
 
+OaksLab_PlayerMovement6:
+	step LEFT
+	step_end
+
+OaksLab_PlayerMovement7:
+	step UP
+	step UP
+	step UP
+	step UP
+	step_end
+
 OaksLab_RedMovement1:
 	step DOWN
-	step RIGHT
 	step RIGHT
 	step RIGHT
 	turn_head UP
@@ -563,7 +689,6 @@ OaksLab_RedMovement2:
 
 OaksLab_RedMovement3:
 	step DOWN
-	step LEFT
 	step LEFT
 	step LEFT
 	step LEFT
@@ -593,9 +718,11 @@ OaksLab_MapEvents:
 	warp_event  4, 11, PALLET_TOWN, 3
 	warp_event  5, 11, PALLET_TOWN, 3
 
-	db 2 ; coord events
+	db 4 ; coord events
 	coord_event  4,  6, SCENE_OAKSLAB_CANT_LEAVE, OaksLab_TryToLeaveScript
 	coord_event  5,  6, SCENE_OAKSLAB_CANT_LEAVE, OaksLab_TryToLeaveScript
+	coord_event  4,  7, SCENE_OAKSLAB_POKEDEX, OaksLab_GetDexScriptL
+	coord_event  5,  7, SCENE_OAKSLAB_POKEDEX, OaksLab_GetDexScriptR
 
 	db 16 ; bg events
 	bg_event  6,  1, BGEVENT_READ, OaksLabBookshelf
@@ -616,11 +743,11 @@ OaksLab_MapEvents:
 	bg_event  0,  1, BGEVENT_READ, OaksLabPC
 
 	db 8 ; object events
-	object_event  4,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakScript, EVENT_OAK_OUT ;
+	object_event  5,  2, SPRITE_OAK, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OakScript, EVENT_OAK_OUT ;
 	object_event  1,  8, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant1Script, -1
 	object_event  8,  9, SPRITE_SCIENTIST, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant2Script, -1
 	object_event  2, 10, SPRITE_SCIENTIST, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, OaksAssistant3Script, -1
 	object_event  7,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_EeveeBallScript, EVENT_GOT_EEVEE_FROM_OAK ;Ball w/ Eevee
 	object_event  2,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_PokedexScript, -1 ;Dex1
 	object_event  3,  1, SPRITE_POKEDEX, SPRITEMOVEDATA_STILL, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_PokedexScript, -1 ;Dex2
-	object_event  4,  3, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_RedScript, EVENT_RED_OAKS_LAB ; Red
+	object_event  5,  3, SPRITE_SILVER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OaksLab_RedScript, EVENT_RED_OAKS_LAB ; Red

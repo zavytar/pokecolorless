@@ -29,7 +29,8 @@ TrainerHouse1F_TeacherScript:
 	writetext TrainerHouse1F_TeacherText3
 	waitbutton
 	closetext
-	setevent EVENT_RED_OAKS_LAB
+	clearevent EVENT_RED_OAKS_LAB
+	setmapscene OAKS_LAB, SCENE_OAKSLAB_POKEDEX
 	end
 
 .RefusedBattle:
