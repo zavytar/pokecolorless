@@ -22,7 +22,7 @@ SCENE_FINISHED EQU 1
 	const SCENE_OAKSLAB_NOTHING						; 2
 	const SCENE_OAKSLAB_POKEDEX
 
-; wViridianCitySceneID, previously wCeruleanGymSceneID
+; wViridianCitySceneID, previously wCeruleanGymSceneID 
 	const_def
 	const SCENE_VIRIDIANCITY_GRAMPS_BLOCK	; 0
 	const SCENE_VIRIDIANCITY_GYM_LOCKED		; 1

@@ -8,16 +8,16 @@ Flypoints:
 	const_def
 ; Johto
 	flypoint NEW_BARK,     NEW_BARK_TOWN
-	flypoint CHERRYGROVE,  CHERRYGROVE_CITY
-	flypoint VIOLET,       VIOLET_CITY
-	flypoint AZALEA,       AZALEA_TOWN
-	flypoint GOLDENROD,    GOLDENROD_CITY
-	flypoint ECRUTEAK,     ECRUTEAK_CITY
-	flypoint OLIVINE,      OLIVINE_CITY
-	flypoint CIANWOOD,     CIANWOOD_CITY
-	flypoint MAHOGANY,     MAHOGANY_TOWN
-	flypoint LAKE_OF_RAGE, LAKE_OF_RAGE
-	flypoint BLACKTHORN,   BLACKTHORN_CITY
+	flypoint CHERRYGROVE,  SPAWN_N_A
+	flypoint VIOLET,       SPAWN_N_A
+	flypoint AZALEA,       SPAWN_N_A
+	flypoint GOLDENROD,    SPAWN_N_A
+	flypoint ECRUTEAK,     SPAWN_N_A
+	flypoint OLIVINE,      SPAWN_N_A
+	flypoint CIANWOOD,     SPAWN_N_A
+	flypoint MAHOGANY,     SPAWN_N_A
+	flypoint LAKE_OF_RAGE, SPAWN_N_A
+	flypoint BLACKTHORN,   SPAWN_N_A
 	flypoint MT_SILVER,    SILVER_CAVE
 
 ; Kanto

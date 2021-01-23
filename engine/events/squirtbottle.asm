@@ -21,12 +21,13 @@ _Squirtbottle:
 	text_end
 
 .CheckCanUseSquirtbottle:
+; TODO: Replace GROUP_NONE and MAP_NONE with the map of the Squirtbottle Sudowoodo.
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_36
+	cp GROUP_NONE
 	jr nz, .nope
 
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_36
+	cp MAP_NONE
 	jr nz, .nope
 
 	farcall GetFacingObject
