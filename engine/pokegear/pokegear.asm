@@ -572,6 +572,7 @@ PokegearMap_KantoMap:
 	jr PokegearMap_ContinueMap
 
 PokegearMap_JohtoMap:
+; TODO: Change these to the last and first landmarks of the Johto region.
 	ld d, SILVER_CAVE
 	ld e, NEW_BARK_TOWN
 PokegearMap_ContinueMap:
@@ -732,16 +733,17 @@ PokegearMap_UpdateCursorPosition:
 	ret
 
 TownMap_GetKantoLandmarkLimits:
+; TODO: Change these to the last and first landmarks of the Kanto region.
 	ld a, [wStatusFlags]
 	bit STATUSFLAGS_HALL_OF_FAME_F, a
 	jr z, .not_hof
-	ld d, ROUTE_28
+	ld d, INDIGO_PLATEAU
 	ld e, PALLET_TOWN
 	ret
 
 .not_hof
-	ld d, ROUTE_28
-	ld e, VICTORY_ROAD
+	ld d, INDIGO_PLATEAU
+	ld e, PALLET_TOWN
 	ret
 
 PokegearRadio_Init:
