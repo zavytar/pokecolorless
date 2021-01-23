@@ -23,7 +23,7 @@ ENDM
 ; Each map also has associated data:
 ; - attributes (see data/maps/attributes.asm)
 ; - blocks (see data/maps/blocks.asm)
-; - scripts and events (see data/maps/scripts.asm)
+; - scripts and events (see data/maps/scripts.asm) 
 	const_def
 
 	newgroup                                                      ;  1
