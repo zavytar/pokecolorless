@@ -27,6 +27,7 @@ INCLUDE "maps/OaksLab.asm"
 
 SECTION "Map Scripts 4", ROMX
 
+INCLUDE "maps/IndigoPlateau.asm"
 INCLUDE "maps/IndigoPlateauPokecenter1F.asm"
 INCLUDE "maps/WillsRoom.asm"
 INCLUDE "maps/KogasRoom.asm"
@@ -41,7 +42,23 @@ SECTION "Map Scripts 5", ROMX
 INCLUDE "maps/Route1.asm"
 INCLUDE "maps/Route2.asm"
 INCLUDE "maps/Route3.asm"
+INCLUDE "maps/Route22.asm"
+INCLUDE "maps/VictoryRoadGate.asm"
 INCLUDE "maps/ViridianCity.asm"
+INCLUDE "maps/PewterCity.asm"
+INCLUDE "maps/ViridianForest.asm"
+INCLUDE "maps/ViridianForestViridianGate.asm"
+INCLUDE "maps/ViridianForestPewterGate.asm"
+INCLUDE "maps/TrainerHouse1F.asm"
+INCLUDE "maps/ViridianNicknameSpeechHouse.asm"
+INCLUDE "maps/PewterNidoranSpeechHouse.asm"
+INCLUDE "maps/PewterSnoozeSpeechHouse.asm"
+INCLUDE "maps/ViridianPokecenter1F.asm"
+INCLUDE "maps/ViridianMart.asm"
+INCLUDE "maps/PewterPokecenter1F.asm"
+INCLUDE "maps/PewterMart.asm"
+INCLUDE "maps/PewterMuseum1F.asm"
+INCLUDE "maps/PewterMuseum2F.asm"
 
 
 SECTION "Map Scripts 6", ROMX

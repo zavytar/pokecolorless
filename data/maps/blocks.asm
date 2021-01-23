@@ -3,11 +3,17 @@ SECTION "Map Blocks 1", ROMX
 Pokecenter2F_Blocks:
 	INCBIN "maps/Pokecenter2F.blk"
 
-;Route30BerryHouse_Blocks:
-;	INCBIN "maps/House1.blk"
+BluesHouse_Blocks:
+Route2NuggetHouse_Blocks:
+ViridianNicknameSpeechHouse_Blocks:
+PewterNidoranSpeechHouse_Blocks:
+PewterSnoozeSpeechHouse_Blocks:
+	INCBIN "maps/House1.blk"
 
-;Route5SaffronGate_Blocks:
-;	INCBIN "maps/NorthSouthGate.blk"
+ViridianForestViridianGate_Blocks:
+ViridianForestPewterGate_Blocks:
+Route2Gate_Blocks:
+	INCBIN "maps/NorthSouthGate.blk"
 
 ;Route31VioletGate_Blocks:
 ;	INCBIN "maps/EastWestGate.blk"
@@ -16,14 +22,16 @@ SECTION "Map Blocks 2", ROMX
 
 NewBarkTown_Blocks:
 	INCBIN "maps/NewBarkTown.blk"
-	
-;CeruleanMart_Blocks:
-;PewterMart_Blocks:
-;ViridianMart_Blocks:
-;	INCBIN "maps/Mart.blk"
 
-;ViridianPokecenter1F_Blocks:
-;	INCBIN "maps/Pokecenter1F.blk"
+;CeruleanMart_Blocks:
+
+ViridianMart_Blocks:
+PewterMart_Blocks:
+	INCBIN "maps/Mart.blk"
+
+ViridianPokecenter1F_Blocks:
+PewterPokecenter1F_Blocks:
+	INCBIN "maps/Pokecenter1F.blk"
 
 ;BetaPewterMuseumOfScience1F_Blocks:
 ;	INCBIN "maps/unused/BetaPewterMuseumOfScience1F.blk"
@@ -84,8 +92,8 @@ RedsHouse2F_Blocks:
 OaksLab_Blocks:
 	INCBIN "maps/OaksLab.blk"
 
-;PewterGym_Blocks:
-;	INCBIN "maps/PewterGym.blk"
+PewterGym_Blocks:
+	INCBIN "maps/PewterGym.blk"
 
 ;DiglettsCave_Blocks:
 ;	INCBIN "maps/DiglettsCave.blk"

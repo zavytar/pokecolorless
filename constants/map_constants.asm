@@ -49,6 +49,7 @@ ENDM
 	map_const ROUTE_2_NUGGET_HOUSE,                         4,  4 ; 10
 	map_const ROUTE_2_GATE,                                 5,  4 ; 11
 	map_const VICTORY_ROAD_GATE,                           10,  9 ; 12
+	map_const VIRIDIAN_FOREST_VIRIDIAN_GATE,								5,	4	; 13
 
 	newgroup                                                      ;  3 (MapGroup_Pewter)
 
@@ -62,6 +63,7 @@ ENDM
 	map_const PEWTER_SNOOZE_SPEECH_HOUSE,                   4,  4 ;  8
 	map_const PEWTER_MUSEUM_1F,															5,  5 ;  9
 	map_const PEWTER_MUSEUM_2F,															5,  5 ; 10
+	map_const VIRIDIAN_FOREST_PEWTER_GATE,									5,	4	;	11
 
 	newgroup                                                      ;  4 (MapGroup_Dungeons)
 
@@ -69,15 +71,15 @@ ENDM
 
 	newgroup                                                      ; 11 (MapGroup_Indigo)
 
-	map_const INDIGO_PLATEAU,															 10,  9 ;  0
-	map_const ROUTE_23,                                    10,  9 ;  1
-	map_const INDIGO_PLATEAU_POKECENTER_1F,                 9,  7 ;  2
-	map_const WILLS_ROOM,                                   5,  9 ;  3
-	map_const KOGAS_ROOM,                                   5,  9 ;  4
-	map_const BRUNOS_ROOM,                                  5,  9 ;  5
-	map_const KARENS_ROOM,                                  5,  9 ;  6
-	map_const LANCES_ROOM,                                  5, 12 ;  7
-	map_const HALL_OF_FAME,                                 5,  7 ;  8
+	map_const INDIGO_PLATEAU,															 10,  9 ;  1
+	map_const ROUTE_23,                                    10,  9 ;  2
+	map_const INDIGO_PLATEAU_POKECENTER_1F,                 9,  7 ;  3
+	map_const WILLS_ROOM,                                   5,  9 ;  4
+	map_const KOGAS_ROOM,                                   5,  9 ;  5
+	map_const BRUNOS_ROOM,                                  5,  9 ;  6
+	map_const KARENS_ROOM,                                  5,  9 ;  7
+	map_const LANCES_ROOM,                                  5, 12 ;  8
+	map_const HALL_OF_FAME,                                 5,  7 ;  9
 
 
 	newgroup                                                      ; 13 (MapGroup_BattleTower)
