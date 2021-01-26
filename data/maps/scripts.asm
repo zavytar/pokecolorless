@@ -57,8 +57,8 @@ INCLUDE "maps/ViridianPokecenter1F.asm"
 INCLUDE "maps/ViridianMart.asm"
 INCLUDE "maps/PewterPokecenter1F.asm"
 INCLUDE "maps/PewterMart.asm"
-INCLUDE "maps/PewterMuseum1F.asm"
-INCLUDE "maps/PewterMuseum2F.asm"
+;INCLUDE "maps/PewterMuseum1F.asm"
+;INCLUDE "maps/PewterMuseum2F.asm"
 
 
 SECTION "Map Scripts 6", ROMX

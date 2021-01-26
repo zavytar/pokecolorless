@@ -118,11 +118,11 @@ ENDM
 
 	map_attributes PalletTown, PALLET_TOWN, $0f, NORTH | SOUTH
 	connection north, Route1, ROUTE_1, 0
-	connection south, Route21, ROUTE_21, 0
+	;connection south, Route21, ROUTE_21, 0
 
 	map_attributes Route3, ROUTE_3, $2c, WEST | EAST
 	connection west, PewterCity, PEWTER_CITY, -5
-	connection east, Route4, ROUTE_4, 0
+;	connection east, Route4, ROUTE_4, 0
 
 	map_attributes IndigoPlateauPokecenter1F, INDIGO_PLATEAU_POKECENTER_1F, $00, 0
 	map_attributes WillsRoom, WILLS_ROOM, $00, 0

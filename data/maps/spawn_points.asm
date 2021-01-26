@@ -24,6 +24,6 @@ SpawnPoints:
 	spawn ROUTE_23,                    9,  6
 
 	spawn NEW_BARK_TOWN,              13,  6
-	spawn BATTLE_TOWER_OUTSIDE				 8, 10
+	spawn BATTLE_TOWER_OUTSIDE,				 8, 10
 	spawn NONE,												 6,  2
 	spawn N_A,                        -1, -1

@@ -71,7 +71,7 @@ BrunosRoom_Blocks:
 KarensRoom_Blocks:
 	INCBIN "maps/KarensRoom.blk"
 
-;SECTION "Map Blocks 3", ROMX
+SECTION "Map Blocks 3", ROMX
 
 ;PokemonFanClub_Blocks:
 ;SafariZoneWardensHome_Blocks:

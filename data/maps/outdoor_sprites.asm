@@ -3,7 +3,7 @@
 
 OutdoorSprites:
 ; entries correspond to map groups
-	dw PalletGroupSprites:
+	dw PalletGroupSprites
 	dw ViridianGroupSprites
 	dw PewterGroupSprites
 	dw DungeonsGroupSprites
