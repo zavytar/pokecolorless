@@ -23,7 +23,7 @@ INCLUDE "maps/RedsHouse1F.asm"
 INCLUDE "maps/RedsHouse2F.asm"
 INCLUDE "maps/BluesHouse.asm"
 INCLUDE "maps/OaksLab.asm"
-
+ 
 
 SECTION "Map Scripts 4", ROMX
 
