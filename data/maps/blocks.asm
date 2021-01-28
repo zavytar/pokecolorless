@@ -18,7 +18,37 @@ Route2Gate_Blocks:
 ;Route31VioletGate_Blocks:
 ;	INCBIN "maps/EastWestGate.blk"
 
+PalletTown_Blocks:
+	INCBIN "maps/PalletTown.blk"
+
+ViridianCity_Blocks:
+	INCBIN "maps/ViridianCity.blk"
+
+ViridianForest_Blocks:
+	INCBIN "maps/ViridianForest.blk"
+
+PewterCity_Blocks:
+	INCBIN "maps/PewterCity.blk"
+
+IndigoPlateau_Blocks:
+	INCBIN "maps/IndigoPlateau.blk"
+
 SECTION "Map Blocks 2", ROMX
+
+Route1_Blocks:
+	INCBIN "maps/Route1.blk"
+
+Route2_Blocks:
+	INCBIN "maps/Route2.blk"
+
+Route3_Blocks:
+	INCBIN "maps/Route3.blk"
+
+Route22_Blocks:
+	INCBIN "maps/Route22.blk"
+
+VictoryRoadGate_Blocks:
+	INCBIN "maps/VictoryRoadGate.blk"
 
 NewBarkTown_Blocks:
 	INCBIN "maps/NewBarkTown.blk"
@@ -39,8 +69,8 @@ PewterPokecenter1F_Blocks:
 ;BetaPewterMuseumOfScience2F_Blocks:
 ;	INCBIN "maps/unused/BetaPewterMuseumOfScience2F.blk"
 
-;Colosseum_Blocks:
-;	INCBIN "maps/Colosseum.blk"
+Colosseum_Blocks:
+	INCBIN "maps/Colosseum.blk"
 
 TradeCenter_Blocks:
 TimeCapsule_Blocks:

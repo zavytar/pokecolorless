@@ -2293,7 +2293,7 @@ FlyMap:
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
 ; ..and end at Silver Cave.
-	ld a, FLY_MT_SILVER
+	ld a, FLY_NEW_BARK
 	ld [wEndFlypoint], a
 ; Fill out the map
 	call FillJohtoMap
@@ -2343,7 +2343,7 @@ FlyMap:
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
 ; ..and end at Silver Cave
-	ld a, FLY_MT_SILVER
+	ld a, FLY_NEW_BARK
 	ld [wEndFlypoint], a
 	call FillJohtoMap
 	pop af

@@ -10,7 +10,7 @@ _Squirtbottle:
 	special UpdateTimePals
 	callasm .CheckCanUseSquirtbottle
 	iffalse .NothingHappenedScript
-	farsjump WateredWeirdTreeScript
+;	farsjump WateredWeirdTreeScript
 
 .NothingHappenedScript:
 	jumptext .NothingHappenedText

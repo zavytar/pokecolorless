@@ -109,6 +109,9 @@ ENDM
 	connection south, Route1, ROUTE_1, 10
 	connection west, Route22, ROUTE_22, 4
 
+	map_attributes IndigoPlateau, INDIGO_PLATEAU, $0f, 0 ; SOUTH
+;	connection south, Route1, ROUTE_1, 10
+
 	map_attributes Route22, ROUTE_22, $2c, EAST
 	connection east, ViridianCity, VIRIDIAN_CITY, -4
 
@@ -118,11 +121,34 @@ ENDM
 
 	map_attributes PalletTown, PALLET_TOWN, $0f, NORTH | SOUTH
 	connection north, Route1, ROUTE_1, 0
-	;connection south, Route21, ROUTE_21, 0
+;	connection south, Route21, ROUTE_21, 0
 
 	map_attributes Route3, ROUTE_3, $2c, WEST | EAST
 	connection west, PewterCity, PEWTER_CITY, -5
 ;	connection east, Route4, ROUTE_4, 0
+
+	map_attributes OaksLab, OAKS_LAB, $00, 0
+	map_attributes BluesHouse, BLUES_HOUSE, $00, 0
+	map_attributes RedsHouse1F, REDS_HOUSE_1F, $00, 0
+	map_attributes RedsHouse2F, REDS_HOUSE_2F, $00, 0
+
+	map_attributes ViridianGym, VIRIDIAN_GYM, $00, 0
+	map_attributes ViridianNicknameSpeechHouse, VIRIDIAN_NICKNAME_SPEECH_HOUSE, $00, 0
+	map_attributes TrainerHouse1F, TRAINER_HOUSE_1F, $00, 0
+	map_attributes ViridianMart, VIRIDIAN_MART, $00, 0
+	map_attributes ViridianPokecenter1F, VIRIDIAN_POKECENTER_1F, $00, 0
+	map_attributes Route2NuggetHouse, ROUTE_2_NUGGET_HOUSE, $00, 0
+	map_attributes Route2Gate, ROUTE_2_GATE, $00, 0
+	map_attributes VictoryRoadGate, VICTORY_ROAD_GATE, $00, 0
+
+	map_attributes PewterNidoranSpeechHouse, PEWTER_NIDORAN_SPEECH_HOUSE, $00, 0
+	map_attributes PewterGym, PEWTER_GYM, $00, 0
+	map_attributes PewterMart, PEWTER_MART, $00, 0
+	map_attributes PewterPokecenter1F, PEWTER_POKECENTER_1F, $00, 0
+	map_attributes PewterSnoozeSpeechHouse, PEWTER_SNOOZE_SPEECH_HOUSE, $00, 0
+	map_attributes ViridianForestPewterGate, VIRIDIAN_FOREST_PEWTER_GATE, $00, 0
+
+	map_attributes ViridianForest, VIRIDIAN_FOREST, $00, 0
 
 	map_attributes IndigoPlateauPokecenter1F, INDIGO_PLATEAU_POKECENTER_1F, $00, 0
 	map_attributes WillsRoom, WILLS_ROOM, $00, 0
@@ -136,6 +162,9 @@ ENDM
 	map_attributes TradeCenter, TRADE_CENTER, $00, 0
 	map_attributes Colosseum, COLOSSEUM, $00, 0
 	map_attributes TimeCapsule, TIME_CAPSULE, $00, 0
+
+	map_attributes MobileTradeRoom, MOBILE_TRADE_ROOM, $00, 0
+	map_attributes MobileBattleRoom, MOBILE_BATTLE_ROOM, $00, 0
 
 	map_attributes BattleTowerOutside, BATTLE_TOWER_OUTSIDE, $05, 0
 	map_attributes BattleTower1F, BATTLE_TOWER_1F, $00, 0

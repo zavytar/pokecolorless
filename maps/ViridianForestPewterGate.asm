@@ -3,12 +3,7 @@ ViridianForestPewterGate_MapScripts:
 
 	db 0 ; callbacks
 
-ViridianForestSign:
-	jumptext ViridianForestSignText
 
-ViridianForestSignText:
-	text "VIRIDIAN FOREST"
-	done
 
 ViridianForestPewterGate_MapEvents:
 	db 0, 0 ; filler
@@ -21,7 +16,6 @@ ViridianForestPewterGate_MapEvents:
 
 	db 0 ; coord events
 
-	db 1 ; bg events
-	bg_event 11,  7, BGEVENT_READ, ViridianForestSign
+	db 0 ; bg events
 
 	db 0 ; object events

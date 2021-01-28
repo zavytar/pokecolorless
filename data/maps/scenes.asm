@@ -21,9 +21,9 @@ MapScenes::
 	scene_var LANCES_ROOM,                                 wLancesRoomSceneID
 	scene_var HALL_OF_FAME,                                wHallOfFameSceneID
 
-	scene_var PLAYERS_HOUSE_1F,                            wPlayersHouse1FSceneID
+	scene_var BLUES_HOUSE,         			                   wPlayersHouse1FSceneID
 
-	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID
+;	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID
 	scene_var BATTLE_TOWER_1F,                             wBattleTower1FSceneID
 	scene_var BATTLE_TOWER_BATTLE_ROOM,                    wBattleTowerBattleRoomSceneID
 	scene_var BATTLE_TOWER_ELEVATOR,                       wBattleTowerElevatorSceneID
@@ -33,7 +33,7 @@ MapScenes::
 ;	scene_var FAST_SHIP_1F,                                wFastShip1FSceneID
 ;	scene_var FAST_SHIP_B1F,                               wFastShipB1FSceneID
 
-	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
+;	scene_var MOUNT_MOON_SQUARE,                           wMountMoonSquareSceneID
 	scene_var MOBILE_TRADE_ROOM,                           wMobileTradeRoomSceneID
 	scene_var MOBILE_BATTLE_ROOM,                          wMobileBattleRoomSceneID
 	db -1 ; end

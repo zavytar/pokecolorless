@@ -34,6 +34,7 @@ ENDM
 	map_const REDS_HOUSE_2F,                                4,  4 ;  4
 	map_const BLUES_HOUSE,                                  4,  4 ;  5
 	map_const OAKS_LAB,                                     5,  6 ;  6
+	map_const NEW_BARK_TOWN,																5,	5 ;	 7
 
 	newgroup                                                      ;  2 (MapGroup_Viridian)
 

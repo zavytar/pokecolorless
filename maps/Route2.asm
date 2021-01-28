@@ -65,7 +65,7 @@ Route2_MapEvents:
 	warp_event 15, 31, ROUTE_2_GATE, 3
 	warp_event 16, 27, ROUTE_2_GATE, 1
 	warp_event 17, 27, ROUTE_2_GATE, 2
-	warp_event 12,  7, DIGLETTS_CAVE, 3
+;	warp_event 12,  7, DIGLETTS_CAVE, 3
 
 	db 0 ; coord events
 

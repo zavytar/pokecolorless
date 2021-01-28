@@ -4,6 +4,8 @@ INCLUDE "maps/Pokecenter2F.asm"
 INCLUDE "maps/TradeCenter.asm"
 INCLUDE "maps/Colosseum.asm"
 INCLUDE "maps/TimeCapsule.asm"
+INCLUDE "maps/MobileTradeRoom.asm"
+INCLUDE "maps/MobileBattleRoom.asm"
 
 
 SECTION "Map Scripts 2", ROMX
@@ -23,7 +25,7 @@ INCLUDE "maps/RedsHouse1F.asm"
 INCLUDE "maps/RedsHouse2F.asm"
 INCLUDE "maps/BluesHouse.asm"
 INCLUDE "maps/OaksLab.asm"
- 
+
 
 SECTION "Map Scripts 4", ROMX
 
@@ -55,10 +57,14 @@ INCLUDE "maps/PewterNidoranSpeechHouse.asm"
 INCLUDE "maps/PewterSnoozeSpeechHouse.asm"
 INCLUDE "maps/ViridianPokecenter1F.asm"
 INCLUDE "maps/ViridianMart.asm"
+INCLUDE "maps/ViridianGym.asm"
 INCLUDE "maps/PewterPokecenter1F.asm"
 INCLUDE "maps/PewterMart.asm"
+INCLUDE "maps/PewterGym.asm"
 ;INCLUDE "maps/PewterMuseum1F.asm"
 ;INCLUDE "maps/PewterMuseum2F.asm"
+INCLUDE "maps/Route2NuggetHouse.asm"
+INCLUDE "maps/Route2Gate.asm"
 
 
 SECTION "Map Scripts 6", ROMX

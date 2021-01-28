@@ -57,10 +57,10 @@ SpecialAerodactylChamber:
 
 	call GetMapAttributesPointer
 	ld a, h
-	cp HIGH(NewBarkTown_MapAttributes)
+	cp HIGH(PalletTown_MapAttributes)
 	jr nz, .nope
 	ld a, l
-	cp LOW(NewBarkTown_MapAttributes)
+	cp LOW(PalletTown_MapAttributes)
 	jr nz, .nope
 
 	ld de, EVENT_WALL_OPENED_IN_AERODACTYL_CHAMBER
@@ -84,10 +84,10 @@ SpecialKabutoChamber:
 
 	call GetMapAttributesPointer
 	ld a, h
-	cp HIGH(NewBarkTown_MapAttributes)
+	cp HIGH(PalletTown_MapAttributes)
 	jr nz, .done
 	ld a, l
-	cp LOW(NewBarkTown_MapAttributes)
+	cp LOW(PalletTown_MapAttributes)
 	jr nz, .done
 
 	ld de, EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
