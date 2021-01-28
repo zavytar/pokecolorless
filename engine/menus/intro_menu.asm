@@ -626,6 +626,7 @@ Continue_DisplayGameTime:
 
 OakSpeech:
 	farcall InitClock
+	farcall SetDayOfWeek
 	call RotateFourPalettesLeft
 	call ClearTileMap
 

@@ -157,11 +157,9 @@ _OakTimeText1::
 	text "<……><……><……><……><……><……>"
 	line "<……><……><……><……><……><……>"
 
-	para "Zzz… Hm? Wha…?"
-	line "You woke me up!"
-
-	para "Will you check the"
-	line "clock for me?"
+	para "Before starting"
+	line "the game, let's"
+	cont "set the time."
 	prompt
 
 _OakTimeText2::
@@ -169,7 +167,7 @@ _OakTimeText2::
 	done
 
 _OakTimeText3::
-	text "What?@"
+	text "@"
 	text_end
 
 _OakTimeText4::
@@ -181,7 +179,7 @@ _OakTimeText5::
 	done
 
 _OakTimeText6::
-	text "Whoa!@"
+	text "@"
 	text_end
 
 _OakTimeText7::
@@ -189,8 +187,9 @@ _OakTimeText7::
 	done
 
 _OakTimeText8::
-	text "!"
-	line "I overslept!"
+	text "Time is set."
+	para "Now let's set the"
+	cont "day of the week."
 	done
 
 _OakTimeText11::

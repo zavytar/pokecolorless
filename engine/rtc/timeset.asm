@@ -375,12 +375,12 @@ OakText_ResponseToSetTime:
 
 .yikes
 	; ! Yikes! I over- slept!
-	text_far _OakTimeText11
+	text_far _OakTimeText8 ; prev _OakTimeText11
 	text_end
 
 .sodark
 	; ! No wonder it's so dark!
-	text_far _OakTimeText12
+	text_far _OakTimeText8 ; prev _OakTimeText12
 	text_end
 
 TimeSetBackgroundGFX:
