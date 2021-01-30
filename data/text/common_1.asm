@@ -167,7 +167,7 @@ _OakTimeText2::
 	done
 
 _OakTimeText3::
-	text "@"
+	text "Is that right?@"
 	text_end
 
 _OakTimeText4::
@@ -179,7 +179,7 @@ _OakTimeText5::
 	done
 
 _OakTimeText6::
-	text "@"
+	text "Is that right?@"
 	text_end
 
 _OakTimeText7::
@@ -187,9 +187,11 @@ _OakTimeText7::
 	done
 
 _OakTimeText8::
-	text "Time is set."
+	text " "
+
+	para "Time is set."
 	para "Now let's set the"
-	cont "day of the week."
+	line "day of the week."
 	done
 
 _OakTimeText11::

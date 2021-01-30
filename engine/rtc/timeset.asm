@@ -328,7 +328,7 @@ Text_WhoaMins:
 	; Whoa!@ @
 	text_far _OakTimeText6
 	text_asm
-	hlcoord 7, 14
+	hlcoord 1, 16
 	call DisplayMinutesWithMinString
 	ld hl, .QuestionMark
 	ret
@@ -573,7 +573,7 @@ InitialSetDSTFlag:
 	ret
 
 .DSTIsThatOK:
-	; DST, is that OK?
+	; DST, is that OK? 
 	text_far Text_DSTIsThatOK
 	text_end
 

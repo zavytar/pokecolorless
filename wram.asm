@@ -2578,10 +2578,10 @@ wPokecenter2FSceneID::                            db ; d972
 wTradeCenterSceneID::                             db ; d973
 wColosseumSceneID::                               db ; d974
 wTimeCapsuleSceneID::                             db ; d975
-wOaksLabSceneID::                       	        db ; d976 previously wPowerPlantSceneID
-wViridianCitySceneID::                            db ; d977 previously wCeruleanGymSceneID
+wOaksLabSceneID::                       	      db ; d976 
+wViridianCitySceneID::                            db ; d977 
 wRoute25SceneID::                                 db ; d978
-wTrainerHouseB1FSceneID::                         db ; d979
+wBluesHouseSceneID::		                      db ; d979
 wVictoryRoadGateSceneID::                         db ; d97a
 wSaffronMagnetTrainStationSceneID::               db ; d97b
 wRoute16GateSceneID::                             db ; d97c

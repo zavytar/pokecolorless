@@ -2,9 +2,43 @@
 	const BLUESHOUSE_DAISY
 
 BluesHouse_MapScripts:
-	db 0 ; scene scripts
+	db 2 ; scene scripts
+	scene_script .DummyScene1 		; SCENE_BLUESHOUSE_NOTHING
+	scene_script .DaisyPokegear		; SCENE_BLUESHOUSE_DAISY
+
 
 	db 0 ; callbacks
+
+.DummyScene1:
+	end
+
+.DaisyPokegear:
+	faceplayer
+	opentext
+	writetext BluesHouse_DaisyText4
+	waitbutton 
+	writetext BluesHouse_PlayerText1 ; Ask Daisy for the Town Map
+	waitbutton
+	pause 15
+	writetext BluesHouse_DaisyText5	; I got something better!
+	waitbutton
+	writetext BluesHouse_GotGearText
+	waitbutton
+	playsound SFX_ITEM
+	waitsfx
+	setflag ENGINE_POKEGEAR
+	setflag ENGINE_MAP_CARD
+	setscene SCENE_BLUESHOUSE_NOTHING
+	writetext BluesHouse_DaisyText5 ; Explain Pokegear 
+	waitbutton
+	writetext BluesHouse_PlayerText2 ; Thanks, sis! You can give that loser the Town Map, he'll need it! Smell ya later!
+	waitbutton
+	showemote EMOTE_HEART, BLUESHOUSE_DAISY, 15
+	pause 15
+	writetext BluesHouse_DaisyText7
+	waitbutton
+	closetext
+	end 
 
 DaisyScript:
 	faceplayer
@@ -78,12 +112,17 @@ BluesHouse_AlreadyGotTM:
 	closetext
 	end
 
+BluesHouse_GotGearText:
+	text "<PLAYER> got"
+	line "#GEAR!"
+	done 
+
 BluesHouse_DaisyText1:
 	text "DAISY: Hi, <PLAYER>!"
 
-	para "Did Grampa give"
-	line "you that #MON?"
-	cont "It's really cute."
+	para "Grampa's old"
+	line "#MON looks"
+	cont "really cute."
 
 	para "Don't forget to"
 	line "treat it with"
@@ -114,6 +153,77 @@ BluesHouse_DaisyText3:
 	para "If you see they're"
 	line "tired, please give"
 	cont "them some rest."
+	done
+
+BluesHouse_DaisyText4:
+	text "DAISY: Wow, did"
+	line "Grampa give you"
+	cont "that thing he was"
+	cont "working on?"
+	done
+
+BluesHouse_DaisyText5:
+	text "DAISY: How about I"
+	line "give you something"
+	cont "else? Here's a"
+	cont "little surprise"
+	cont "gift from me!"
+	done
+
+BluesHouse_DaisyText6:
+	text "DAISY: It's a"
+	line "new #MON"
+	cont "GEAR, or"
+	cont "#GEAR for short."
+
+	para "It's got some"
+	line "nice features,"
+	cont "like a clock"
+	cont "and a map."
+
+	para "It can even work"
+	line "as a phone!"
+
+	para "It's my going"
+	line "away present for"
+	cont "you, <PLAYER>."
+
+	para "Good luck on your"
+	line "adventure!"
+	done
+
+BluesHouse_DaisyText7:
+	text "DAISY: Take care!"
+	done 
+
+BluesHouse_PlayerText1:
+	text "<PLAYER>: Yeah!"
+
+	para "By the way, I"
+	line "need to borrow"
+	cont "the TOWN MAP!"
+	done
+
+
+BluesHouse_PlayerText2:
+	text "<PLAYER>: Alright!"
+	line "Thanks, sis!"
+
+	para "This is way"
+	line "more awesome than"
+	cont "just the MAP!"
+
+	para "Hey, maybe you"
+	line "should give <RIVAL>"
+	cont "that TOWN MAP if"
+	cont "he swings by."
+
+	para "He'll need it to"
+	line "not get lost, that"
+	cont "loser!"
+
+	para "Anyway, I'm off,"
+	line "sis! Smell ya later"
 	done
 
 DaisyOfferGroomingText:

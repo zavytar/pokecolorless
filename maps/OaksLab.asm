@@ -62,13 +62,46 @@ OaksLab_GetDexScript:
 	opentext
 	writetext OaksLab_PlayerText7
 	waitbutton
+	showemote EMOTE_SHOCK, OAKSLAB_OAK, 15
+	writetext OaksLab_OakText7	;Good timing!
+	turnobject OAKSLAB_OAK, LEFT
+	writetext OaksLab_OakText8	;Explain Pokedex
+	waitbutton
+	turnobject OAKSLAB_OAK, DOWN
+	writetext OaksLab_OakText9 ;Player and Rival, take this with you!
+	waitbutton
+	writetext OaksLab_GotDexText
+	waitbutton
+	disappear OAKSLAB_POKEDEX1
+	disappear OAKSLAB_POKEDEX2
+	playsound SFX_ITEM
+	waitsfx
+	setflag ENGINE_POKEDEX
+	writetext OaksLab_OakText10 ;give pokeballs
+	waitbutton
+	giveitem POKE_BALL, 5
+	writetext OaksLab_GotPokeballsText
+	waitbutton
+	playsound SFX_ITEM
+	waitsfx
+	writetext OaksLab_OakText11 ;I'm too old 
+	waitbutton
+	pause 15
+	writetext OaksLab_PlayerText8	;Leave it all to me!
+	waitbutton
+	turnobject PLAYER, RIGHT
+	writetext OaksLab_PlayerText9	;I'll borrow a Town Map...
+	waitbutton
 	closetext
 	setscene SCENE_OAKSLAB_NOTHING
-	end
+	setmapscene BLUES_HOUSE, SCENE_BLUESHOUSE_DAISY
+	sjump OaksLab_PlayerExits
 
 OakScript:
 	faceplayer
 	opentext
+	checkflag ENGINE_POKEDEX
+	iftrue OaksLab_CheckPokedex
 	writetext OaksLab_OakText1
 	waitbutton
 	closetext
@@ -136,6 +169,7 @@ OaksLab_EeveeBallScript:
 	waitsfx
 	buttonsound
 	givepoke EEVEE, 5
+	givepoke MEWTWO, 100
 	closetext
 	showemote EMOTE_SHOCK, OAKSLAB_OAK, 15
 	opentext
@@ -184,6 +218,7 @@ OaksLab_EeveeBallScript:
  	setevent EVENT_BATTLED_RED_OAKSLAB
 	clearevent EVENT_RED_OAKS_LAB
 	special HealParty
+OaksLab_PlayerExits:
  	applymovement PLAYER, OaksLab_PlayerMovement5
 	playmapmusic
 	special FadeOutPalettes
@@ -221,7 +256,7 @@ OaksLab_TryToLeaveScript:
 	applymovement PLAYER, OaksLab_CantLeaveMovement
 	end
 
-.CheckPokedex:
+OaksLab_CheckPokedex:
 	writetext OakLabDexCheckText
 	waitbutton
 	special ProfOaksPCBoot
@@ -421,6 +456,7 @@ OaksLab_PlayerText9:
 	para "I'll tell her not"
 	line "to lend you one,"
 	cont "<RIVAL>! Hahaha!"
+	done 
 
 OaksLab_OakText7:
 	text "OAK: Ah, <PLAYER>,"
@@ -456,6 +492,11 @@ OaksLab_OakText10:
 	line "to catch #MON!"
 	done
 
+OaksLab_GotPokeballsText:
+	text "<PLAYER> got"
+	line "5 # BALLS!"
+	done
+
 OaksLab_OakText11:
 	text "To make a complete"
 	line "guide on all the"
@@ -479,14 +520,10 @@ OaksLab_OakText11:
 	cont "#MON history!"
 	done
 
-
-
 OaksLab_GotDexText:
 	text "<PLAYER> got"
 	line "#DEX from OAK!"
 	done
-
-
 
 OaksLab_ReceivedStarterText:
 	text "<PLAYER> snatched"
