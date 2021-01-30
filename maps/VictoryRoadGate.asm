@@ -1,7 +1,7 @@
 	object_const_def ; object_event constants
 	const VICTORYROADGATE_OFFICER
-	const VICTORYROADGATE_BLACK_BELT1
-	const VICTORYROADGATE_BLACK_BELT2
+	const VICTORYROADGATE_OFFICER2
+	const VICTORYROADGATE_COOLTRAINERF
 
 VictoryRoadGate_MapScripts:
 	db 2 ; scene scripts
@@ -26,26 +26,26 @@ VictoryRoadGateBadgeCheckScript:
 	opentext
 	writetext VictoryRoadGateOfficerText
 	buttonsound
-	readvar VAR_BADGES
-	ifgreater NUM_JOHTO_BADGES - 1, .AllEightBadges
+	checkevent ENGINE_BOULDERBADGE
+	iftrue .CanGoThrough
 	writetext VictoryRoadGateNotEnoughBadgesText
 	waitbutton
 	closetext
 	applymovement PLAYER, VictoryRoadGateStepDownMovement
 	end
 
-.AllEightBadges:
+.CanGoThrough:
 	writetext VictoryRoadGateEightBadgesText
 	waitbutton
 	closetext
 	setscene SCENE_FINISHED
 	end
 
-VictoryRoadGateLeftBlackBeltScript:
-	jumptextfaceplayer VictoryRoadGateLeftBlackBeltText
+VictoryRoadGateOfficer2Script:
+	jumptextfaceplayer VictoryRoadGateOfficer2Text
 
-VictoryRoadGateRightBlackBeltScript:
-	jumptextfaceplayer VictoryRoadGateRightBlackBeltText
+VictoryRoadGateCooltrainerFScript:
+	jumptextfaceplayer VictoryRoadGateCooltrainerFText
 
 VictoryRoadGateStepDownMovement:
 	step DOWN
@@ -54,13 +54,14 @@ VictoryRoadGateStepDownMovement:
 VictoryRoadGateOfficerText:
 	text "Only trainers who"
 	line "have proven them-"
-	cont "selves may pass."
+	cont "selves by earning"
+	cont "the BOULDERBADGE"
+	cont "may pass."
 	done
 
 VictoryRoadGateNotEnoughBadgesText:
-	text "You don't have all"
-	line "the GYM BADGES of"
-	cont "JOHTO."
+	text "You don't have the"
+	line "BOULDERBADGE."
 
 	para "I'm sorry, but I"
 	line "can't let you go"
@@ -68,23 +69,14 @@ VictoryRoadGateNotEnoughBadgesText:
 	done
 
 VictoryRoadGateEightBadgesText:
-	text "Oh! The eight"
-	line "BADGES of JOHTO!"
+	text "Oh! That's the"
+	line "BOULDERBADGE!"
 
 	para "Please, go right"
 	line "on through!"
 	done
 
-VictoryRoadGateLeftBlackBeltText:
-	text "This way leads to"
-	line "MT.SILVER."
-
-	para "You'll see scary-"
-	line "strong #MON out"
-	cont "there."
-	done
-
-VictoryRoadGateRightBlackBeltText:
+VictoryRoadGateOfficer2Text:
 	text "Off to the #MON"
 	line "LEAGUE, are you?"
 
@@ -95,19 +87,34 @@ VictoryRoadGateRightBlackBeltText:
 	line "ready for you!"
 	done
 
+VictoryRoadGateCooltrainerFText:
+	text "If you want to pass"
+	line "through this gate,"
+	cont "you'll need the"
+	cont "BOULDERBADGE."
+
+	para "That's the BADGE"
+	line "from PEWTER's GYM."
+
+	para "I think there are"
+	line "more officers like"
+	cont "this one all over"
+	cont "ROUTE 23, too."
+	done
+
 VictoryRoadGate_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event 17,  7, ROUTE_22, 1
-	warp_event 18,  7, ROUTE_22, 1
+	warp_event  4,  7, ROUTE_22, 1
+	warp_event  5,  7, ROUTE_22, 1
 
 	db 1 ; coord events
-	coord_event 10, 11, SCENE_DEFAULT, VictoryRoadGateBadgeCheckScene
+	coord_event  4,  4, SCENE_DEFAULT, VictoryRoadGateBadgeCheckScene
 
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  8, 11, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficerScript, -1
-	object_event  7,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateLeftBlackBeltScript, EVENT_OPENED_MT_SILVER
-	object_event 12,  5, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateRightBlackBeltScript, EVENT_FOUGHT_SNORLAX
+	object_event  5,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficerScript, -1
+	object_event  2,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficer2Script, -1
+	object_event  7,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateCooltrainerFScript, -1
