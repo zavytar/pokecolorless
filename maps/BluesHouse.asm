@@ -46,7 +46,8 @@ BluesHouse_TM27Script:
 BluesHouse_PokegearScript:
 	checkevent ENGINE_POKEGEAR
 	iftrue .DoNothing
-	faceplayer
+	turnobject BLUESHOUSE_DAISY, DOWN
+	turnobject PLAYER, UP 
 	opentext
 	writetext BluesHouse_DaisyText4
 	waitbutton 
@@ -67,7 +68,8 @@ BluesHouse_PokegearScript:
 	waitbutton
 	writetext BluesHouse_PlayerText2 ; Thanks, sis! You can give that loser the Town Map, he'll need it! Smell ya later!
 	waitbutton
-	showemote EMOTE_HEART, BLUESHOUSE_DAISY, 15
+	pause 15
+	showemote EMOTE_HEART, BLUESHOUSE_DAISY, 30
 	pause 15
 	writetext BluesHouse_DaisyText7
 	waitbutton
