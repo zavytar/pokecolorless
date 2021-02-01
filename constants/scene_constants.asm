@@ -33,10 +33,16 @@ SCENE_FINISHED EQU 1
 	const SCENE_ROUTE25_NOTHING     ; 0
 	const SCENE_ROUTE25_MISTYS_DATE ; 1
 
+;wRoute22SceneID
+	const_def
+	const SCENE_ROUTE22_NOTHING
+	const SCENE_ROUTE22_RED_BATTLE_1
+	const SCENE_ROUTE22_RED_BATTLE_2
+	
 ;wBluesHouseSceneID
 	const_def 1
-	const SCENE_BLUESHOUSE_NOTHING							; 0
-	const SCENE_BLUESHOUSE_DAISY	
+	const SCENE_BLUESHOUSE_DAISY			; 0
+	const SCENE_BLUESHOUSE_NOTHING			; 1	
 
 ; wLancesRoomSceneID
 	const_def 1

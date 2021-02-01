@@ -4,6 +4,7 @@
 	const PEWTERCITY_GRAMPS
 	const PEWTERCITY_FRUIT_TREE1
 	const PEWTERCITY_FRUIT_TREE2
+	const PEWTERCITY_REPELGUY
 
 PewterCity_MapScripts:
 	db 0 ; scene scripts
@@ -20,6 +21,10 @@ PewterCityCooltrainerFScript:
 
 PewterCityBugCatcherScript:
 	jumptextfaceplayer PewterCityBugCatcherText
+
+PewterCityRepelScript:
+	jumptextfaceplayer PewterCityRepelText
+
 
 PewterCityGrampsScript:
 	faceplayer
@@ -82,6 +87,15 @@ PewterCityBugCatcherText:
 	para "But not every"
 	line "night."
 	done
+
+PewterCityRepelText:
+	text "I'm using REPEL"
+	line "to keep wild"
+	cont "#MON away."
+
+	para "You can buy it"
+	line "at any MART."
+	done 
 
 PewterCityGrampsText:
 	text "Ah, you came all"
@@ -171,9 +185,10 @@ PewterCity_MapEvents:
 	bg_event 14, 25, BGEVENT_READ, PewterCityPokecenterSign
 	bg_event 24, 17, BGEVENT_READ, PewterCityMartSign
 
-	db 5 ; object events
-	object_event 19, 11, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerFScript, -1
-	object_event 14, 29, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PewterCityBugCatcherScript, -1
-	object_event 29, 17, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityGrampsScript, -1
+	db 6 ; object events
+	object_event  6, 15, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerFScript, -1
+	object_event 16, 28, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PewterCityBugCatcherScript, -1
+	object_event 28, 16, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityGrampsScript, -1
 	object_event 32,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree1, -1
 	object_event 30,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree2, -1
+	object_event 26, 26, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PewterCityRepelScript, -1

@@ -10,8 +10,9 @@ MapScenes::
 	scene_var COLOSSEUM,                                   wColosseumSceneID
 	scene_var TIME_CAPSULE,                                wTimeCapsuleSceneID
 
-	scene_var OAKS_LAB,                             	     wOaksLabSceneID ; previously wPowerPlantSceneID
+	scene_var OAKS_LAB,                             	   wOaksLabSceneID ; previously wPowerPlantSceneID
 	scene_var VIRIDIAN_CITY,                               wViridianCitySceneID ; previously wCeruleanGymSceneID
+	scene_var ROUTE_22,									   wRoute22SceneID
 
 	scene_var INDIGO_PLATEAU_POKECENTER_1F,                wIndigoPlateauPokecenter1FSceneID
 	scene_var WILLS_ROOM,                                  wWillsRoomSceneID

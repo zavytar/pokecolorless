@@ -23,14 +23,22 @@ PewterGymBrockScript:
 	setevent EVENT_BEAT_BROCK
 	setevent EVENT_BEAT_CAMPER_JERRY
 	opentext
-	writetext ReceivedBoulderBadgeText
+	writetext BrockBoulderBadgeText
 	playsound SFX_GET_BADGE
 	waitsfx
 	setflag ENGINE_BOULDERBADGE
-	writetext BrockBoulderBadgeText
 	waitbutton
+	writetext TM02PreReceiveText
+	waitbutton
+	verbosegiveitem TM_HEADBUTT
+	iffalse .done 
+	writetext BrockExplainTMText
+	waitbutton 
 	closetext
 	end
+
+.done:
+	end 
 
 .FightDone:
 	writetext BrockFightDoneText
@@ -74,105 +82,122 @@ PewterGymStatue:
 	jumpstd gymstatue2
 
 BrockIntroText:
-	text "BROCK: Wow, it's"
-	line "not often that we"
+	text "I'm BROCK!"
+	line "I'm PEWTER's GYM"
+	cont "LEADER!"
 
-	para "get a challenger"
-	line "from JOHTO."
+	para "I believe in rock"
+	line "hard defense and"
+	cont "determination!"
 
-	para "I'm BROCK, the"
-	line "PEWTER GYM LEADER."
+	para "That's why my"
+	line "#MON are all"
+	cont "the ROCK-type!"
 
-	para "I'm an expert on"
-	line "rock-type #MON."
-
-	para "My #MON are im-"
-	line "pervious to most"
-
-	para "physical attacks."
-	line "You'll have a hard"
-
-	para "time inflicting"
-	line "any damage."
-
-	para "Come on!"
+	para "Do you still want"
+	line "to challenge me?"
+	cont "Fine then! Show"
+	cont "me your best!"
 	done
 
 BrockWinLossText:
-	text "BROCK: Your #-"
-	line "MON's powerful at-"
-	cont "tacks overcame my"
-	cont "rock-hard defense…"
+	text "I took"
+	line "you for granted."
 
-	para "You're stronger"
-	line "than I expected…"
+	para "As proof of your"
+	line "victory, here's"
+	cont "the BOULDERBADGE!"
 
-	para "Go ahead--take"
-	line "this BADGE."
+	para "<PLAYER> received"
+	line "the BOULDERBADGE!@"
 	done
 
-ReceivedBoulderBadgeText:
+TM02PreReceiveText:
+	text "Wait! Take this"
+	line "with you!"
+	done
+
+ReceivedTM02Text:
 	text "<PLAYER> received"
-	line "BOULDERBADGE."
+	line "TM02 - HEADBUTT."
 	done
 
 BrockBoulderBadgeText:
-	text "BROCK: <PLAY_G>,"
-	line "thanks. I enjoyed"
+	para "That's an official"
+	line "#MON LEAGUE"
+	cont "BADGE!"
 
-	para "battling you, even"
-	line "though I am a bit"
-	cont "upset."
+	para "Its bearer's"
+	line "#MON become"
+	cont "more powerful!"
 
-	para "That BOULDERBADGE"
-	line "will make your"
+	para "The technique"
+	line "FLASH can now be"
+	cont "used anytime!"
+	done
 
-	para "#MON even more"
-	line "powerful."
+BrockExplainTMText:
+	text "A TM contains a"
+	line "technique that"
+	cont "can be taught to"
+	cont "#MON!"
+
+	para "A TM won't break"
+	line "after using it, so"
+	cont "use it as much"
+	cont "as you need!"
+
+	para "Anyway, TM02"
+	line "contains HEADBUTT!"
+
+	para "The foe can flinch"
+	line "sometimes after the"
+	cont "attack hits!"
+
+	para "You can also use"
+	line "it outside on trees!"
+	cont "Give it a try!"
 	done
 
 BrockFightDoneText:
-	text "BROCK: The world"
-	line "is huge. There are"
+	text "BROCK: There are"
+	line "all kinds of trai-"
+	cont "ners in the world!"
 
-	para "still many strong"
-	line "trainers like you."
+	para "Some raise #MON"
+	line "for fights. Some"
+	cont "see them as pets."
 
-	para "Just wait and see."
-	line "I'm going to be-"
-	cont "come a lot strong-"
-	cont "er too."
+	para "I'm in training to"
+	line "become a #MON"
+	cont "breeder."
+
+	para "If you take your"
+	line "#MON training"
+	cont "seriously, go"
+	cont "visit the GYM in"
+	cont "CERULEAN and test"
+	cont "your abilities!"
 	done
 
 CamperJerrySeenText:
-	text "The trainers of"
-	line "this GYM use rock-"
-	cont "type #MON."
+	text "Hey, wait!"
 
-	para "The rock-type has"
-	line "high DEFENSE."
-
-	para "Battles could end"
-	line "up going a long"
-
-	para "time. Are you"
-	line "ready for this?"
+	para "You're still light"
+	line "years from facing"
+	cont "BROCK!"
 	done
 
 CamperJerryBeatenText:
-	text "I have to win"
-	line "these battles…"
+	text "Light years don't"
+	line "measure time…"
+	cont "They're distance!"
 	done
 
 CamperJerryAfterBattleText:
-	text "Hey, you! Trainer"
-	line "from JOHTO! BROCK"
-
-	para "is tough. He'll"
-	line "punish you if you"
-
-	para "don't take him"
-	line "seriously."
+	text "You're hot, but"
+	line "not as hot as"
+	cont "BROCK!"
 	done
 
 PewterGymGuyText:

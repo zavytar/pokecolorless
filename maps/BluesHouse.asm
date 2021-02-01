@@ -3,16 +3,40 @@
 
 BluesHouse_MapScripts:
 	db 2 ; scene scripts
+	scene_script .DaisyScene		; SCENE_BLUESHOUSE_DAISY
 	scene_script .DummyScene1 		; SCENE_BLUESHOUSE_NOTHING
-	scene_script .DaisyPokegear		; SCENE_BLUESHOUSE_DAISY
-
 
 	db 0 ; callbacks
 
 .DummyScene1:
 	end
 
-.DaisyPokegear:
+.DaisyScene:
+	checkevent EVENT_DAISY_AUX
+	iftrue .DoNothing
+	checkevent ENGINE_POKEGEAR
+	iftrue .DoNothing
+	checkevent ENGINE_POKEDEX
+	iftrue .PokeGearScript
+	turnobject BLUESHOUSE_DAISY, DOWN
+	turnobject PLAYER, UP 
+	opentext
+	writetext BluesHouse_DaisyText1
+	waitbutton
+	verbosegiveitem TM_RETURN
+	iffalse .Done
+	writetext BluesHouse_DaisyText2
+	waitbutton
+	closetext
+	setevent EVENT_DAISY_AUX
+;	setscene SCENE_BLUESHOUSE_NOTHING
+	end
+
+.Done:
+.DoNothing:
+	end 
+
+.PokeGearScript	
 	faceplayer
 	opentext
 	writetext BluesHouse_DaisyText4
@@ -38,6 +62,7 @@ BluesHouse_MapScripts:
 	writetext BluesHouse_DaisyText7
 	waitbutton
 	closetext
+	setevent EVENT_DAISY_AUX
 	end 
 
 DaisyScript:
@@ -45,24 +70,10 @@ DaisyScript:
 	opentext
 ;	readvar VAR_HOUR
 ;	ifequal 15, .ThreePM
-	checkitem TM_RETURN
-	iftrue BluesHouse_AlreadyGotTM
-	writetext BluesHouse_DaisyText1
-	waitbutton
-	verbosegiveitem TM_RETURN
-	iffalse .Done
-	writetext BluesHouse_DaisyText2
-	waitbutton
-	closetext
-	end
-
-.Done:
-	end
-
-BluesHouse_AlreadyGotTM:
 	writetext BluesHouse_DaisyText3
 	waitbutton
 	closetext
+	special HealParty
 	end
 
 .ThreePM:
@@ -153,6 +164,10 @@ BluesHouse_DaisyText3:
 	para "If you see they're"
 	line "tired, please give"
 	cont "them some rest."
+
+	para "Speaking of rest,"
+	line "rest up your"
+	cont "#MON, <PLAYER>."
 	done
 
 BluesHouse_DaisyText4:

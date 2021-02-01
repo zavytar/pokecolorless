@@ -94,7 +94,8 @@ OaksLab_GetDexScript:
 	waitbutton
 	closetext
 	setscene SCENE_OAKSLAB_NOTHING
-	setmapscene BLUES_HOUSE, SCENE_BLUESHOUSE_DAISY
+;	setmapscene BLUES_HOUSE, SCENE_BLUESHOUSE_DAISY
+	clearevent EVENT_DAISY_AUX
 	sjump OaksLab_PlayerExits
 
 OakScript:

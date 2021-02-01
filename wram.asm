@@ -2583,7 +2583,7 @@ wViridianCitySceneID::                            db ; d977
 wRoute25SceneID::                                 db ; d978
 wBluesHouseSceneID::		                      db ; d979
 wVictoryRoadGateSceneID::                         db ; d97a
-wSaffronMagnetTrainStationSceneID::               db ; d97b
+wRoute22SceneID::					              db ; d97b
 wRoute16GateSceneID::                             db ; d97c
 wRoute17Route18GateSceneID::                      db ; d97d
 wIndigoPlateauPokecenter1FSceneID::               db ; d97e
