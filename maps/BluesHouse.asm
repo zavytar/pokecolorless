@@ -2,22 +2,27 @@
 	const BLUESHOUSE_DAISY
 
 BluesHouse_MapScripts:
-	db 2 ; scene scripts
-	scene_script .DaisyScene		; SCENE_BLUESHOUSE_DAISY
+	db 3 ; scene scripts
+	scene_script .DaisyTM27Scene	; SCENE_BLUESHOUSE_DAISY_TM27
+	scene_script .PokegearScene		; SCENE_BLUESHOUSE_DAISY_POKEGEAR
 	scene_script .DummyScene1 		; SCENE_BLUESHOUSE_NOTHING
 
 	db 0 ; callbacks
 
+.DaisyTM27Scene:
+	prioritysjump BluesHouse_TM27Script
+	end 
+
+.PokegearScene:
+	prioritysjump BluesHouse_PokegearScript
+	end 
+
 .DummyScene1:
 	end
 
-.DaisyScene:
+BluesHouse_TM27Script:
 	checkevent EVENT_DAISY_AUX
 	iftrue .DoNothing
-	checkevent ENGINE_POKEGEAR
-	iftrue .DoNothing
-	checkevent ENGINE_POKEDEX
-	iftrue .PokeGearScript
 	turnobject BLUESHOUSE_DAISY, DOWN
 	turnobject PLAYER, UP 
 	opentext
@@ -29,14 +34,18 @@ BluesHouse_MapScripts:
 	waitbutton
 	closetext
 	setevent EVENT_DAISY_AUX
-;	setscene SCENE_BLUESHOUSE_NOTHING
+	setscene SCENE_BLUESHOUSE_NOTHING	
 	end
 
-.Done:
 .DoNothing:
 	end 
 
-.PokeGearScript	
+.Done:
+	end
+
+BluesHouse_PokegearScript:
+	checkevent ENGINE_POKEGEAR
+	iftrue .DoNothing
 	faceplayer
 	opentext
 	writetext BluesHouse_DaisyText4
@@ -53,6 +62,7 @@ BluesHouse_MapScripts:
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_MAP_CARD
 	setscene SCENE_BLUESHOUSE_NOTHING
+	setevent EVENT_DAISY_AUX
 	writetext BluesHouse_DaisyText5 ; Explain Pokegear 
 	waitbutton
 	writetext BluesHouse_PlayerText2 ; Thanks, sis! You can give that loser the Town Map, he'll need it! Smell ya later!
@@ -62,7 +72,9 @@ BluesHouse_MapScripts:
 	writetext BluesHouse_DaisyText7
 	waitbutton
 	closetext
-	setevent EVENT_DAISY_AUX
+	end 
+
+.DoNothing:
 	end 
 
 DaisyScript:

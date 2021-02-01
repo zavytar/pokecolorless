@@ -40,9 +40,10 @@ SCENE_FINISHED EQU 1
 	const SCENE_ROUTE22_RED_BATTLE_2
 	
 ;wBluesHouseSceneID
-	const_def 1
-	const SCENE_BLUESHOUSE_DAISY			; 0
-	const SCENE_BLUESHOUSE_NOTHING			; 1	
+	const_def 
+	const SCENE_BLUESHOUSE_DAISY_TM27		; 0
+	const SCENE_BLUESHOUSE_DAISY_POKEGEAR	; 1	
+	const SCENE_BLUESHOUSE_NOTHING			; 2
 
 ; wLancesRoomSceneID
 	const_def 1

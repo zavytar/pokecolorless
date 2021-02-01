@@ -94,7 +94,7 @@ OaksLab_GetDexScript:
 	waitbutton
 	closetext
 	setscene SCENE_OAKSLAB_NOTHING
-;	setmapscene BLUES_HOUSE, SCENE_BLUESHOUSE_DAISY
+	setmapscene BLUES_HOUSE, SCENE_BLUESHOUSE_DAISY_POKEGEAR
 	clearevent EVENT_DAISY_AUX
 	sjump OaksLab_PlayerExits
 
@@ -217,6 +217,7 @@ OaksLab_EeveeBallScript:
 ; Blue exits (warp to his house)
 	setscene SCENE_OAKSLAB_NOTHING
  	setevent EVENT_BATTLED_RED_OAKSLAB
+	setmapscene BLUES_HOUSE, SCENE_BLUESHOUSE_DAISY_TM27
 	clearevent EVENT_RED_OAKS_LAB
 	special HealParty
 OaksLab_PlayerExits:
