@@ -32,6 +32,17 @@ VictoryRoadGateBadgeCheckScript:
 	waitbutton
 	closetext
 	applymovement PLAYER, VictoryRoadGateStepDownMovement
+	checkevent ENGINE_POKEDEX
+	iftrue .SetRedBattle
+	end 
+
+.SetRedBattle:
+	checkevent EVENT_BATTLED_RED_ROUTE_22
+	iftrue .DoNothing
+	setmapscene ROUTE_22, SCENE_ROUTE22_RED_BATTLE_1
+	end 
+
+.DoNothing:
 	end
 
 .CanGoThrough:
