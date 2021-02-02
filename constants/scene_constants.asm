@@ -46,7 +46,7 @@ SCENE_FINISHED EQU 1
 	const SCENE_BLUESHOUSE_NOTHING			; 2
 
 ; wVictoryRoadSceneID
-	const_def 1
+	const_def 
 	const SCENE_VICTORYROADGATE_NOTHING       ; 1
 	const SCENE_VICTORYROADGATE_CHECKBADGE    ; 2
 

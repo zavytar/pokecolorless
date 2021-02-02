@@ -218,6 +218,7 @@ OaksLab_EeveeBallScript:
 	setscene SCENE_OAKSLAB_NOTHING
  	setevent EVENT_BATTLED_RED_OAKSLAB
 	setmapscene BLUES_HOUSE, SCENE_BLUESHOUSE_DAISY_TM27
+	setmapscene VICTORY_ROAD_GATE, SCENE_VICTORYROADGATE_CHECKBADGE
 	clearevent EVENT_RED_OAKS_LAB
 	special HealParty
 OaksLab_PlayerExits:

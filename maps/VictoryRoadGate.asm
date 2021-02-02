@@ -121,11 +121,11 @@ VictoryRoadGate_MapEvents:
 	warp_event  5,  7, ROUTE_22, 1
 
 	db 1 ; coord events
-	coord_event  4,  4, SCENE_VICTORYROADGATE_CHECKBADGE, VictoryRoadGateBadgeCheckScene 
+	coord_event  4,  2, SCENE_VICTORYROADGATE_CHECKBADGE, VictoryRoadGateBadgeCheckScene
 
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event  5,  4, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficerScript, -1
-	object_event  2,  2, SPRITE_OFFICER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficer2Script, -1
-	object_event  7,  6, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateCooltrainerFScript, -1
+	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficerScript, -1
+	object_event  2,  2, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficer2Script, -1
+	object_event  7,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateCooltrainerFScript, -1
