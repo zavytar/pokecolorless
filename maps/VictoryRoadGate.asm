@@ -5,8 +5,8 @@
 
 VictoryRoadGate_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script .DummyScene0 ; SCENE_VICTORYROADGATE_NOTHING
+	scene_script .DummyScene1 ; SCENE_VICTORYROADGATE_CHECKBADGE
 
 	db 0 ; callbacks
 
@@ -121,7 +121,7 @@ VictoryRoadGate_MapEvents:
 	warp_event  5,  7, ROUTE_22, 1
 
 	db 1 ; coord events
-	coord_event  4,  4, SCENE_DEFAULT, VictoryRoadGateBadgeCheckScene
+	coord_event  4,  4, SCENE_VICTORYROADGATE_CHECKBADGE, VictoryRoadGateBadgeCheckScene 
 
 	db 0 ; bg events
 

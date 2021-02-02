@@ -45,18 +45,14 @@ SCENE_FINISHED EQU 1
 	const SCENE_BLUESHOUSE_DAISY_POKEGEAR	; 1	
 	const SCENE_BLUESHOUSE_NOTHING			; 2
 
+; wVictoryRoadSceneID
+	const_def 1
+	const SCENE_VICTORYROADGATE_NOTHING       ; 1
+	const SCENE_VICTORYROADGATE_CHECKBADGE    ; 2
+
 ; wLancesRoomSceneID
 	const_def 1
 	const SCENE_LANCESROOM_APPROACH_LANCE ; 1
-
-; wElmsLabSceneID
-	const_def 1
-	const SCENE_ELMSLAB_CANT_LEAVE            ; 1
-	const SCENE_ELMSLAB_NOTHING               ; 2
-	const SCENE_ELMSLAB_MEET_OFFICER          ; 3
-	const SCENE_ELMSLAB_UNUSED                ; 4
-	const SCENE_ELMSLAB_AIDE_GIVES_POTION     ; 5
-	const SCENE_ELMSLAB_AIDE_GIVES_POKE_BALLS ; 6
 
 ; wRoute29SceneID
 	const_def
