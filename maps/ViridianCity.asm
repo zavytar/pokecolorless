@@ -40,7 +40,16 @@ ViridianCity_GrampsBlockScript:
 	applymovement PLAYER, ViridianCity_PlayerMovement1
 	end
 
+ViridianCity_GrampsOkayScript:
+	opentext
+	writetext ViridianCity_GrampsOkayText1
+	waitbutton
+	closetext
+	end
+
 ViridianCity_CooltrainerFScript:
+	checkevent EVENT_VIRIDIAN_GRAMPS_OKAY
+	iffalse .GrampsOkay
 	opentext
 	writetext ViridianCity_CooltrainerFText1
 	waitbutton
@@ -49,6 +58,14 @@ ViridianCity_CooltrainerFScript:
 	waitbutton
 	closetext
 	turnobject VIRIDIANCITY_COOLTRAINERF, RIGHT
+	end
+
+.GrampsOkay:
+	faceplayer
+	opentext
+	writetext ViridianCity_CooltrainerFText3
+	waitbutton
+	closetext
 	end
 
 ViridianCityGrampsNearGym:
@@ -90,7 +107,7 @@ ViridianCity_GymLockedScript:
 	writetext ViridianCity_GymLockedText
 	waitbutton
 	closetext
-	applymovement PLAYER, ViridianCity_PlayerMovement1
+	applymovement PLAYER, ViridianCity_PlayerMovement2
 	end
 
 ViridianCityYoungsterScript:
@@ -122,6 +139,18 @@ ViridianCity_CoffeeGrampsText1:
 	line "property!"
 	done
 
+ViridianCity_GrampsOkayText1:
+	text "Ahh, I've had my"
+	line "coffee now and I"
+	cont "feel great!"
+
+	para "Sure, you can go"
+	line "through!"
+
+	para "I'm sorry I was"
+	line "so rude to you!"
+	done
+
 ViridianCity_CooltrainerFText1:
 	text "Grampa! Don't"
 	line "be so mean!"
@@ -133,12 +162,20 @@ ViridianCity_CooltrainerFText2:
 	cont "coffee yet."
 	done
 
+ViridianCity_CooltrainerFText3:
+	text "When I go shop in"
+	line "PEWTER CITY, I"
+	cont "have to take the"
+	cont "winding trail in"
+	cont "VIRIDIAN FOREST."
+	done
+
 ViridianCity_GrampsNearGymText1:
-	text "This GYM is"
-	line "always empty."
+	text "This #MON GYM"
+	line "is always closed."
 
 	para "I wonder who the"
-	line "GYM LEADER is?"
+	line "LEADER is?"
 	done
 
 ViridianCity_GrampsNearGymText2:
@@ -177,11 +214,12 @@ ViridianCityDreamEaterFisherGotDreamEaterText:
 	done
 
 ViridianCityYoungsterText:
-	text "I heard that there"
-	line "are many items on"
+	text "CATERPIE has no"
+	line "poison, but"
+	cont "WEEDLE does."
 
-	para "the ground in"
-	line "VIRIDIAN FOREST."
+	para "Watch out for its"
+	line "POISON STING!"
 	done
 
 ViridianCitySignText:
@@ -220,6 +258,10 @@ ViridianCity_GymLockedText:
 ViridianCity_PlayerMovement1:
 	step DOWN
 	step_end
+
+ViridianCity_PlayerMovement2:
+	jump_step DOWN
+	step_end 
 
 ViridianCity_MapEvents:
 	db 0, 0 ; filler

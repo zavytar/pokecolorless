@@ -32,13 +32,16 @@ VictoryRoadGateBadgeCheckScript:
 	waitbutton
 	closetext
 	applymovement PLAYER, VictoryRoadGateStepDownMovement
-	checkevent ENGINE_POKEDEX
-	iftrue .SetRedBattle
+	setmapscene VIRIDIAN_CITY, SCENE_VIRIDIANCITY_GYM_LOCKED
+	clearevent EVENT_VIRIDIAN_GRAMPS_OKAY
+	setevent EVENT_VIRIDIAN_GRAMPS_GRUMPY
+	checkevent ENGINE_POKEGEAR
+	iffalse .SetRedBattle
 	end 
 
 .SetRedBattle:
-	checkevent EVENT_BATTLED_RED_ROUTE_22
-	iftrue .DoNothing
+;	checkevent EVENT_BATTLED_RED_ROUTE_22
+;	iftrue .DoNothing
 	setmapscene ROUTE_22, SCENE_ROUTE22_RED_BATTLE_1
 	end 
 

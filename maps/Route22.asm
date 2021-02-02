@@ -16,7 +16,7 @@ Route22_MapScripts:
 	end
 
 Route22_OptionalRivalBattleScriptTop:
-	moveobject ROUTE22_RED, 26, 4
+	moveobject ROUTE22_RED, 27, 4
 	appear ROUTE22_RED
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, Route22_PlayerWalksToRed
@@ -47,9 +47,10 @@ Route22_OptionalRivalBattleScriptTop:
 	end
 
 Route22_OptionalRivalBattleScriptBot:
-	moveobject ROUTE22_RED, 26, 5
-	appear ROUTE22_RED
 	showemote EMOTE_SHOCK, PLAYER, 15
+	pause 15
+	moveobject ROUTE22_RED, 27, 5
+	appear ROUTE22_RED	
 	applymovement PLAYER, Route22_PlayerWalksToRed
 	opentext
 	writetext Route22_PlayerText1
@@ -69,8 +70,10 @@ Route22_OptionalRivalBattleScriptBot:
 	waitbutton
 	pause 15
 	writetext Route22_RedText
-	waitbutton 
+	waitbutton
+	closetext 
 	applymovement PLAYER, Route22_PlayerLeavesBot
+	opentext
 	writetext Route22_PlayerText2
 	waitbutton
 	closetext
@@ -78,9 +81,10 @@ Route22_OptionalRivalBattleScriptBot:
 	end
 
 Route22_RivalBattle6ScriptTop:
-	moveobject ROUTE22_RED, 26, 4
-	appear ROUTE22_RED
 	showemote EMOTE_SHOCK, PLAYER, 15
+	pause 15
+	moveobject ROUTE22_RED, 27, 4
+	appear ROUTE22_RED
 	applymovement PLAYER, Route22_PlayerWalksToRed
 	opentext
 	writetext Route22_PlayerText1
@@ -91,7 +95,7 @@ Route22_RivalBattle6ScriptTop:
 	end
 
 Route22_RivalBattle6ScriptBot:
-	moveobject ROUTE22_RED, 26, 5
+	moveobject ROUTE22_RED, 27, 5
 	appear ROUTE22_RED
 	showemote EMOTE_SHOCK, PLAYER, 15
 	applymovement PLAYER, Route22_PlayerWalksToRed
