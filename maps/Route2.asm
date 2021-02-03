@@ -1,7 +1,4 @@
 	object_const_def ; object_event constants
-;	const ROUTE2_BUG_CATCHER1
-;	const ROUTE2_BUG_CATCHER2
-;	const ROUTE2_BUG_CATCHER3
 	const ROUTE2_POKE_BALL1
 	const ROUTE2_POKE_BALL2
 	const ROUTE2_POKE_BALL3
@@ -18,6 +15,9 @@ Route2Sign:
 
 Route2DiglettsCaveSign:
 	jumptext Route2DiglettsCaveSignText
+
+Route2ViridianForestSign:
+	jumptext Route2ViridianForestSignText
 
 Route2DireHit:
 	itemball DIRE_HIT
@@ -57,30 +57,35 @@ Route2DiglettsCaveSignText:
 	text "DIGLETT'S CAVE"
 	done
 
+Route2ViridianForestSignText:
+	text "VIRIDIAN FOREST"
+	done
+
 Route2_MapEvents:
 	db 0, 0 ; filler
 
-	db 5 ; warp events
+	db 7 ; warp events
 	warp_event 15, 15, ROUTE_2_NUGGET_HOUSE, 1
 	warp_event 15, 31, ROUTE_2_GATE, 3
 	warp_event 16, 27, ROUTE_2_GATE, 1
 	warp_event 17, 27, ROUTE_2_GATE, 2
 ;	warp_event 12,  7, DIGLETTS_CAVE, 3
+	warp_event  3, 33, VIRIDIAN_FOREST_VIRIDIAN_GATE, 1
+	warp_event  1,  7, VIRIDIAN_FOREST_PEWTER_GATE, 3
+	warp_event  2,  7, VIRIDIAN_FOREST_PEWTER_GATE, 4
 
 	db 0 ; coord events
 
-	db 6 ; bg events
-	bg_event  7, 51, BGEVENT_READ, Route2Sign
+	db 7 ; bg events
+	bg_event  9, 49, BGEVENT_READ, Route2Sign
 	bg_event 11,  9, BGEVENT_READ, Route2DiglettsCaveSign
+	bg_event  9, 37, BGEVENT_READ, Route2ViridianForestSign
 	bg_event  7, 23, BGEVENT_ITEM, Route2HiddenMaxEther
 	bg_event  3, 19, BGEVENT_ITEM, Route2HiddenFullHeal
 	bg_event  4, 27, BGEVENT_ITEM, Route2HiddenFullRestore
 	bg_event 11, 30, BGEVENT_ITEM, Route2HiddenRevive
 
 	db 5 ; object events
-;	object_event 10, 45, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherRob, -1
-;	object_event  6,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherEd, -1
-;	object_event  0, 40, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDoug, -1
 	object_event 13, 36, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2DireHit, EVENT_ROUTE_2_DIRE_HIT
 	object_event 18, 44, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2MaxPotion, EVENT_ROUTE_2_MAX_POTION
 	object_event 13,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route2Carbos, EVENT_ROUTE_2_CARBOS

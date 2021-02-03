@@ -39,10 +39,13 @@ Route22_OptionalRivalBattleScriptTop:
 	pause 15
 	writetext Route22_RedText
 	waitbutton 
+	closetext
 	applymovement PLAYER, Route22_PlayerLeavesTop
+	opentext
 	writetext Route22_PlayerText2
 	waitbutton
 	closetext
+	disappear ROUTE22_RED
 	setscene SCENE_ROUTE22_NOTHING
 	end
 
@@ -77,6 +80,7 @@ Route22_OptionalRivalBattleScriptBot:
 	writetext Route22_PlayerText2
 	waitbutton
 	closetext
+	disappear ROUTE22_RED
 	setscene SCENE_ROUTE22_NOTHING
 	end
 
@@ -184,6 +188,7 @@ Route22_PlayerWalksToRed:
 	step RIGHT
 	step RIGHT 
 	step RIGHT 
+	step RIGHT
 	step RIGHT 
 	step_end 
 
@@ -193,6 +198,9 @@ Route22_PlayerLeavesTop:
 	step RIGHT
 	step RIGHT
 	step RIGHT
+	step RIGHT
+	step DOWN
+	step DOWN
 	step DOWN
 	step DOWN
 	step_end
@@ -206,6 +214,8 @@ Route22_PlayerLeavesBot:
 	step DOWN
 	step DOWN
 	step DOWN
+	step DOWN
+	step DOWN
 	step_end
 
 Route22_MapEvents:
@@ -215,14 +225,14 @@ Route22_MapEvents:
 	warp_event 13,  5, VICTORY_ROAD_GATE, 1
 
 	db 4 ; coord events
-	coord_event 22,  4, SCENE_ROUTE22_RED_BATTLE_1, Route22_OptionalRivalBattleScriptTop	; optional Rival battle, early game 
-	coord_event 22,  5, SCENE_ROUTE22_RED_BATTLE_1, Route22_OptionalRivalBattleScriptBot	; optional Rival battle, early game 
-	coord_event 22,  4, SCENE_ROUTE22_RED_BATTLE_2, Route22_RivalBattle6ScriptTop			; Rival battle after getting the 8 badges
-	coord_event 22,  5, SCENE_ROUTE22_RED_BATTLE_2, Route22_RivalBattle6ScriptBot			; Rival battle after getting the 8 badges 
+	coord_event 21,  4, SCENE_ROUTE22_RED_BATTLE_1, Route22_OptionalRivalBattleScriptTop	; optional Rival battle, early game 
+	coord_event 21,  5, SCENE_ROUTE22_RED_BATTLE_1, Route22_OptionalRivalBattleScriptBot	; optional Rival battle, early game 
+	coord_event 21,  4, SCENE_ROUTE22_RED_BATTLE_2, Route22_RivalBattle6ScriptTop			; Rival battle after getting the 8 badges
+	coord_event 21,  5, SCENE_ROUTE22_RED_BATTLE_2, Route22_RivalBattle6ScriptBot			; Rival battle after getting the 8 badges 
 
 	db 1 ; bg events
 	bg_event 15,  7, BGEVENT_READ, VictoryRoadEntranceSign
 
 	db 1 ; object events
-	object_event  0,  0, SPRITE_SILVER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1; Red
+	object_event  0,  0, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1; Red
 ;	object_event 31,  8, SPRITE_MONSTER, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, -1; Mankey
