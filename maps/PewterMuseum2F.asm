@@ -1,9 +1,9 @@
-PewterMuseum2FBeta_MapScripts:
+PewterMuseum2F_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
 
-PewterMuseum2FBeta_MapEvents:
+PewterMuseum2F_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
