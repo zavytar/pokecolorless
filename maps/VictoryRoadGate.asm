@@ -17,7 +17,8 @@ VictoryRoadGate_MapScripts:
 	end
 
 VictoryRoadGateBadgeCheckScene:
-	turnobject PLAYER, LEFT
+	turnobject PLAYER, RIGHT
+	turnobject VICTORYROADGATE_OFFICER, LEFT 
 	sjump VictoryRoadGateBadgeCheckScript
 
 VictoryRoadGateOfficerScript:
@@ -130,5 +131,5 @@ VictoryRoadGate_MapEvents:
 
 	db 3 ; object events
 	object_event  5,  2, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficerScript, -1
-	object_event  2,  2, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficer2Script, -1
+	object_event  2,  2, SPRITE_OFFICER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateOfficer2Script, -1
 	object_event  7,  5, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VictoryRoadGateCooltrainerFScript, -1
