@@ -63,11 +63,11 @@ ViridianPokecenter1F_Blocks:
 PewterPokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
-;BetaPewterMuseumOfScience1F_Blocks:
-;	INCBIN "maps/unused/BetaPewterMuseumOfScience1F.blk"
+PewterMuseum1F_Blocks:
+	INCBIN "maps/PewterMuseum1F.blk"
 
-;BetaPewterMuseumOfScience2F_Blocks:
-;	INCBIN "maps/unused/BetaPewterMuseumOfScience2F.blk"
+PewterMuseum2F_Blocks:
+	INCBIN "maps/PewterMuseum2F.blk"
 
 Colosseum_Blocks:
 	INCBIN "maps/Colosseum.blk"
