@@ -51,11 +51,11 @@ KRIS EQU __enum__
 
 	trainerclass RIVAL1 ; 9
 	const RIVAL1_OAKSLAB   ; Battle w/Rival at Oak's Lab
-	const RIVAL1_ROUTE22_1 ; Optional Battle w/Rival at Route 22
+	const RIVAL1_ROUTE22_1 ; Optional Battle w/Rival at Route 22 
 	const RIVAL1_CERULEAN  ; Battle w/Rival at Nugget Bridge
-	const RIVAL1_2_CHIKORITA
-	const RIVAL1_2_CYNDAQUIL
-	const RIVAL1_2_TOTODILE
+	const RIVAL1_2_CHIKORITA ; Battle w/Rival at S. S. Anne
+	const RIVAL1_2_CYNDAQUIL ; Battle w/Rival at Pokémon Tower
+	const RIVAL1_2_TOTODILE ;Battle w/Rival at Silph Co. 
 	const RIVAL1_3_CHIKORITA
 	const RIVAL1_3_CYNDAQUIL
 	const RIVAL1_3_TOTODILE

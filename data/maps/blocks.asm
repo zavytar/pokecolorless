@@ -47,6 +47,9 @@ Route3_Blocks:
 Route22_Blocks:
 	INCBIN "maps/Route22.blk"
 
+Route23_Blocks:
+	INCBIN "maps/Route23.blk"
+
 VictoryRoadGate_Blocks:
 	INCBIN "maps/VictoryRoadGate.blk"
 

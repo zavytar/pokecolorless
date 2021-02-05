@@ -1,37 +1,38 @@
 Route23_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_NEWMAP, .FlyPoint
+	db 0 ; callbacks
 
-.FlyPoint:
-	setflag ENGINE_FLYPOINT_INDIGO_PLATEAU
-	return
+Route23Sign:
+	jumptext Route23SignText
 
-IndigoPlateauSign:
-	jumptext IndigoPlateauSignText
+Route23SignText:
+	text "ROUTE 23"
 
-IndigoPlateauSignText:
-	text "INDIGO PLATEAU"
+	para "The road to the"
+	line "#MON LEAGUE"
+	done
 
-	para "The Ultimate Goal"
-	line "for Trainers!"
+Route23VictoryRoadSign:
+	jumptext Route23VictoryRoadSignText
 
-	para "#MON LEAGUE HQ"
+Route23VictoryRoadSignText:
+	text "VICTORY ROAD"
+	line "AHEAD"
 	done
 
 Route23_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
-	warp_event  9,  5, INDIGO_PLATEAU_POKECENTER_1F, 1
-	warp_event 10,  5, INDIGO_PLATEAU_POKECENTER_1F, 2
-	warp_event  9, 13, VICTORY_ROAD, 10
-	warp_event 10, 13, VICTORY_ROAD, 10
+	db 3 ; warp events
+	warp_event  4,  5, INDIGO_PLATEAU_POKECENTER_1F, 1
+	warp_event  9, 115, VICTORY_ROAD_GATE, 3
+	warp_event 10, 115, VICTORY_ROAD_GATE, 4
 
 	db 0 ; coord events
 
-	db 1 ; bg events
-	bg_event 11,  7, BGEVENT_READ, IndigoPlateauSign
+	db 2 ; bg events
+	bg_event  3,  7, BGEVENT_READ, Route23Sign
+	bg_event  3,  8, BGEVENT_READ, Route23VictoryRoadSign
 
 	db 0 ; object events

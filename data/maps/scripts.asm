@@ -29,6 +29,7 @@ INCLUDE "maps/OaksLab.asm"
 
 SECTION "Map Scripts 4", ROMX
 
+INCLUDE "maps/Route23.asm"
 INCLUDE "maps/IndigoPlateau.asm"
 INCLUDE "maps/IndigoPlateauPokecenter1F.asm"
 INCLUDE "maps/WillsRoom.asm"

@@ -127,6 +127,8 @@ ENDM
 	connection west, PewterCity, PEWTER_CITY, -5
 ;	connection east, Route4, ROUTE_4, 0
 
+	map_attributes Route23, ROUTE_23, $0f, $2c
+
 	map_attributes OaksLab, OAKS_LAB, $00, 0
 	map_attributes BluesHouse, BLUES_HOUSE, $00, 0
 	map_attributes RedsHouse1F, REDS_HOUSE_1F, $00, 0

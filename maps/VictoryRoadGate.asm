@@ -120,9 +120,11 @@ VictoryRoadGateCooltrainerFText:
 VictoryRoadGate_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
+	db 4 ; warp events
 	warp_event  4,  7, ROUTE_22, 1
 	warp_event  5,  7, ROUTE_22, 1
+	warp_event  4,  0, ROUTE_23, 2
+	warp_event  5,  0, ROUTE_23, 3
 
 	db 1 ; coord events
 	coord_event  4,  2, SCENE_VICTORYROADGATE_CHECKBADGE, VictoryRoadGateBadgeCheckScene
