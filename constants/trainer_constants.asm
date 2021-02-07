@@ -175,19 +175,6 @@ KRIS EQU __enum__
 	const BRIDGET
 	const ALICE
 	const KRISE
-	const CONNIE1
-	const LINDA
-	const LAURA
-	const SHANNON
-	const MICHELLE
-	const DANA1
-	const ELLEN
-	const CONNIE2
-	const CONNIE3
-	const DANA2
-	const DANA3
-	const DANA4
-	const DANA5
 
 	trainerclass JANINE ; 1a
 	const JANINE1
@@ -331,21 +318,7 @@ KRIS EQU __enum__
 	const ED
 	const WADE1
 	const BUG_CATCHER_BENNY
-	const AL
-	const JOSH
-	const ARNIE1
-	const KEN
-	const WADE2
-	const WADE3
-	const DOUG
-	const ARNIE2
-	const ARNIE3
-	const WADE4
-	const WADE5
-	const ARNIE4
-	const ARNIE5
-	const WAYNE
-
+	
 	trainerclass FISHER ; 25
 	const JUSTIN
 	const RALPH1
@@ -581,28 +554,7 @@ KRIS EQU __enum__
 	const TIFFANY4
 
 	trainerclass CAMPER ; 36
-	const ROLAND
-	const TODD1
-	const IVAN
-	const ELLIOT
-	const BARRY
-	const LLOYD
-	const DEAN
-	const SID
-	const HARVEY
-	const DALE
-	const TED
-	const TODD2
-	const TODD3
-	const THOMAS
-	const LEROY
-	const DAVID
-	const JOHN
 	const JERRY
-	const SPENCER
-	const TODD4
-	const TODD5
-	const QUENTIN
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1

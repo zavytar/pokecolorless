@@ -49,7 +49,7 @@ BugContestant_BugCatcherBenny:
 	dbw CATERPIE,   285
 
 BugContestant_CamperBarry:
-	db CAMPER, BARRY
+	db CAMPER, JERRY
 	dbw PINSIR,     366
 	dbw VENONAT,    329
 	dbw KAKUNA,     314
@@ -61,7 +61,7 @@ BugContestant_PicnickerCindy:
 	dbw CATERPIE,   264
 
 BugContestant_BugCatcherJosh:
-	db BUG_CATCHER, JOSH
+	db TEACHER, COLETTE
 	dbw SCYTHER,    326
 	dbw BUTTERFREE, 292
 	dbw METAPOD,    282

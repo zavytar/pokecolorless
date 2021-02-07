@@ -1,5 +1,5 @@
 ArniePhoneCalleeScript:
-	gettrainername STRING_BUFFER_3, BUG_CATCHER, ARNIE1
+;	gettrainername STRING_BUFFER_3, BUG_CATCHER, ARNIE1
 	checkflag ENGINE_ARNIE
 	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Male
@@ -24,7 +24,7 @@ ArniePhoneCalleeScript:
 	farsjump UnknownScript_0xa0aff
 
 ArniePhoneCallerScript:
-	gettrainername STRING_BUFFER_3, BUG_CATCHER, ARNIE1
+;	gettrainername STRING_BUFFER_3, BUG_CATCHER, ARNIE1
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_ARNIE
 	iftrue .Swarm

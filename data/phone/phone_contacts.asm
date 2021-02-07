@@ -30,13 +30,13 @@ PhoneContacts:
 	phone FISHER,       RALPH1,                NONE,                  		ANYTIME, RalphPhoneCalleeScript,   ANYTIME, RalphPhoneCallerScript
 	phone PICNICKER,    LIZ1,                  NONE,                  		ANYTIME, LizPhoneCalleeScript,     ANYTIME, LizPhoneCallerScript
 	phone HIKER,        ANTHONY2,              NONE,                  		ANYTIME, AnthonyPhoneCalleeScript, ANYTIME, AnthonyPhoneCallerScript
-	phone CAMPER,       TODD1,                 NONE,                  		ANYTIME, ToddPhoneCalleeScript,    ANYTIME, ToddPhoneCallerScript
+	phone CAMPER,       JERRY,                 NONE,                  		ANYTIME, ToddPhoneCalleeScript,    ANYTIME, ToddPhoneCallerScript
 	phone PICNICKER,    GINA1,                 NONE,                  		ANYTIME, GinaPhoneCalleeScript,    ANYTIME, GinaPhoneCallerScript
 	phone JUGGLER,      IRWIN1,                NONE,                  		ANYTIME, IrwinPhoneCalleeScript,   ANYTIME, IrwinPhoneCallerScript
-	phone BUG_CATCHER,  ARNIE1,                NONE,                  		ANYTIME, ArniePhoneCalleeScript,   ANYTIME, ArniePhoneCallerScript
+	phone TEACHER,  	COLETTE,           	   NONE,                  		ANYTIME, ArniePhoneCalleeScript,   ANYTIME, ArniePhoneCallerScript
 	phone SCHOOLBOY,    ALAN1,                 NONE,                  		ANYTIME, AlanPhoneCalleeScript,    ANYTIME, AlanPhoneCallerScript
 	phone TRAINER_NONE, PHONE_00,              N_A,                       0,       UnusedPhoneScript,        0,       UnusedPhoneScript
-	phone LASS,         DANA1,                 NONE,                 			ANYTIME, DanaPhoneCalleeScript,    ANYTIME, DanaPhoneCallerScript
+	phone LASS,         CARRIE,                NONE,                 			ANYTIME, DanaPhoneCalleeScript,    ANYTIME, DanaPhoneCallerScript
 	phone SCHOOLBOY,    CHAD1,                 NONE,                 			ANYTIME, ChadPhoneCalleeScript,    ANYTIME, ChadPhoneCallerScript
 	phone POKEFANM,     DEREK1,                NONE,                  		ANYTIME, DerekPhoneCalleeScript,   ANYTIME, DerekPhoneCallerScript
 	phone FISHER,       TULLY1,                NONE,                  		ANYTIME, TullyPhoneCalleeScript,   ANYTIME, TullyPhoneCallerScript

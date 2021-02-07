@@ -378,13 +378,13 @@ Route23_MapEvents:
 	warp_event 10, 115, VICTORY_ROAD_GATE, 4
 
 	db 7 ; coord events
-	coord_event  7,  8, SCENE_ROUTE23_CASCADEBADGE_CHECK, Route23_CascadeBadgeCheck
-	coord_event  7,  9, SCENE_ROUTE23_THUNDERBADGE_CHECK, Route23_ThunderBadgeCheck
-	coord_event  7, 10, SCENE_ROUTE23_RAINBOWBADGE_CHECK, Route23_RainbowBadgeCheck
-	coord_event  7, 11, SCENE_ROUTE23_SOULBADGE_CHECK, Route23_SoulBadgeCheck
-	coord_event  7, 12, SCENE_ROUTE23_MARSHBADGE_CHECK, Route23_MarshBadgeCheck
-	coord_event  7, 13, SCENE_ROUTE23_VOLCANOBADGE_CHECK, Route23_VolcanoBadgeCheck
-	coord_event  7, 14, SCENE_ROUTE23_EARTHBADGE_CHECK, Route23_EarthBadgeCheck
+	coord_event 14, 101, SCENE_ROUTE23_CASCADEBADGE_CHECK, Route23_CascadeBadgeCheck
+	coord_event  9, 92, SCENE_ROUTE23_THUNDERBADGE_CHECK, Route23_ThunderBadgeCheck
+	coord_event 10, 76, SCENE_ROUTE23_RAINBOWBADGE_CHECK, Route23_RainbowBadgeCheck
+	coord_event 11, 56, SCENE_ROUTE23_SOULBADGE_CHECK, Route23_SoulBadgeCheck
+	coord_event  7, 50, SCENE_ROUTE23_MARSHBADGE_CHECK, Route23_MarshBadgeCheck
+	coord_event 12, 22, SCENE_ROUTE23_VOLCANOBADGE_CHECK, Route23_VolcanoBadgeCheck
+	coord_event  4, 13, SCENE_ROUTE23_EARTHBADGE_CHECK, Route23_EarthBadgeCheck
 
 	db 2 ; bg events
 	bg_event  3,  7, BGEVENT_READ, Route23Sign
