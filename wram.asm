@@ -2584,6 +2584,7 @@ wRoute25SceneID::                                 db ; d978
 wBluesHouseSceneID::		                      db ; d979
 wVictoryRoadGateSceneID::                         db ; d97a
 wRoute22SceneID::					              db ; d97b
+wRoute23SceneID::
 wRoute16GateSceneID::                             db ; d97c
 wRoute17Route18GateSceneID::                      db ; d97d
 wIndigoPlateauPokecenter1FSceneID::               db ; d97e
@@ -2654,7 +2655,7 @@ wMountMoonSquareSceneID::                         db ; d9be
 wMobileTradeRoomSceneID::                         db ; d9bf
 wMobileBattleRoomSceneID::                        db ; d9c0
 
-	ds 49
+	ds 48
 
 ; fight counts
 wJackFightCount::    db ; d9f2

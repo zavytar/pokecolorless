@@ -21,7 +21,19 @@ PewterMuseum2F_CooltrainerMScript:
 	jumptextfaceplayer PewterMuseum2F_CooltrainerMText
 
 PewterMuseum2F_PokefanScript:
-	jumptextfaceplayer PewterMuseum2F_PokefanText
+	turnobject PEWTERMUSEUM2F_POKEFAN, RIGHT
+	opentext 
+	writetext PewterMuseum2F_PokefanText
+	waitbutton
+	closetext
+PokefanMike:
+	faceplayer
+	opentext
+	trade NPC_TRADE_MIKE
+	waitbutton
+	closetext
+	end
+
 
 PewterMuseum2F_TwinScript:
 	jumptextfaceplayer PewterMuseum2F_TwinText
