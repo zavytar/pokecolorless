@@ -5,9 +5,12 @@
 	const PEWTERCITY_FRUIT_TREE1
 	const PEWTERCITY_FRUIT_TREE2
 	const PEWTERCITY_REPELGUY
+	const PEWTERCITY_COOLTRAINER_M
 
 PewterCity_MapScripts:
-	db 0 ; scene scripts
+	db 2 ; scene scripts
+	scene_script .DummyScene1 		; SCENE_PEWTERCITY_NO_BADGE
+	scene_script .DummyScene2 		; SCENE_PEWTERCITY_NOTHING
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -15,6 +18,10 @@ PewterCity_MapScripts:
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_PEWTER
 	return
+
+.DummyScene1:
+.DummyScene2:
+	end
 
 PewterCityCooltrainerFScript:
 	jumptextfaceplayer PewterCityCooltrainerFText
@@ -43,6 +50,63 @@ PewterCityGrampsScript:
 	waitbutton
 	closetext
 	end
+
+PewterCity_CheckBadge1:
+	opentext
+	writetext PewterCityCooltrainerMText1
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, PLAYER, 15
+	pause 15
+	turnobject PLAYER, UP
+	jumpstd PewterCityCooltrainerMScript
+
+PewterCity_CheckBadge2:
+	opentext
+	writetext PewterCityCooltrainerMText1
+	waitbutton
+	closetext
+	showemote EMOTE_SHOCK, PLAYER, 15
+	pause 15
+	applymovement PLAYER, PewterCity_PlayerMovement2
+PewterCityCooltrainerMScript:
+	faceplayer
+	opentext 
+	checkevent EVENT_PEWTER_CITY_BADGE_CHECK
+	iftrue .NPCText
+	writetext PewterCityCooltrainerMText2
+	waitbutton 
+	closetext
+	checkevent ENGINE_BOULDERBADGE
+	iftrue .GotBoulderBadge
+	pause 15
+	opentext
+	writetext PewterCityCooltrainerMText3
+	waitbutton
+	closetext
+	applymovement PLAYER, PewterCity_PlayerMovement1
+	opentext
+	writetext PewterCityCooltrainerMText4
+	waitbutton
+	closetext
+	end 
+
+.NPCText:
+	writetext PewterCityCooltrainerMText6
+	waitbutton
+	closetext
+	end
+
+.GotBoulderBadge:
+	showemote EMOTE_SHOCK, PEWTERCITY_COOLTRAINER_M, 15
+	pause 15
+	opentext 
+	writetext PewterCityCooltrainerMText5
+	waitbutton
+	closetext 
+	setscene SCENE_PEWTERCITY_NOTHING
+	setevent EVENT_PEWTER_CITY_BADGE_CHECK
+	end 
 
 PewterCitySign:
 	jumptext PewterCitySignText
@@ -128,6 +192,49 @@ PewterCityGrampsText_GotSilverWing:
 	line "of travel."
 	done
 
+PewterCityCooltrainerMText1:
+	text "Hey, wait up!"
+	done
+
+PewterCityCooltrainerMText2:
+	text "Have you been to"
+	line "the #MON GYM?"
+	done
+
+PewterCityCooltrainerMText3:
+	text "BROCK's looking for"
+	line "new challengers!"
+
+	para "Go west of town"
+	line "to find his GYM!"
+	done
+	
+PewterCityCooltrainerMText4:
+	text "If you think you"
+	line "got the right stuff,"
+	cont "go take on BROCK!"
+	done
+
+PewterCityCooltrainerMText5:
+	text "…"
+
+	para "Wow! That's the"
+	line "BOULDERBADGE,"
+	cont "alright!"
+
+	para "You're definitely"
+	line "a strong trainer."
+	
+	para "You can go through"
+	line "to go east to"
+	cont "CERULEAN CITY."
+	done
+
+PewterCityCooltrainerMText6:
+	text "Good luck on your"
+	line "GYM challenge!"
+	done 
+	
 PewterCitySignText:
 	text "PEWTER CITY"
 	line "A Stone Gray City"
@@ -164,6 +271,16 @@ PewterCityWelcomeSignText:
 	line "PEWTER CITY!"
 	done
 
+PewterCity_PlayerMovement1:
+	step LEFT
+	turn_head RIGHT
+	step_end
+
+PewterCity_PlayerMovement2:
+	step UP
+	turn_head RIGHT
+	step_end
+	
 PewterCity_MapEvents:
 	db 0, 0 ; filler
 
@@ -175,7 +292,9 @@ PewterCity_MapEvents:
 	warp_event  7, 29, PEWTER_SNOOZE_SPEECH_HOUSE, 1
 	warp_event 15,  7, PEWTER_MUSEUM_1F, 2
 
-	db 0 ; coord events
+	db 2 ; coord events
+	coord_event 36, 17, SCENE_PEWTERCITY_NO_BADGE, PewterCity_CheckBadge1
+	coord_event 36, 18, SCENE_PEWTERCITY_NO_BADGE, PewterCity_CheckBadge2
 
 	db 7 ; bg events
 	bg_event 25, 23, BGEVENT_READ, PewterCitySign
@@ -186,10 +305,11 @@ PewterCity_MapEvents:
 	bg_event 14, 25, BGEVENT_READ, PewterCityPokecenterSign
 	bg_event 24, 17, BGEVENT_READ, PewterCityMartSign
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event  6, 15, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerFScript, -1
 	object_event 16, 28, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PewterCityBugCatcherScript, -1
 	object_event 28, 16, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityGrampsScript, -1
 	object_event 32,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree1, -1
 	object_event 30,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree2, -1
 	object_event 26, 26, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PewterCityRepelScript, -1
+	object_event 36, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerMScript, ENGINE_BOULDERBADGE

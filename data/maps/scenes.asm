@@ -24,6 +24,8 @@ MapScenes::
 	scene_var LANCES_ROOM,                                 wLancesRoomSceneID
 	scene_var HALL_OF_FAME,                                wHallOfFameSceneID
 
+	scene_var PEWTER_CITY,								   wPewterCitySceneID
+
 	scene_var BLUES_HOUSE,         			               wBluesHouseSceneID
 
 ;	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID

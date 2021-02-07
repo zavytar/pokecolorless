@@ -64,10 +64,10 @@ SCENE_FINISHED EQU 1
 	const_def 1
 	const SCENE_LANCESROOM_APPROACH_LANCE ; 1
 
-; wRoute29SceneID
+; wPewterCitySceneID
 	const_def
-	const SCENE_ROUTE29_NOTHING        ; 0
-	const SCENE_ROUTE29_CATCH_TUTORIAL ; 1
+	const SCENE_PEWTERCITY_NO_BADGE      	; 0
+	const SCENE_PEWTERCITY_NOTHING		 	; 1
 
 ; wCherrygroveCitySceneID
 	const_def

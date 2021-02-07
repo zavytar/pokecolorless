@@ -2598,7 +2598,7 @@ wRoute27SceneID::                                 db ; d985
 wNewBarkTownSceneID::                             db ; d986
 wElmsLabSceneID::               		          db ; d987
 wPlayersHouse1FSceneID::                          db ; d988
-wRoute29SceneID::                                 db ; d989
+wPewterCitySceneID::                              db ; d989
 wCherrygroveCitySceneID::                         db ; d98a
 wMrPokemonsHouseSceneID::                         db ; d98b
 wRoute32SceneID::                                 db ; d98c
