@@ -69,6 +69,11 @@ INCLUDE "maps/Route2Gate.asm"
 
 
 SECTION "Map Scripts 6", ROMX
+INCLUDE "maps/MountMoonOutside.asm"
+INCLUDE "maps/MountMoonPokecenter1F.asm"
+INCLUDE "maps/MountMoon1F.asm"
+INCLUDE "maps/MountMoonB1F.asm"
+INCLUDE "maps/MountMoonB2F.asm"
 
 SECTION "Map Scripts 7", ROMX
 

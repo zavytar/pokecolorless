@@ -30,6 +30,18 @@ ViridianForest_Blocks:
 PewterCity_Blocks:
 	INCBIN "maps/PewterCity.blk"
 
+MountMoonOutside_Blocks:
+	INCBIN "maps/MountMoonOutside.blk"
+
+MountMoon1F_Blocks:
+	INCBIN "maps/MountMoon1F.blk"
+
+MountMoonB1F_Blocks:
+	INCBIN "maps/MountMoonB1F.blk"
+
+MountMoonB2F_Blocks:
+	INCBIN "maps/MountMoonB2F.blk"
+
 IndigoPlateau_Blocks:
 	INCBIN "maps/IndigoPlateau.blk"
 
@@ -64,6 +76,7 @@ PewterMart_Blocks:
 
 ViridianPokecenter1F_Blocks:
 PewterPokecenter1F_Blocks:
+MountMoonPokecenter1F_Blocks:
 	INCBIN "maps/Pokecenter1F.blk"
 
 PewterMuseum1F_Blocks:

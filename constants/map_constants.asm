@@ -69,6 +69,12 @@ ENDM
 	newgroup                                                      ;  4 (MapGroup_Dungeons)
 
 	map_const VIRIDIAN_FOREST,								17,	24 ; 1
+	map_const MOUNT_MOON_OUTSIDE,							10,	10 ; 2
+	map_const MOUNT_MOON_POKECENTER_1F,						 5,	 4 ; 3
+	map_const MOUNT_MOON_1F,								23, 18 ; 4
+	map_const MOUNT_MOON_B1F,								14, 14 ; 5
+	map_const MOUNT_MOON_B2F,								23, 18 ; 5
+
 
 	newgroup                                                      ; 11 (MapGroup_Indigo)
 

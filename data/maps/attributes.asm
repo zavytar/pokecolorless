@@ -123,9 +123,13 @@ ENDM
 	connection north, Route1, ROUTE_1, 0
 ;	connection south, Route21, ROUTE_21, 0
 
-	map_attributes Route3, ROUTE_3, $2c, WEST | EAST
+	map_attributes Route3, ROUTE_3, $2c, WEST | NORTH
 	connection west, PewterCity, PEWTER_CITY, -5
-;	connection east, Route4, ROUTE_4, 0
+	connection north, MountMoonOutside, MOUNT_MOON_OUTSIDE, 0
+
+
+	map_attributes MountMoonOutside, MOUNT_MOON_OUTSIDE, $00, SOUTH
+	connection south, Route3, ROUTE_3, 0
 
 	map_attributes Route23, ROUTE_23, $0f, $2c
 
@@ -154,6 +158,10 @@ ENDM
 	map_attributes ViridianForestPewterGate, VIRIDIAN_FOREST_PEWTER_GATE, $00, 0
 
 	map_attributes ViridianForest, VIRIDIAN_FOREST, $00, 0
+	map_attributes MountMoonPokecenter1F, MOUNT_MOON_POKECENTER_1F, $00, 0
+	map_attributes MountMoon1F, MOUNT_MOON_1F, $00, 0
+	map_attributes MountMoonB1F, MOUNT_MOON_B1F, $00, 0
+	map_attributes MountMoonB2F, MOUNT_MOON_B2F, $00, 0
 
 	map_attributes IndigoPlateauPokecenter1F, INDIGO_PLATEAU_POKECENTER_1F, $00, 0
 	map_attributes WillsRoom, WILLS_ROOM, $00, 0
