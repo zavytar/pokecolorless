@@ -20,6 +20,8 @@ PewterCity_MapScripts:
 	return
 
 .DummyScene1:
+	end 
+	
 .DummyScene2:
 	end
 
@@ -278,7 +280,7 @@ PewterCity_PlayerMovement1:
 
 PewterCity_PlayerMovement2:
 	step UP
-	turn_head RIGHT
+;	turn_head RIGHT
 	step_end
 	
 PewterCity_MapEvents:

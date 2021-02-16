@@ -16,13 +16,13 @@ PewterGymBrockScript:
 	writetext BrockIntroText
 	waitbutton
 	closetext
-	winlosstext BrockWinLossText, 0
+;	winlosstext BrockWinLossText, 0
 	loadtrainer BROCK, BROCK1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BROCK
 	setevent EVENT_BEAT_CAMPER_JERRY
-	opentext
+;	opentext
 	writetext BrockBoulderBadgeText
 	playsound SFX_GET_BADGE
 	waitsfx

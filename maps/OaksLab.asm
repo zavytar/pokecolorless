@@ -96,7 +96,13 @@ OaksLab_GetDexScript:
 	setscene SCENE_OAKSLAB_NOTHING
 	setmapscene BLUES_HOUSE, SCENE_BLUESHOUSE_DAISY_POKEGEAR
 	clearevent EVENT_DAISY_AUX
-	sjump OaksLab_PlayerExits
+	applymovement PLAYER, OaksLab_PlayerMovement6
+	applymovement PLAYER, OaksLab_PlayerMovement5
+	playmapmusic
+	special FadeOutPalettes
+	disappear OAKSLAB_RED
+ 	warp BLUES_HOUSE, 2, 4
+	end
 
 OakScript:
 	faceplayer
@@ -221,7 +227,6 @@ OaksLab_EeveeBallScript:
 	setmapscene VICTORY_ROAD_GATE, SCENE_VICTORYROADGATE_CHECKBADGE
 	clearevent EVENT_RED_OAKS_LAB
 	special HealParty
-OaksLab_PlayerExits:
  	applymovement PLAYER, OaksLab_PlayerMovement5
 	playmapmusic
 	special FadeOutPalettes
@@ -697,7 +702,6 @@ OaksLab_PlayerMovement4:
 	step_end
 
 OaksLab_PlayerMovement5:
-	step LEFT
 	step DOWN
 	step DOWN
 	step DOWN
