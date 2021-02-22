@@ -110,18 +110,6 @@ KRIS EQU __enum__
 	trainerclass YOUNGSTER ; 16
 	const JOEY1
 	const MIKEY
-	const ALBERT
-	const GORDON
-	const SAMUEL
-	const IAN
-	const JOEY2
-	const JOEY3
-	const WARREN
-	const JIMMY
-	const OWEN
-	const JASON
-	const JOEY4
-	const JOEY5
 
 	trainerclass SCHOOLBOY ; 17
 	const JACK1
@@ -318,6 +306,8 @@ KRIS EQU __enum__
 	const ED
 	const WADE1
 	const BUG_CATCHER_BENNY
+	;
+	;
 	
 	trainerclass FISHER ; 25
 	const JUSTIN
