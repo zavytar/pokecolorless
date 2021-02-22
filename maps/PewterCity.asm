@@ -79,7 +79,7 @@ PewterCityCooltrainerMScript:
 	writetext PewterCityCooltrainerMText2
 	waitbutton 
 	closetext
-	checkevent ENGINE_BOULDERBADGE
+	checkevent ENGINE_ZEPHYRBADGE
 	iftrue .GotBoulderBadge
 	pause 15
 	opentext
