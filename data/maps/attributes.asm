@@ -153,8 +153,8 @@ ENDM
 	map_attributes PewterMart, PEWTER_MART, $00, 0
 	map_attributes PewterPokecenter1F, PEWTER_POKECENTER_1F, $00, 0
 	map_attributes PewterSnoozeSpeechHouse, PEWTER_SNOOZE_SPEECH_HOUSE, $00, 0
-	map_attributes PewterMuseum1F, PEWTER_MUSEUM_1F, $0A, 0
-	map_attributes PewterMuseum2F, PEWTER_MUSEUM_2F, $0A, 0
+	map_attributes PewterMuseum1F, PEWTER_MUSEUM_1F, $00, 0
+	map_attributes PewterMuseum2F, PEWTER_MUSEUM_2F, $00, 0
 	map_attributes ViridianForestPewterGate, VIRIDIAN_FOREST_PEWTER_GATE, $00, 0
 
 	map_attributes ViridianForest, VIRIDIAN_FOREST, $00, 0

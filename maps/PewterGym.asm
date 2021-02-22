@@ -16,13 +16,13 @@ PewterGymBrockScript:
 	writetext BrockIntroText
 	waitbutton
 	closetext
-;	winlosstext BrockWinLossText, 0
+	winlosstext BrockWinLossText, 0
 	loadtrainer BROCK, BROCK1
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BROCK
 	setevent EVENT_BEAT_CAMPER_JERRY
-;	opentext
+	opentext
 	writetext BrockBoulderBadgeText
 	playsound SFX_GET_BADGE
 	waitsfx
@@ -101,7 +101,7 @@ BrockIntroText:
 	done
 
 BrockWinLossText:
-	text "I took"
+	text "BROCK: I took"
 	line "you for granted."
 
 	para "As proof of your"
@@ -109,21 +109,11 @@ BrockWinLossText:
 	cont "the BOULDERBADGE!"
 
 	para "<PLAYER> received"
-	line "the BOULDERBADGE!@"
-	done
-
-TM02PreReceiveText:
-	text "Wait! Take this"
-	line "with you!"
-	done
-
-ReceivedTM02Text:
-	text "<PLAYER> received"
-	line "TM02 - HEADBUTT."
+	line "the BOULDERBADGE!"
 	done
 
 BrockBoulderBadgeText:
-	para "That's an official"
+	text "That's an official"
 	line "#MON LEAGUE"
 	cont "BADGE!"
 
@@ -134,6 +124,16 @@ BrockBoulderBadgeText:
 	para "The technique"
 	line "FLASH can now be"
 	cont "used anytime!"
+	done
+
+TM02PreReceiveText:
+	text "Wait! Take this"
+	line "with you!"
+	done
+
+ReceivedTM02Text:
+	text "<PLAYER> received"
+	line "TM02 - HEADBUTT."
 	done
 
 BrockExplainTMText:
@@ -151,11 +151,11 @@ BrockExplainTMText:
 	line "contains HEADBUTT!"
 
 	para "The foe can flinch"
-	line "sometimes after the"
-	cont "attack hits!"
+	line "sometimes after"
+	cont "the attack hits!"
 
 	para "You can also use"
-	line "it outside on trees!"
+	line "it on trees!"
 	cont "Give it a try!"
 	done
 

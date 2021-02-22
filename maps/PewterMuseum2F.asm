@@ -26,7 +26,7 @@ PewterMuseum2F_PokefanScript:
 	writetext PewterMuseum2F_PokefanText
 	waitbutton
 	closetext
-PokefanMike:
+;PokefanMike:
 	faceplayer
 	opentext
 	trade NPC_TRADE_MIKE
@@ -100,9 +100,10 @@ PewterMuseum2F_MapEvents:
     
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 2 ; bg events
 	bg_event 11,  2, BGEVENT_READ, PewterMuseum2F_SpaceShuttle
 	bg_event  2,  5, BGEVENT_READ, PewterMuseum2F_MoonStone
+
 	db 5 ; object events
 	object_event  4,  2, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_UP, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_GrampsScript, -1
 	object_event 12,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_STANDING_UP, 2, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterMuseum2F_ScientistScript, -1
