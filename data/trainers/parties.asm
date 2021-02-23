@@ -342,81 +342,14 @@ ErikaGroup:
 
 YoungsterGroup:
 	; YOUNGSTER (1)
-	db "JOEY@", TRAINERTYPE_NORMAL
-	db  4, RATTATA
+	db "BEN@", TRAINERTYPE_NORMAL
+	db  11, RATTATA
+	db  11, EKANS
 	db -1 ; end
 
 	; YOUNGSTER (2)
-	db "MIKEY@", TRAINERTYPE_NORMAL
-	db  2, PIDGEY
-	db  4, RATTATA
-	db -1 ; end
-
-	; YOUNGSTER (3)
-	db "ALBERT@", TRAINERTYPE_NORMAL
-	db  6, RATTATA
-	db  8, ZUBAT
-	db -1 ; end
-
-	; YOUNGSTER (4)
-	db "GORDON@", TRAINERTYPE_NORMAL
-	db 10, WOOPER
-	db -1 ; end
-
-	; YOUNGSTER (5)
-	db "SAMUEL@", TRAINERTYPE_NORMAL
-	db  7, RATTATA
-	db 10, SANDSHREW
-	db  8, SPEAROW
-	db  8, SPEAROW
-	db -1 ; end
-
-	; YOUNGSTER (6)
-	db "IAN@", TRAINERTYPE_NORMAL
-	db 10, MANKEY
-	db 12, DIGLETT
-	db -1 ; end
-
-	; YOUNGSTER (7)
-	db "JOEY@", TRAINERTYPE_NORMAL
-	db 15, RATTATA
-	db -1 ; end
-
-	; YOUNGSTER (8)
-	db "JOEY@", TRAINERTYPE_MOVES
-	db 21, RATICATE,   TAIL_WHIP, QUICK_ATTACK, HYPER_FANG, SCARY_FACE
-	db -1 ; end
-
-	; YOUNGSTER (9)
-	db "WARREN@", TRAINERTYPE_NORMAL
-	db 35, FEAROW
-	db -1 ; end
-
-	; YOUNGSTER (10)
-	db "JIMMY@", TRAINERTYPE_NORMAL
-	db 33, RATICATE
-	db 33, ARBOK
-	db -1 ; end
-
-	; YOUNGSTER (11)
-	db "OWEN@", TRAINERTYPE_NORMAL
-	db 35, GROWLITHE
-	db -1 ; end
-
-	; YOUNGSTER (12)
-	db "JASON@", TRAINERTYPE_NORMAL
-	db 33, SANDSLASH
-	db 33, CROBAT
-	db -1 ; end
-
-	; YOUNGSTER (13)
-	db "JOEY@", TRAINERTYPE_MOVES
-	db 30, RATICATE,   TAIL_WHIP, QUICK_ATTACK, HYPER_FANG, PURSUIT
-	db -1 ; end
-
-	; YOUNGSTER (14)
-	db "JOEY@", TRAINERTYPE_MOVES
-	db 37, RATICATE,   HYPER_BEAM, QUICK_ATTACK, HYPER_FANG, PURSUIT
+	db "CALVIN@", TRAINERTYPE_NORMAL
+	db  14, SPEAROW
 	db -1 ; end
 
 SchoolboyGroup:
@@ -699,19 +632,19 @@ LassGroup:
 	db -1 ; end
 
 	; LASS (2) - Route 3
-	db "BRIDGET@", TRAINERTYPE_NORMAL
+	db "JANICE@", TRAINERTYPE_NORMAL
 	db  9, PIDGEY
 	db  9, PIDGEY
 	db -1 ; end
 
 	; LASS (3) - Route 3
-	db "ALICE@", TRAINERTYPE_NORMAL
-	db  9, ODDISH
-	db  9, NIDORAN_F
+	db "SALLY@", TRAINERTYPE_NORMAL
+	db  10, RATTATA
+	db  10, NIDORAN_F
 	db -1 ; end
 
 	; LASS (4) - Route 3
-	db "KRISE@", TRAINERTYPE_NORMAL
+	db "ROBIN@", TRAINERTYPE_NORMAL
 	db 14, JIGGLYPUFF
 	db -1 ; end
 

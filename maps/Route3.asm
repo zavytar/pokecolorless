@@ -16,7 +16,7 @@ Route3_MapScripts:
 	db 0 ; callbacks
 
 TrainerYoungster1:
-	trainer YOUNGSTER, JOEY1, EVENT_BEAT_YOUNGSTER_JOEY, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+	trainer YOUNGSTER, YOUNGSTER_BEN, EVENT_BEAT_YOUNGSTER_BEN, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -27,7 +27,7 @@ TrainerYoungster1:
 	end
 
 TrainerYoungster2:
-	trainer YOUNGSTER, MIKEY, EVENT_BEAT_YOUNGSTER_MIKEY, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+	trainer YOUNGSTER, YOUNGSTER_CALVIN, EVENT_BEAT_YOUNGSTER_CALVIN, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -37,8 +37,8 @@ TrainerYoungster2:
 	closetext
 	end
 
-TrainerLass11:
-	trainer LASS, BRIDGET, EVENT_BEAT_LASS_BRIDGET, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+TrainerLassJanice:
+	trainer LASS, JANICE, EVENT_BEAT_LASS_JANICE, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -48,8 +48,8 @@ TrainerLass11:
 	closetext
 	end
 
-TrainerLass2:
-	trainer LASS, ALICE, EVENT_BEAT_LASS_ALICE, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+TrainerLassSally:
+	trainer LASS, SALLY, EVENT_BEAT_LASS_SALLY, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -59,8 +59,8 @@ TrainerLass2:
 	closetext
 	end
 
-TrainerLass3:
-	trainer LASS, KRISE, EVENT_BEAT_LASS_ALICE, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+TrainerLassRobin:
+	trainer LASS, ROBIN, EVENT_BEAT_LASS_ROBIN, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -155,9 +155,9 @@ Route3_MapEvents:
 	db 9 ; object events
 	object_event 10,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerYoungster1, -1 ; YOUNGSTER 1
 	object_event 18,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungster2, -1 ; YOUNGSTER 2
-	object_event 12,  7, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLass11, -1 ; LASS 1
-	object_event 26, 12, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLass2, -1 ; LASS 2
-	object_event 26, 13, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLass3, -1 ; LASS 3
+	object_event 12,  7, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassJanice, -1 ; LASS 1
+	object_event 26, 12, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLassSally, -1 ; LASS 2
+	object_event 26, 13, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLassRobin, -1 ; LASS 3
 	object_event  6,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerBugcatcher11, -1 ; BUG CATCHER 1
 	object_event 16,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugcatcher12, -1 ; BUG CATCHER 2
 	object_event 20,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugcatcher13, -1 ; BUG CATCHER 3

@@ -27,7 +27,7 @@ MapScenes::
 	scene_var PEWTER_CITY,								   wPewterCitySceneID
 
 	scene_var BLUES_HOUSE,         			               wBluesHouseSceneID
-
+;	scene_var ROUTE_4,									   wRoute4SceneID
 ;	scene_var CIANWOOD_CITY,                               wCianwoodCitySceneID
 	scene_var BATTLE_TOWER_1F,                             wBattleTower1FSceneID
 	scene_var BATTLE_TOWER_BATTLE_ROOM,                    wBattleTowerBattleRoomSceneID

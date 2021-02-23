@@ -108,8 +108,8 @@ KRIS EQU __enum__
 	const ERIKA1
 
 	trainerclass YOUNGSTER ; 16
-	const JOEY1
-	const MIKEY
+	const YOUNGSTER_BEN
+	const YOUNGSTER_CALVIN
 
 	trainerclass SCHOOLBOY ; 17
 	const JACK1
@@ -160,9 +160,9 @@ KRIS EQU __enum__
 
 	trainerclass LASS ; 19
 	const CARRIE
-	const BRIDGET
-	const ALICE
-	const KRISE
+	const JANICE
+	const SALLY
+	const ROBIN 
 
 	trainerclass JANINE ; 1a
 	const JANINE1

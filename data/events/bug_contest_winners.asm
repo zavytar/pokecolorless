@@ -67,7 +67,7 @@ BugContestant_BugCatcherJosh:
 	dbw METAPOD,    282
 
 BugContestant_YoungsterSamuel:
-	db YOUNGSTER, JOEY1
+	db YOUNGSTER, YOUNGSTER_BEN
 	dbw WEEDLE,     270
 	dbw PINSIR,     282
 	dbw CATERPIE,   251

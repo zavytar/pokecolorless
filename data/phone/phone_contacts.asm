@@ -25,7 +25,7 @@ PhoneContacts:
 	phone COOLTRAINERF, BETH1,                 NONE,                  		ANYTIME, BethPhoneCalleeScript,    ANYTIME, BethPhoneCallerScript
 	phone BIRD_KEEPER,  JOSE2,                 NONE,                  		ANYTIME, JosePhoneCalleeScript,    ANYTIME, JosePhoneCallerScript
 	phone COOLTRAINERF, REENA1,                NONE,                  		ANYTIME, ReenaPhoneCalleeScript,   ANYTIME, ReenaPhoneCallerScript
-	phone YOUNGSTER,    JOEY1,                 NONE,                  		ANYTIME, JoeyPhoneCalleeScript,    ANYTIME, JoeyPhoneCallerScript
+	phone YOUNGSTER,    YOUNGSTER_BEN,         NONE,                  		ANYTIME, JoeyPhoneCalleeScript,    ANYTIME, JoeyPhoneCallerScript
 	phone BUG_CATCHER,  WADE1,                 NONE,                  		ANYTIME, WadePhoneCalleeScript,    ANYTIME, WadePhoneCallerScript
 	phone FISHER,       RALPH1,                NONE,                  		ANYTIME, RalphPhoneCalleeScript,   ANYTIME, RalphPhoneCallerScript
 	phone PICNICKER,    LIZ1,                  NONE,                  		ANYTIME, LizPhoneCalleeScript,     ANYTIME, LizPhoneCallerScript

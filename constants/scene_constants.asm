@@ -74,10 +74,10 @@ SCENE_FINISHED EQU 1
 	const SCENE_CHERRYGROVECITY_NOTHING    ; 0
 	const SCENE_CHERRYGROVECITY_MEET_RIVAL ; 1
 
-; wRoute32SceneID
-	const_def 1
-	const SCENE_ROUTE32_OFFER_SLOWPOKETAIL ; 1
-	const SCENE_ROUTE32_NOTHING            ; 2
+; wRoute4SceneID
+	const_def 
+	const SCENE_ROUTE4_ROCKETS 			; 1
+	const SCENE_ROUTE4_NOTHING          ; 2
 
 ; wRoute35NationalParkGateSceneID
 	const_def

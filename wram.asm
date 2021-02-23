@@ -2601,7 +2601,7 @@ wPlayersHouse1FSceneID::                          db ; d988
 wPewterCitySceneID::                              db ; d989
 wCherrygroveCitySceneID::                         db ; d98a
 wMrPokemonsHouseSceneID::                         db ; d98b
-wRoute32SceneID::                                 db ; d98c
+wRoute4SceneID::                                 db ; d98c route 32
 wRoute35NationalParkGateSceneID::                 db ; d98d
 wRoute36SceneID::                                 db ; d98e
 wRoute36NationalParkGateSceneID::                 db ; d98f
