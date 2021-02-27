@@ -68,4 +68,4 @@ TrainerGroups:
 	dba BlueGroup
 	dba OfficerGroup
 	dba GruntFGroup
-	dba MysticalmanGroup
+	dba RocketAgentsGroup

@@ -68,4 +68,4 @@ TrainerPicPointers::
 	dba BluePic
 	dba OfficerPic
 	dba GruntfPic
-	dba MysticalmanPic
+	dba RocketAgentsPic

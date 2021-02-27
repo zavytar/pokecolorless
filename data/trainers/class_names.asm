@@ -66,4 +66,4 @@ TrainerClassNames::
 	db "LEADER@"
 	db "OFFICER@"
 	db "ROCKET@"
-	db "MYSTICALMAN@"
+	db "ROCKET AGENTS@"

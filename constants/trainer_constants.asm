@@ -639,7 +639,7 @@ KRIS EQU __enum__
 	const GRUNTF_4
 	const GRUNTF_5
 
-	trainerclass MYSTICALMAN ; 43
-	const EUSINE
+	trainerclass ROCKETAGENTS ; 43
+	const BUTCH_AND_CASSIDY1
 
 NUM_TRAINER_CLASSES EQU __enum__
