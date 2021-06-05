@@ -110,6 +110,7 @@ Route3Sign:
 	jumptext Route3SignText
 
 
+
 FirebreatherOtisSeenText:
 	text "Ah! The weather's"
 	line "as fine as ever."
@@ -144,7 +145,9 @@ Route3SignText:
 Route3_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
+	db 2 ; warp events
+	warp_event 53,  3, MOUNT_MOON_OUTSIDE, 3 ; Mt Moon Outside
+	warp_event 54,  3, MOUNT_MOON_OUTSIDE, 4 ; Mt Moon Outside
 ;	warp_event 58,  3, MOUNT_MOON, 1
 
 	db 0 ; coord events
@@ -156,7 +159,7 @@ Route3_MapEvents:
 	object_event 10,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerYoungster1, -1 ; YOUNGSTER 1
 	object_event 18,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungster2, -1 ; YOUNGSTER 2
 	object_event 12,  7, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassJanice, -1 ; LASS 1
-	object_event 26, 12, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLassSally, -1 ; LASS 2
+	object_event 17,  2, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLassSally, -1 ; LASS 2
 	object_event 26, 13, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLassRobin, -1 ; LASS 3
 	object_event  6,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerBugcatcher11, -1 ; BUG CATCHER 1
 	object_event 16,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugcatcher12, -1 ; BUG CATCHER 2

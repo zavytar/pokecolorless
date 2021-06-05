@@ -123,13 +123,13 @@ ENDM
 	connection north, Route1, ROUTE_1, 0
 ;	connection south, Route21, ROUTE_21, 0
 
-	map_attributes Route3, ROUTE_3, $2c, WEST ; | NORTH
+	map_attributes Route3, ROUTE_3, $2c, WEST ;| NORTH
 	connection west, PewterCity, PEWTER_CITY, -5
-;	connection north, MountMoonOutside, MOUNT_MOON_OUTSIDE, 0
+;	connection north, MountMoonOutside, MOUNT_MOON_OUTSIDE, -4
 
 
-	map_attributes MountMoonOutside, MOUNT_MOON_OUTSIDE, $00, 0 ;SOUTH
-;	connection south, Route3, ROUTE_3, 0
+	map_attributes MountMoonOutside, MOUNT_MOON_OUTSIDE, $2c, 0 ;SOUTH
+;	connection south, Route3, ROUTE_3, 4
 
 	map_attributes Route23, ROUTE_23, $0f, $2c
 

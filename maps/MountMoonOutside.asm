@@ -1,6 +1,6 @@
 	object_const_def ; object_event constants
 	const MOUNTMOONOUTSIDE_COOLTRAINERF
-	const MOUNTMOONOUTSIDE_YOUNGSTER 
+	const MOUNTMOONOUTSIDE_YOUNGSTER
 
 MountMoonOutside_MapScripts:
 	db 0 ; scene scripts
@@ -8,9 +8,9 @@ MountMoonOutside_MapScripts:
 	db 0 ; callbacks
 ;	callback MAPCALLBACK_NEWMAP, .FlyPoint
 
-;.FlyPoint:
+.FlyPoint:
 ;	setflag ENGINE_FLYPOINT_MOUNT_MOON
-;	return
+	return
 
 MountMoonOutside_CooltrainerFScript:
     jumptextfaceplayer MountMoonOutside_CooltrainerFText
@@ -25,7 +25,7 @@ MountMoonOutside_CooltrainerFText:
     text "Ouch! I tripped"
     line "over a rocky"
     cont "#MON, GEODUDE!"
-    done 
+    done
 
 MountMoonOutside_YoungsterText:
     text "Many TRAINERS"
@@ -34,22 +34,25 @@ MountMoonOutside_YoungsterText:
     cont "for fossils."
     done
 
+
 MountMoonSignText:
     text "MOUNT MOON"
 
     para "PEWTER CITY"
-    line "SIDE"
+    line "ENTRANCE"
 
 MountMoonOutside_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
+	db 4 ; warp events
 	warp_event  9,  5, MOUNT_MOON_POKECENTER_1F, 1 ; PokéCenter
 	warp_event 16,  3, MOUNT_MOON_1F, 1 ; Mount Moon 1F
+	warp_event 11, 19, ROUTE_3, 1 ; Mount Moon 1F
+	warp_event 12, 19, ROUTE_3, 2 ; Mount Moon 1F
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 1 ; bg events
 	bg_event 13,  5, BGEVENT_READ, MountMoonSign
 
 	db 2 ; object events
