@@ -33,7 +33,7 @@ MountMoon1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 5 ; warp events
-	warp_event 17, 34, MOUNT_MOON_OUTSIDE, 2
+	warp_event 17, 33, MOUNT_MOON_OUTSIDE, 2
 ;	warp_event  4,  7, ROUTE_4, 1
 	warp_event 27, 11, MOUNT_MOON_B1F, 1 ; to NUGGET
 	warp_event 19, 11, MOUNT_MOON_B1F, 2 ; to TM
