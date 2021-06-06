@@ -38,34 +38,34 @@ TrainerYoungster2:
 	end
 
 TrainerLassJanice:
-	trainer LASS, JANICE, EVENT_BEAT_LASS_JANICE, Lass1SeenText, Lass1BeatenText, 0, .Script
+	trainer LASS, JANICE, EVENT_BEAT_LASS_JANICE, Lass2SeenText, Lass2BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext Lass1AfterBattleText
+	writetext Lass2AfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerLassSally:
-	trainer LASS, SALLY, EVENT_BEAT_LASS_SALLY, Lass2SeenText, Lass2BeatenText, 0, .Script
-
-.Script:
-	endifjustbattled
-	opentext
-	writetext FirebreatherOtisAfterBattleText
-	waitbutton
-	closetext
-	end
-
-TrainerLassRobin:
-	trainer LASS, ROBIN, EVENT_BEAT_LASS_ROBIN, Lass3SeenText, Lass3BeatenText, 0, .Script
+	trainer LASS, SALLY, EVENT_BEAT_LASS_SALLY, Lass3SeenText, Lass3BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
 	writetext Lass3AfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerLassRobin:
+	trainer LASS, ROBIN, EVENT_BEAT_LASS_ROBIN, Lass4SeenText, Lass4BeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext Lass4AfterBattleText
 	waitbutton
 	closetext
 	end
@@ -200,48 +200,48 @@ BugCatcher13AfterBattleText:
 	cont "to another BOX!"
 	done
 
-Lass1SeenText:
+Lass2SeenText:
 	text "You looked at me,"
 	line "didn't you?"
 	done
 
-Lass1BeatenText:
+Lass2BeatenText:
 	text "You're"
 	line "mean!"
 	done
 
-Lass1AfterBattleText:
+Lass2AfterBattleText:
 	text "Quit staring if"
 	line "you don't want to"
 	cont "fight!"
 	done
 
-Lass2SeenText:
+Lass3SeenText:
 	text "That look you"
 	line "gave me, it's so"
 	cont "intriguing!"
 	done
 
-Lass2BeatenText:
+Lass3BeatenText:
 	text "Be nice!"
 	prompt
 
-Lass2AfterBattleText:
+Lass3AfterBattleText:
 	text "Avoid fights by"
 	line "not letting"
 	cont "people see you!"
 	done
 
-Lass3SeenText:
+Lass4SeenText:
 	text "Eek! Did you"
 	line "touch me?"
 	done
 
-Lass3BeatenText:
+Lass4BeatenText:
 	text "That's it?"
 	done
 
-Lass3AfterBattleText:
+Lass4AfterBattleText:
 	text "ROUTE 4 is at the"
 	line "foot of MT.MOON."
 	done

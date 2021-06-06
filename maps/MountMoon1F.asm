@@ -25,9 +25,25 @@ MountMoon1F_Script:
 	end 
 
 MountMoon1F_Hiker2Script:
-	jumptextfaceplayer MountMoon1F_Hiker2Text
+	checkitem TM_ROCK_SMASH
+	iftrue .AlreadyGotTM
+	opentext
+	writetext MountMoon1F_Hiker2Text1
+	waitbutton
+	verbosegiveitem TM_HEADBUTT
+	iffalse .done 
+	writetext MountMoon1F_Hiker2Text2
+	waitbutton
+	closetext
+	end
 
-MountMoon1F_Hiker2Text:
+.done
+	end
+
+.AlreadyGotTM:
+	jumptextfaceplayer MountMoon1F_Hiker2Text2
+
+MountMoon1F_Hiker2Text1:
 	text "We use ROCK SMASH"
 	line "to smash rocks and"
 	cont "find fossils."
@@ -37,12 +53,26 @@ MountMoon1F_Hiker2Text:
 	cont "comes by to help."
 	done 
 
+MountMoon1F_Hiker2Text2:
+	text "Use ROCK SMASH"
+	line "on rugged rocks"
+	cont "to smash 'em up!"
+
+	para "You can find items"
+	line "and even #MON!"
+	done
+
+ReceivedTM08Text:
+	text "<PLAYER> received"
+	line "TM08 - ROCK SMASH."
+	done
+
 MountMoon1F_MapEvents:
 	db 0, 0 ; filler
 
 	db 6 ; warp events
-	warp_event 17, 33, MOUNT_MOON_OUTSIDE, 2
-	warp_event 43, 33, MOUNT_MOON_OUTSIDE, 2 ; change to route 4 after addingS
+	warp_event 17, 33, MOUNT_MOON_OUTSIDE, 2	; Route 3 Exit
+	warp_event 43, 33, ROUTE_4, 1 	 			; Route 4 Exit
 	warp_event 27, 11, MOUNT_MOON_B1F, 1 ; to NUGGET
 	warp_event 19, 11, MOUNT_MOON_B1F, 2 ; to TM
 	warp_event  7,  5, MOUNT_MOON_B1F, 3 ; to EXIT
@@ -59,5 +89,5 @@ MountMoon1F_MapEvents:
 	object_event 29,  4, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Lass 2
 	object_event 24, 30, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Super Nerd
 	object_event 14, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Youngster
-	object_event  8,  7, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Hiker 1
-	object_event 40,  4, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Hiker2Script, -1 ; Hiker 2
+	object_event  8,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Hiker 1
+	object_event 40,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Hiker2Script, -1 ; Hiker 2

@@ -20,7 +20,7 @@ MapGroupPointers::
 	dw MapGroup_Viridian    ;  2
 	dw MapGroup_Pewter	    ;  3
 	dw MapGroup_Dungeons    ;  4
-;	dw MapGroup_Cerulean	  ;  5
+	dw MapGroup_Cerulean    ;  5
 ;	dw MapGroup_Vermilion   ;  6
 ;	dw MapGroup_Lavender    ;  7
 ;	dw MapGroup_Celadon     ;  8
@@ -64,6 +64,9 @@ MapGroup_Pewter:
 	map PewterMuseum1F, TILESET_MUSEUM, INDOOR, PEWTER_CITY, MUSIC_VIRIDIAN_CITY, FALSE, PALETTE_DAY, FISHGROUP_SHORE
 	map PewterMuseum2F, TILESET_MUSEUM, INDOOR, PEWTER_CITY, MUSIC_VIRIDIAN_CITY, FALSE, PALETTE_DAY, FISHGROUP_SHORE
 	map ViridianForestPewterGate, TILESET_GATE, GATE, ROUTE_2, MUSIC_ROUTE_2, FALSE, PALETTE_DAY, FISHGROUP_SHORE
+
+MapGroup_Cerulean:
+	map Route4, TILESET_KANTO, ROUTE, ROUTE_4, MUSIC_ROUTE_3, FALSE, PALETTE_AUTO, FISHGROUP_SHORE
 
 MapGroup_Dungeons:
 	map ViridianForest, TILESET_FOREST, CAVE, VIRIDIAN_FOREST, MUSIC_UNION_CAVE, FALSE, PALETTE_NITE, FISHGROUP_SHORE

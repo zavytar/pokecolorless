@@ -23,7 +23,7 @@ Route4_MapScripts:
 .DummyScene2:
 	end 
 
-TrainerLass1:
+TrainerLassX:
 	trainer PICNICKER, HOPE, EVENT_BEAT_PICNICKER_HOPE, PicnickerHopeSeenText, PicnickerHopeBeatenText, 0, .Script
 
 .Script:
@@ -39,7 +39,7 @@ Route4_RocketSceneTop:
 	writetext Route4_PlayerText1
 	waitbutton
 	closetext
-	applymovement Route4_PlayerMovement1Top
+	applymovement PLAYER, Route4_PlayerMovement1Top
 	sjump Route4_RocketsScene
 
 Route4_RocketSceneBot:
@@ -47,7 +47,7 @@ Route4_RocketSceneBot:
 	writetext Route4_PlayerText1
 	waitbutton
 	closetext
-	applymovement Route4_PlayerMovement1Bot
+	applymovement PLAYER, Route4_PlayerMovement1Bot
 Route4_RocketsScene:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	moveobject ROUTE4_ROCKET3, 10, 10
@@ -85,6 +85,16 @@ Route4_Sign:
 
 Route4HPUp:
 	itemball HP_UP
+
+Route4_TM:
+	verbosegiveitem TM_ROAR 
+	iffalse .done
+	disappear ROUTE4_TM
+	setevent EVENT_GOT_TM05_ROAR_AT_ROUTE_4
+	end
+
+.done
+	end 
 
 Route4HiddenUltraBall:
 	hiddenitem ULTRA_BALL, EVENT_ROUTE_4_HIDDEN_ULTRA_BALL
@@ -185,7 +195,7 @@ Route4_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  2,  5, MOUNT_MOON_1F, 4
+	warp_event  2,  5, MOUNT_MOON_1F, 2
 
 	db 2 ; coord events
 	coord_event  3,  6, SCENE_ROUTE4_ROCKETS, Route4_RocketSceneTop	
@@ -193,12 +203,12 @@ Route4_MapEvents:
 
 
 	db 2 ; bg events
-	bg_event  3,  7, BGEVENT_READ, MtMoonSquareSign
+	bg_event  3,  7, BGEVENT_READ, Route4_Sign
 	bg_event 10,  3, BGEVENT_ITEM, Route4HiddenUltraBall
 
 	db 6 ; object events
-	object_event 30,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerLass1, -1
-	object_event 22,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, Route4_TM, -1
+	object_event 30,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerLassX, -1
+	object_event 22,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, Route4_TM, EVENT_GOT_TM05_ROAR_AT_ROUTE_4
 	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
 	object_event 11,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS
 	object_event 12,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS
