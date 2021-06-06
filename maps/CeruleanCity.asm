@@ -19,7 +19,7 @@ CeruleanCity_MapScripts:
 CeruleanCity_CooltrainerMScript:
 	faceplayer
 	opentext
-	writetext CeruleanCityCooltrainerMText1
+;	writetext CeruleanCityCooltrainerMText1
 	waitbutton
 	closetext
 	end
@@ -206,32 +206,32 @@ CeruleanLockedDoorText:
 CeruleanCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 6 ; warp events
-	warp_event  9, 15, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 1
-	warp_event 25, 15, CERULEAN_POLICE_STATION, 1
-	warp_event 13, 19, CERULEAN_TRADE_SPEECH_HOUSE, 1
-	warp_event 19, 21, CERULEAN_POKECENTER_1F, 1
-	warp_event 30, 23, CERULEAN_GYM, 1
-	warp_event 25, 29, CERULEAN_MART, 2
+	db 0 ; warp events
+;	warp_event  9, 15, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 1
+;	warp_event 25, 15, CERULEAN_POLICE_STATION, 1
+;	warp_event 13, 19, CERULEAN_TRADE_SPEECH_HOUSE, 1
+;	warp_event 19, 21, CERULEAN_POKECENTER_1F, 1
+;	warp_event 30, 23, CERULEAN_GYM, 1
+;	warp_event 25, 29, CERULEAN_MART, 2
 ;	warp_event 13, 29, CERULEAN_BIKE_SHOP, 1	
 
 	db 0 ; coord events
 
-	db 9 ; bg events
-	bg_event 17, 23, BGEVENT_READ, CeruleanCitySign
-	bg_event 23, 23, BGEVENT_READ, CeruleanGymSign
-	bg_event 11, 29, BGEVENT_READ, CeruleanBikeShopSign
-	bg_event 25, 17, BGEVENT_READ, CeruleanPoliceSign
-	bg_event 23,  7, BGEVENT_READ, CeruleanCapeSign
-	bg_event 14, 29, BGEVENT_READ, CeruleanLockedDoor
-	bg_event 20, 21, BGEVENT_READ, CeruleanCityPokecenterSign
-	bg_event 26, 29, BGEVENT_READ, CeruleanCityMartSign
-	bg_event  2, 12, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
+	db 0 ; bg events
+;	bg_event 17, 23, BGEVENT_READ, CeruleanCitySign
+;	bg_event 23, 23, BGEVENT_READ, CeruleanGymSign
+;	bg_event 11, 29, BGEVENT_READ, CeruleanBikeShopSign
+;	bg_event 25, 17, BGEVENT_READ, CeruleanPoliceSign
+;	bg_event 23,  7, BGEVENT_READ, CeruleanCapeSign
+;	bg_event 14, 29, BGEVENT_READ, CeruleanLockedDoor
+;	bg_event 20, 21, BGEVENT_READ, CeruleanCityPokecenterSign
+;	bg_event 26, 29, BGEVENT_READ, CeruleanCityMartSign
+;	bg_event  2, 12, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
 
-	db 6 ; object events
-	object_event 29, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerMScript, -1
-	object_event 23, 15, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCitySuperNerdScript, -1
-	object_event 20, 32, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbro, -1
-	object_event 21, 32, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
-	object_event 13, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
-	object_event  8, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityYoungsterScript, -1
+	db 0 ; object events
+;	object_event 29, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerMScript, -1
+;	object_event 23, 15, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCitySuperNerdScript, -1
+;	object_event 20, 32, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbro, -1
+;	object_event 21, 32, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
+;	object_event 13, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
+;	object_event  8, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityYoungsterScript, -1

@@ -1,3 +1,5 @@
+MOUTMOONPOKECENTER_MAGIKARP_PRICE EQU 500
+
 	object_const_def ; object_event constants
 	const MOUNTMOONPOKECENTER1F_NURSE
     const MOUNTMOONPOKECENTER1F_MAGIKARPSALESMAN
@@ -14,11 +16,45 @@ MountMoonPokecenter1F_NurseScript:
 
 MountMoonPokecenter1F_MagikarpSalesmanScript:
 	faceplayer
+    checkevent EVENT_BOUGHT_MAGIKARP_AT_MT_MOON
+    iftrue .NoRefunds
     opentext
     writetext MountMoonPokecenter1F_MagikarpSalesmanText1
     waitbutton
+    yesorno
+    iftrue .TryToBuy
+    writetext MountMoonPokecenter1F_MagikarpSalesmanText3
+    waitbutton
     closetext
     end 
+
+.TryToBuy
+    checkmoney YOUR_MONEY, MOUTMOONPOKECENTER_MAGIKARP_PRICE
+    ifequal HAVE_LESS, .NoMoney
+    writetext MountMoonPokecenter1F_MagikarpSalesmanText2
+    waitbutton    
+    playsound SFX_TRANSACTION
+	writetext MountMoonPokecenter1F_PlayerGotMagikarpText
+    waitbutton
+    playsound SFX_CAUGHT_MON
+    waitsfx
+    givepoke MAGIKARP, 5
+    closetext
+    end  
+
+.NoMoney:
+    writetext MountMoonPokecenter1F_MagikarpSalesmanText5
+    waitbutton
+
+    closetext
+    end 
+
+.NoRefunds:
+    opentext 
+    writetext MountMoonPokecenter1F_MagikarpSalesmanText4
+    waitbutton
+    closetext
+    end
 
 MountMoonPokecenter1F_GentlemanScript:
     jumptextfaceplayer MountMoonPokecenter1F_GentlemanText
@@ -54,6 +90,18 @@ MountMoonPokecenter1F_MagikarpSalesmanText3:
 MountMoonPokecenter1F_MagikarpSalesmanText4:
     text "Well, I don't"
     line "give refunds!"
+    done 
+
+MountMoonPokecenter1F_MagikarpSalesmanText5:
+    text "No money, no"
+    line "MAGIKARP!"
+    done
+
+MountMoonPokecenter1F_PlayerGotMagikarpText:
+    text "<PLAYER> paid a"
+    line "ridiculous $100"
+    cont "for a MAGIKARP…"
+    done 
 
 MountMoonPokecenter1F_GentlemanText:
     text "TEAM ROCKET is"
