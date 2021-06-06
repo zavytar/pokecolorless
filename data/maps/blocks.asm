@@ -62,8 +62,8 @@ Route22_Blocks:
 Route4_Blocks:
 	INCBIN "maps/Route4.blk"
 
-;CeruleanCity_Blocks:
-;	INCBIN "maps/CeruleanCity.blk"
+CeruleanCity_Blocks:
+	INCBIN "maps/CeruleanCity.blk"
 
 Route23_Blocks:
 	INCBIN "maps/Route23.blk"

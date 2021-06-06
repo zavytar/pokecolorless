@@ -75,7 +75,7 @@ INCLUDE "maps/MountMoon1F.asm"
 INCLUDE "maps/MountMoonB1F.asm"
 INCLUDE "maps/MountMoonB2F.asm"
 INCLUDE "maps/Route4.asm"
-;INCLUDE "maps/CeruleanCity.asm"
+INCLUDE "maps/CeruleanCity.asm"
 
 SECTION "Map Scripts 7", ROMX
 
