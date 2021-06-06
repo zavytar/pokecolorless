@@ -7,7 +7,7 @@ OutdoorSprites:
 	dw ViridianGroupSprites
 	dw PewterGroupSprites
 	dw DungeonsGroupSprites
-;	dw CeruleanGroupSprites
+	dw CeruleanGroupSprites
 ;	dw VermilionGroupSprites
 	dw IndigoGroupSprites
 	dw BattleTowerGroupSprites

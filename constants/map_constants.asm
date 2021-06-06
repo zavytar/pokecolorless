@@ -75,7 +75,7 @@ ENDM
 	map_const MOUNT_MOON_B1F,								14, 14 ; 5
 	map_const MOUNT_MOON_B2F,								20, 18 ; 5
 
-	newgroup
+	newgroup													; 	5 (MapGroup_Cerulean)
 	map_const ROUTE_4,										20,	 9 ; 1
 	map_const CERULEAN_CITY,								20,	18 ; 2
 

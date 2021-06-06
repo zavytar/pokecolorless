@@ -131,10 +131,10 @@ ENDM
 	connection south, Route3, ROUTE_3, -21
 
 	map_attributes Route4, ROUTE_4, $2c, EAST
-	connection east, CeruleanCity, CERULEAN_CITY, -5
+	connection east, CeruleanCity, CERULEAN_CITY, -4
 
 	map_attributes CeruleanCity, CERULEAN_CITY, $2c, WEST
-	connection west, Route4, ROUTE_4, 5
+	connection west, Route4, ROUTE_4, 4
 
 	map_attributes Route23, ROUTE_23, $0f, $2c
 
