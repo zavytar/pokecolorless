@@ -78,6 +78,7 @@ ENDM
 	newgroup													; 	5 (MapGroup_Cerulean)
 	map_const ROUTE_4,										20,	 9 ; 1
 	map_const CERULEAN_CITY,								20,	18 ; 2
+	map_const BIKE_SHOP,									 4,  4 ; 3									
 	map_const CERULEAN_GYM,                            	     5,  8 ; 4
 	map_const CERULEAN_MART,                                 6,  4 ; 5
 	map_const CERULEAN_POKECENTER_1F,                        5,  4 ; 6

@@ -206,26 +206,26 @@ CeruleanLockedDoorText:
 CeruleanCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 0 ; warp events
+	db 3 ; warp events
+	warp_event 19, 17, CERULEAN_POKECENTER_1F, 1
+	warp_event 30, 19, CERULEAN_GYM, 1
+	warp_event 25, 25, CERULEAN_MART, 2
+	warp_event 13, 25, CERULEAN_BIKE_SHOP, 1	
 ;	warp_event  9, 15, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 1
 ;	warp_event 25, 15, CERULEAN_POLICE_STATION, 1
 ;	warp_event 13, 19, CERULEAN_TRADE_SPEECH_HOUSE, 1
-;	warp_event 19, 21, CERULEAN_POKECENTER_1F, 1
-;	warp_event 30, 23, CERULEAN_GYM, 1
-;	warp_event 25, 29, CERULEAN_MART, 2
-;	warp_event 13, 29, CERULEAN_BIKE_SHOP, 1	
 
 	db 0 ; coord events
 
-	db 0 ; bg events
-;	bg_event 17, 23, BGEVENT_READ, CeruleanCitySign
-;	bg_event 23, 23, BGEVENT_READ, CeruleanGymSign
-;	bg_event 11, 29, BGEVENT_READ, CeruleanBikeShopSign
+	db 5 ; bg events
+	bg_event 17, 29, BGEVENT_READ, CeruleanCitySign
+	bg_event 23, 19, BGEVENT_READ, CeruleanGymSign
+	bg_event 11, 25, BGEVENT_READ, CeruleanBikeShopSign
 ;	bg_event 25, 17, BGEVENT_READ, CeruleanPoliceSign
 ;	bg_event 23,  7, BGEVENT_READ, CeruleanCapeSign
 ;	bg_event 14, 29, BGEVENT_READ, CeruleanLockedDoor
-;	bg_event 20, 21, BGEVENT_READ, CeruleanCityPokecenterSign
-;	bg_event 26, 29, BGEVENT_READ, CeruleanCityMartSign
+	bg_event 20, 17, BGEVENT_READ, CeruleanCityPokecenterSign
+	bg_event 26, 25, BGEVENT_READ, CeruleanCityMartSign
 ;	bg_event  2, 12, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
 
 	db 0 ; object events

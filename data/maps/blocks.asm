@@ -65,6 +65,9 @@ Route4_Blocks:
 CeruleanCity_Blocks:
 	INCBIN "maps/CeruleanCity.blk"
 
+BikeShop_Blocks:
+	INCBIN "maps/BikeShop.blk"
+
 CeruleanGym_Blocks:
 	INCBIN "maps/CeruleanGym.blk"
 
