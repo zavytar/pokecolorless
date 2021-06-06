@@ -62,7 +62,42 @@ PewterCity_CheckBadge1:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	pause 15
 	turnobject PLAYER, UP
-	jumpstd PewterCityCooltrainerMScript
+	opentext ; delete from here
+	checkevent EVENT_PEWTER_CITY_BADGE_CHECK
+	iftrue .NPCText
+	writetext PewterCityCooltrainerMText2
+	waitbutton 
+	closetext
+	checkevent ENGINE_ZEPHYRBADGE
+	iftrue .GotBoulderBadge
+	pause 15
+	opentext
+	writetext PewterCityCooltrainerMText3
+	waitbutton
+	closetext
+	opentext
+	writetext PewterCityCooltrainerMText4
+	waitbutton
+	closetext
+	end
+	 
+.NPCText:
+	writetext PewterCityCooltrainerMText6
+	waitbutton
+	closetext
+	end
+
+.GotBoulderBadge:
+	showemote EMOTE_SHOCK, PEWTERCITY_COOLTRAINER_M, 15
+	pause 15
+	opentext 
+	writetext PewterCityCooltrainerMText5
+	waitbutton
+	closetext 
+	setscene SCENE_PEWTERCITY_NOTHING
+	setevent EVENT_PEWTER_CITY_BADGE_CHECK
+	end 
+;	jumpstd PewterCityCooltrainerMScript
 
 PewterCity_CheckBadge2:
 	turnobject PEWTERCITY_COOLTRAINER_M, DOWN 

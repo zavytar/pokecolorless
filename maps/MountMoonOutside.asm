@@ -40,6 +40,7 @@ MountMoonSignText:
 
     para "PEWTER CITY"
     line "ENTRANCE"
+	done
 
 MountMoonOutside_MapEvents:
 	db 0, 0 ; filler
@@ -47,8 +48,6 @@ MountMoonOutside_MapEvents:
 	db 2 ; warp events
 	warp_event  9,  5, MOUNT_MOON_POKECENTER_1F, 1 ; PokéCenter
 	warp_event 16,  3, MOUNT_MOON_1F, 1 ; Mount Moon 1F
-;	warp_event 11, 19, ROUTE_3, 1 ; Mount Moon 1F
-;	warp_event 12, 19, ROUTE_3, 2 ; Mount Moon 1F
 
 	db 0 ; coord events
 
@@ -56,5 +55,5 @@ MountMoonOutside_MapEvents:
 	bg_event 13,  5, BGEVENT_READ, MountMoonSign
 
 	db 2 ; object events
-	object_event  6,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PalletTownTeacherScript, -1 ; Tripped over rocky Pokémon
-	object_event 12, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PalletTownTeacherScript, -1 ; Younngster
+	object_event  6,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoonOutside_CooltrainerFScript, -1 ; Tripped over rocky Pokémon
+	object_event 12, 11, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoonOutside_YoungsterScript, -1 ; Younngster
