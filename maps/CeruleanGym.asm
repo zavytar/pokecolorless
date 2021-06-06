@@ -1,8 +1,8 @@
 	object_const_def ; object_event constants
 	const CERULEANGYM_MISTY
-	const CERULEANGYM_SWIMMER_GIRL1
-	const CERULEANGYM_SWIMMER_GIRL2
-	const CERULEANGYM_SWIMMER_GUY
+;	const CERULEANGYM_SWIMMER_GIRL1
+;	const CERULEANGYM_SWIMMER_GIRL2
+;	const CERULEANGYM_SWIMMER_GUY
 	const CERULEANGYM_GYM_GUY
 
 CeruleanGym_MapScripts:
@@ -13,7 +13,7 @@ CeruleanGym_MapScripts:
 CeruleanGymMistyScript:
 	faceplayer
 	opentext
-	checkflag ENGINE_CASCADEBADGE
+	checkflag ENGINE_HIVEBADGE ; CASCADEBADGE
 	iftrue .FightDone
 	writetext MistyIntroText
 	waitbutton
@@ -30,12 +30,22 @@ CeruleanGymMistyScript:
 	writetext ReceivedCascadeBadgeText
 	playsound SFX_GET_BADGE
 	waitsfx
-	setflag ENGINE_CASCADEBADGE
+;	setflag ENGINE_CASCADEBADGE
+	setflag ENGINE_HIVEBADGE
+	waitbutton
+	writetext MistyAfterBattleText
+	waitbutton
+	verbosegiveitem TM_ICY_WIND
+	iffalse .done
 .FightDone:
 	writetext MistyFightDoneText
 	waitbutton
 	closetext
 	end
+
+	
+.done
+	end 
 
 TrainerSwimmerfDiana:
 	trainer SWIMMERF, DIANA, EVENT_BEAT_SWIMMERF_DIANA, SwimmerfDianaSeenText, SwimmerfDianaBeatenText, 0, .Script
@@ -96,30 +106,56 @@ CeruleanGymStatue2:
 	jumpstd gymstatue2
 
 MistyIntroText:
-	text "MISTY: I was ex-"
-	line "pecting you, you"
-	cont "pest!"
+	text "Hi, you're a new"
+	line "face!"
 
-	para "You may have a"
-	line "lot of JOHTO GYM"
+	para "What's your policy"
+	line "on #MON? What"
+	cont "is your approach?"
 
-	para "BADGES, but you'd"
-	line "better not take me"
-	cont "too lightly."
+	para "My policy is an"
+	line "all-out offensive"
+	cont "with water-type"
+	cont "#MON!"
 
-	para "My water-type"
-	line "#MON are tough!"
+	para "MISTY, the world-"
+	line "famous beauty, is"
+	cont "your host!"
+
+	para "Are you ready,"
+	line "sweetie?"
 	done
 
-MistyWinLossText:
-	text "MISTY: You really"
-	line "are good…"
+MistyWinLossText:	
+	text "I can't"
+	line "believe I lost!"
 
-	para "I'll admit that"
-	line "you are skilled…"
+	para "All right!"
 
-	para "Here you go. It's"
-	line "CASCADEBADGE."
+	para "You can have the"
+	line "CASCADEBADGE to"
+	cont "show you beat me!"
+	prompt
+
+
+MistyAfterBattleText:
+	text "The CASCADEBADGE"
+	line "makes all #MON"
+	cont "up to L30 obey!"
+
+	para "That includes"
+	line "even outsiders!"
+
+	para "There's more, you"
+	line "can now use CUT"
+	cont "anytime!"
+
+	para "You can CUT down"
+	line "small bushes to"
+	cont "open new paths!"
+
+	para "You can also have"
+	line "my favorite TM!"
 	done
 
 ReceivedCascadeBadgeText:
@@ -128,16 +164,11 @@ ReceivedCascadeBadgeText:
 	done
 
 MistyFightDoneText:
-	text "MISTY: Are there"
-	line "many strong train-"
-	cont "ers in JOHTO? Like"
-	cont "you, I mean."
+	text "MISTY: TM11"
+	line "teaches SCALD!"
 
-	para "I'm going to"
-	line "travel one day, so"
-
-	para "I can battle some"
-	line "skilled trainers."
+	para "Use it on an"
+	line "aquatic #MON!"
 	done
 
 SwimmerfDianaSeenText:
@@ -201,11 +232,12 @@ CeruleanGymGuyText:
 	text "Yo! CHAMP in"
 	line "making!"
 
-	para "Since MISTY was"
-	line "away, I went out"
+	para "MISTY uses water-"
+	line "type #MON."
 
-	para "for some fun too."
-	line "He-he-he."
+	para "Electric or grass-"
+	line "moves yould be"
+	cont "ideal!"
 	done
 
 CeruleanGymGuyWinText:
@@ -230,9 +262,9 @@ CeruleanGym_MapEvents:
 	bg_event  2, 13, BGEVENT_READ, CeruleanGymStatue1
 	bg_event  6, 13, BGEVENT_READ, CeruleanGymStatue2
 
-	db 5 ; object events
+	db 2 ; object events
 	object_event  5,  3, SPRITE_MISTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanGymMistyScript, -1
-	object_event  4,  6, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfDiana, -1
-	object_event  1,  9, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerSwimmerfBriana, -1
-	object_event  8,  9, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermParker, -1
+;	object_event  4,  6, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfDiana, -1
+;	object_event  1,  9, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerSwimmerfBriana, -1
+;	object_event  8,  9, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermParker, -1
 	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanGymGuyScript, -1

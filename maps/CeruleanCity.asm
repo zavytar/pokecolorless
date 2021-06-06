@@ -97,8 +97,8 @@ CeruleanCityPokecenterSign:
 CeruleanCityMartSign:
 	jumpstd martsign
 
-CeruleanCityHiddenBerserkGene:
-	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY
+;CeruleanCityHiddenBerserkGene:
+;	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY
 
 CeruleanCity_CooltrainerMText1:
 	text "KANTO's POWER"
@@ -206,23 +206,23 @@ CeruleanLockedDoorText:
 CeruleanCity_MapEvents:
 	db 0, 0 ; filler
 
-	db 3 ; warp events
+	db 4 ; warp events
 	warp_event 19, 17, CERULEAN_POKECENTER_1F, 1
 	warp_event 30, 19, CERULEAN_GYM, 1
 	warp_event 25, 25, CERULEAN_MART, 2
-	warp_event 13, 25, CERULEAN_BIKE_SHOP, 1	
+	warp_event 13, 25, BIKE_SHOP, 1
 ;	warp_event  9, 15, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 1
 ;	warp_event 25, 15, CERULEAN_POLICE_STATION, 1
 ;	warp_event 13, 19, CERULEAN_TRADE_SPEECH_HOUSE, 1
 
 	db 0 ; coord events
 
-	db 5 ; bg events
+	db 6 ; bg events
 	bg_event 17, 29, BGEVENT_READ, CeruleanCitySign
 	bg_event 23, 19, BGEVENT_READ, CeruleanGymSign
 	bg_event 11, 25, BGEVENT_READ, CeruleanBikeShopSign
 ;	bg_event 25, 17, BGEVENT_READ, CeruleanPoliceSign
-;	bg_event 23,  7, BGEVENT_READ, CeruleanCapeSign
+	bg_event 23, 11, BGEVENT_READ, CeruleanCapeSign
 ;	bg_event 14, 29, BGEVENT_READ, CeruleanLockedDoor
 	bg_event 20, 17, BGEVENT_READ, CeruleanCityPokecenterSign
 	bg_event 26, 25, BGEVENT_READ, CeruleanCityMartSign
