@@ -168,6 +168,10 @@ ENDM
 	map_attributes MountMoonB1F, MOUNT_MOON_B1F, $00, 0
 	map_attributes MountMoonB2F, MOUNT_MOON_B2F, $00, 0
 
+	map_attributes CeruleanGym, CERULEAN_GYM, $00, 0
+	map_attributes CeruleanMart, CERULEAN_MART, $00, 0
+	map_attributes CeruleanPokecenter1F, CERULEAN_POKECENTER_1F, $00, 0	
+
 	map_attributes IndigoPlateauPokecenter1F, INDIGO_PLATEAU_POKECENTER_1F, $00, 0
 	map_attributes WillsRoom, WILLS_ROOM, $00, 0
 	map_attributes KogasRoom, KOGAS_ROOM, $00, 0

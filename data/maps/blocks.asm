@@ -65,6 +65,9 @@ Route4_Blocks:
 CeruleanCity_Blocks:
 	INCBIN "maps/CeruleanCity.blk"
 
+CeruleanGym_Blocks:
+	INCBIN "maps/CeruleanGym.blk"
+
 Route23_Blocks:
 	INCBIN "maps/Route23.blk"
 
@@ -74,12 +77,12 @@ VictoryRoadGate_Blocks:
 NewBarkTown_Blocks:
 	INCBIN "maps/NewBarkTown.blk"
 
-;CeruleanMart_Blocks:
-
+CeruleanMart_Blocks:
 ViridianMart_Blocks:
 PewterMart_Blocks:
 	INCBIN "maps/Mart.blk"
 
+CeruleanPokecenter1F_Blocks:
 ViridianPokecenter1F_Blocks:
 PewterPokecenter1F_Blocks:
 MountMoonPokecenter1F_Blocks:
