@@ -130,11 +130,11 @@ ENDM
 	map_attributes MountMoonOutside, MOUNT_MOON_OUTSIDE, $2c, SOUTH
 	connection south, Route3, ROUTE_3, -21
 
-	map_attributes Route4, ROUTE_4, $2c, 0 ; EAST
-	; connection east, CeruleanCity, CERULEAN_CITY, -5
+	map_attributes Route4, ROUTE_4, $2c, EAST
+	connection east, CeruleanCity, CERULEAN_CITY, -5
 
-	map_attributes CeruleanCity, CERULEAN_CITY, $2c, 0 ; WEST
-	; connection west, Route4, ROUTE_4, 5
+	map_attributes CeruleanCity, CERULEAN_CITY, $2c, WEST
+	connection west, Route4, ROUTE_4, 5
 
 	map_attributes Route23, ROUTE_23, $0f, $2c
 

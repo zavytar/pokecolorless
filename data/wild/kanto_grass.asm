@@ -100,7 +100,7 @@ KantoGrassWildMons:
 	db 7, KAKUNA
 	db 5, PIDGEY
 	db 5, PIKACHU
-	db 9, PIDGEOTTO
+	db 5, BULBASAUR
 	; nite
 	db 5, CATERPIE
 	db 5, WEEDLE
@@ -111,3 +111,139 @@ KantoGrassWildMons:
 	db 5, PIKACHU
 
 	db -1 ; end
+
+	map_id ROUTE_3 
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, MANKEY
+	db 7, LEDIAN
+	db 4, JIGGLYPUFF
+	db 4, PIKACHU
+	; day
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, MANKEY
+	db 7, PIDGEOTTO
+	db 4, JIGGLYPUFF
+	db 4, PIKACHU
+	; nite
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, JIGGLYPUFF
+	db 7, CATERPIE
+	db 4, NOCTOWL
+	db 4, NOCTOWL
+
+	map_id MOUNT_MOON_1F 
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, MANKEY
+	db 7, LEDIAN
+	db 4, JIGGLYPUFF
+	db 4, PIKACHU
+	; day
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, MANKEY
+	db 7, PIDGEOTTO
+	db 4, JIGGLYPUFF
+	db 4, PIKACHU
+	; nite
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, JIGGLYPUFF
+	db 7, CATERPIE
+	db 4, NOCTOWL
+	db 4, NOCTOWL
+
+	map_id MOUNT_MOON_B1F 
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, MANKEY
+	db 7, LEDIAN
+	db 4, JIGGLYPUFF
+	db 4, PIKACHU
+	; day
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, MANKEY
+	db 7, PIDGEOTTO
+	db 4, JIGGLYPUFF
+	db 4, PIKACHU
+	; nite
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, JIGGLYPUFF
+	db 7, CATERPIE
+	db 4, NOCTOWL
+	db 4, NOCTOWL
+
+	map_id MOUNT_MOON_B2F 
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, MANKEY
+	db 7, LEDIAN
+	db 4, JIGGLYPUFF
+	db 4, PIKACHU
+	; day
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, MANKEY
+	db 7, PIDGEOTTO
+	db 4, JIGGLYPUFF
+	db 4, PIKACHU
+	; nite
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, JIGGLYPUFF
+	db 7, CATERPIE
+	db 4, NOCTOWL
+	db 4, NOCTOWL
+
+	map_id ROUTE_4 
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, MANKEY
+	db 7, LEDIAN
+	db 4, JIGGLYPUFF
+	db 4, PIKACHU
+	; day
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, MANKEY
+	db 7, PIDGEOTTO
+	db 4, JIGGLYPUFF
+	db 4, PIKACHU
+	; nite
+	db 3, SPEAROW
+	db 3, NIDORAN_M
+	db 5, NIDORAN_F
+	db 7, JIGGLYPUFF
+	db 7, CATERPIE
+	db 4, NOCTOWL
+	db 4, NOCTOWL
+

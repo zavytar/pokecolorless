@@ -20,4 +20,16 @@ KantoWaterWildMons:
 	db 5, POLIWAG
 	db 10, POLIWHIRL
 
+	map_id ROUTE_4 
+	db 2 percent ; encounter rate
+	db 10, POLIWAG
+	db 5, POLIWAG
+	db 10, POLIWHIRL
+
+	map_id CERULEAN_CITY
+	db 2 percent ; encounter rate
+	db 10, POLIWAG
+	db 5, POLIWAG
+	db 10, POLIWHIRL
+
 	db -1 ; end
