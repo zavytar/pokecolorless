@@ -73,7 +73,7 @@ Route4_RocketsScene:
 	applymovement PLAYER, Route4_PlayerMovement2
 	setevent EVENT_ROUTE_4_ROCKETS
 	clearevent EVENT_ROUTE_4_GUARD
-
+	setscene SCENE_ROUTE4_NOTHING 
 	end
 
 Route4_Rocket3Script:
@@ -171,24 +171,48 @@ Route4_SignText:
 	done
 
 Route4_PlayerMovement1Top:
+	step RIGHT 
+	step RIGHT
+	step RIGHT
+	step DOWN 
+	step RIGHT
+	step RIGHT
 	step_end
 
 Route4_PlayerMovement1Bot:
+	step DOWN
+	step RIGHT 
+	step RIGHT
+	step RIGHT
+	step UP 
+	step RIGHT
+	step RIGHT 
+	step RIGHT
 	step_end
 
 Route4_PlayerMovement2:
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	step RIGHT 
 	step_end
 
 Route4_RocketsEnterMovement1:
+	step LEFT
 	step_end
 
 Route4_RocketsEnterMovement2:
+	step LEFT
 	step_end
 
 Route4_RocketsEnterMovement3:
+	step LEFT
 	step_end
 
 Route4_RocketsEnterMovement4:
+	step LEFT
 	step_end
 
 Route4_MapEvents:
@@ -206,7 +230,7 @@ Route4_MapEvents:
 	bg_event  3,  7, BGEVENT_READ, Route4_Sign
 	bg_event 10,  3, BGEVENT_ITEM, Route4HiddenUltraBall
 
-	db 6 ; object events
+	db 8 ; object events
 	object_event 30,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerLassX, -1
 	object_event 22,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, Route4_TM, EVENT_GOT_TM05_ROAR_AT_ROUTE_4
 	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
