@@ -145,9 +145,9 @@ Route3SignText:
 Route3_MapEvents:
 	db 0, 0 ; filler
 
-	db 2 ; warp events
-	warp_event 53,  3, MOUNT_MOON_OUTSIDE, 3 ; Mt Moon Outside
-	warp_event 54,  3, MOUNT_MOON_OUTSIDE, 4 ; Mt Moon Outside
+	db 0 ; warp events
+;	warp_event 52,  3, MOUNT_MOON_OUTSIDE, 3 ; Mt Moon Outside
+;	warp_event 53,  3, MOUNT_MOON_OUTSIDE, 4 ; Mt Moon Outside
 ;	warp_event 58,  3, MOUNT_MOON, 1
 
 	db 0 ; coord events

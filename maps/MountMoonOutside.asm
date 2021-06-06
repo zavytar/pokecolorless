@@ -44,11 +44,11 @@ MountMoonSignText:
 MountMoonOutside_MapEvents:
 	db 0, 0 ; filler
 
-	db 4 ; warp events
+	db 2 ; warp events
 	warp_event  9,  5, MOUNT_MOON_POKECENTER_1F, 1 ; PokéCenter
 	warp_event 16,  3, MOUNT_MOON_1F, 1 ; Mount Moon 1F
-	warp_event 11, 19, ROUTE_3, 1 ; Mount Moon 1F
-	warp_event 12, 19, ROUTE_3, 2 ; Mount Moon 1F
+;	warp_event 11, 19, ROUTE_3, 1 ; Mount Moon 1F
+;	warp_event 12, 19, ROUTE_3, 2 ; Mount Moon 1F
 
 	db 0 ; coord events
 
