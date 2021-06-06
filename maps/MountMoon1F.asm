@@ -13,6 +13,14 @@ MountMoon1F_MapScripts:
 
 	db 0 ; callbacks
 
+; bug catcher
+; bug catcher 2
+; lass 1
+; lass 2
+; super nerd
+; youngster
+; hiker
+
 MountMoon1F_Script:
 	end 
 
@@ -45,11 +53,11 @@ MountMoon1F_MapEvents:
 	db 0 ; bg events
 
 	db 8 ; object events
-	object_event  7, 24, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Bug Catcher 1
-	object_event 34, 25, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Bug Catcher 2
-	object_event 18, 25, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Lass 1
-	object_event 29,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Lass 2
-	object_event 24, 30, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Super Nerd
-	object_event 14, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Younngster
-	object_event  8,  7, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Hiker 1
-	object_event 40,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Hiker2Script, -1 ; Hiker 2
+	object_event  7, 24, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Bug Catcher 1
+	object_event 34, 25, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Bug Catcher 2
+	object_event 18, 25, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Lass 1
+	object_event 29,  4, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Lass 2
+	object_event 24, 30, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Super Nerd
+	object_event 14, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Youngster
+	object_event  8,  7, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Script, -1 ; Hiker 1
+	object_event 40,  4, SPRITE_HIKER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Hiker2Script, -1 ; Hiker 2

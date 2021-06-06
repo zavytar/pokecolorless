@@ -16,40 +16,40 @@ Route3_MapScripts:
 	db 0 ; callbacks
 
 TrainerYoungster1:
-	trainer YOUNGSTER, YOUNGSTER_BEN, EVENT_BEAT_YOUNGSTER_BEN, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+	trainer YOUNGSTER, YOUNGSTER_BEN, EVENT_BEAT_YOUNGSTER_BEN, Youngster1SeenText, Youngster1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext FirebreatherOtisAfterBattleText
+	writetext Youngster1AfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerYoungster2:
-	trainer YOUNGSTER, YOUNGSTER_CALVIN, EVENT_BEAT_YOUNGSTER_CALVIN, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+	trainer YOUNGSTER, YOUNGSTER_CALVIN, EVENT_BEAT_YOUNGSTER_CALVIN, Youngster2SeenText, Youngster2BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext FirebreatherOtisAfterBattleText
+	writetext Youngster2AfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerLassJanice:
-	trainer LASS, JANICE, EVENT_BEAT_LASS_JANICE, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+	trainer LASS, JANICE, EVENT_BEAT_LASS_JANICE, Lass1SeenText, Lass1BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext FirebreatherOtisAfterBattleText
+	writetext Lass1AfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerLassSally:
-	trainer LASS, SALLY, EVENT_BEAT_LASS_SALLY, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+	trainer LASS, SALLY, EVENT_BEAT_LASS_SALLY, Lass2SeenText, Lass2BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -60,45 +60,45 @@ TrainerLassSally:
 	end
 
 TrainerLassRobin:
-	trainer LASS, ROBIN, EVENT_BEAT_LASS_ROBIN, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+	trainer LASS, ROBIN, EVENT_BEAT_LASS_ROBIN, Lass3SeenText, Lass3BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext FirebreatherOtisAfterBattleText
+	writetext Lass3AfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerBugcatcher11:
-	trainer BUG_CATCHER, OTIS, EVENT_BEAT_BUG_CATCHER_BENNY, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+	trainer BUG_CATCHER, OTIS, EVENT_BEAT_BUG_CATCHER_BENNY, BugCatcher11SeenText, BugCatcher11BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext FirebreatherOtisAfterBattleText
+	writetext BugCatcher11AfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerBugcatcher12:
-	trainer BUG_CATCHER, OTIS, EVENT_BEAT_FIREBREATHER_OTIS, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+	trainer BUG_CATCHER, OTIS, EVENT_BEAT_FIREBREATHER_OTIS, BugCatcher12SeenText, BugCatcher12BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext FirebreatherOtisAfterBattleText
+	writetext BugCatcher12AfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerBugcatcher13:
-	trainer BUG_CATCHER, OTIS, EVENT_BEAT_FIREBREATHER_OTIS, FirebreatherOtisSeenText, FirebreatherOtisBeatenText, 0, .Script
+	trainer BUG_CATCHER, OTIS, EVENT_BEAT_FIREBREATHER_OTIS, BugCatcher13SeenText, BugCatcher13BeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext FirebreatherOtisAfterBattleText
+	writetext BugCatcher13AfterBattleText
 	waitbutton
 	closetext
 	end
@@ -109,7 +109,142 @@ Route3_CooltrainerMScript:
 Route3Sign:
 	jumptext Route3SignText
 
+Youngster1SeenText:
+	text "Hi! I like shorts!"
+	line "They're comfy and"
+	cont "easy to wear!"
+	done
 
+Youngster1BeatenText:
+	text "I don't"
+	line "believe it!"
+	done
+
+Youngster1AfterBattleText:
+	text "Are you storing"
+	line "your #MON on"
+	cont "PC? Each BOX can"
+	cont "hold 20 #MON!"
+	done
+
+Youngster2SeenText:
+	text "Hey! You're not"
+	line "wearing shorts!"
+	done
+
+Youngster2BeatenText:
+	text "Lost!"
+	line "Lost! Lost!"
+	done
+
+Youngster2AfterBattleText:
+	text "I always wear"
+	line "shorts, even in"
+	cont "winter!"
+	done
+
+BugCatcher11SeenText:
+	text "Hey! Didn't I meet"
+	line "you back in"
+	cont "VIRIDIAN FOREST!"
+	done
+
+BugCatcher11BeatenText:
+	text "I was beaten"
+	line "again!"
+	done
+
+BugCatcher11AfterBattleText:
+	text "There are other"
+	line "kinds of #MON"
+	cont "that aren't bugs"
+	cont "in the forest!"
+
+	para "I once found a"
+	line "PIKACHU and a"
+	cont "BULBASAUR there,"
+	cont "but they got away…"
+	done
+
+BugCatcher12SeenText:
+	text "You can fight my"
+	line "new #MON!"
+	done
+
+BugCatcher12BeatenText:
+	text "Done"
+	line "like dinner!"
+	done
+
+BugCatcher12AfterBattleText:
+	text "Trained #MON"
+	line "are stronger than"
+	cont "the wild ones!"
+	done
+
+BugCatcher13SeenText:
+	text "Are you a trainer?"
+	line "Let's fight!"
+	done
+
+BugCatcher13BeatenText:
+	text "If I"
+	line "had new #MON,"
+	cont "I would've won!"
+	prompt
+
+BugCatcher13AfterBattleText:
+	text "If a #MON BOX"
+	line "on the PC gets"
+	cont "full, just switch"
+	cont "to another BOX!"
+	done
+
+Lass1SeenText:
+	text "You looked at me,"
+	line "didn't you?"
+	done
+
+Lass1BeatenText:
+	text "You're"
+	line "mean!"
+	done
+
+Lass1AfterBattleText:
+	text "Quit staring if"
+	line "you don't want to"
+	cont "fight!"
+	done
+
+Lass2SeenText:
+	text "That look you"
+	line "gave me, it's so"
+	cont "intriguing!"
+	done
+
+Lass2BeatenText:
+	text "Be nice!"
+	prompt
+
+Lass2AfterBattleText:
+	text "Avoid fights by"
+	line "not letting"
+	cont "people see you!"
+	done
+
+Lass3SeenText:
+	text "Eek! Did you"
+	line "touch me?"
+	done
+
+Lass3BeatenText:
+	text "That's it?"
+	done
+
+Lass3AfterBattleText:
+	text "ROUTE 4 is at the"
+	line "foot of MT.MOON."
+	done
 
 FirebreatherOtisSeenText:
 	text "Ah! The weather's"
