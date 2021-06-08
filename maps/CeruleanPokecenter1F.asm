@@ -42,9 +42,19 @@ CeruleanPokecenter1F_OaksAideScript:
 	writetext CeruleanPokecenter1F_OaksAideText3
 	waitbutton 
 	closetext
-	disappear CERULEANPOKECENTER1F_OAKS_AIDE
 	clearevent EVENT_OAKS_AIDE_IN_CERULEAN_POKEMON_CENTER 
+	readvar VAR_FACING
+	ifequal UP, .RunAround
+	turnobject PLAYER, DOWN 
+	applymovement CeruleanPokecenter1F_AideLeavesMovement1
+	playsound SFX_EXIT_BUILDING
+	disappear CERULEANPOKECENTER1F_OAKS_AIDE
 	end 
+
+.RunAround:	
+	applymovement CeruleanPokecenter1F_AideLeavesMovement2:
+	disappear CERULEANPOKECENTER1F_OAKS_AIDE
+	end
 
 CeruleanPokecenter1FSuperNerdText:
 	text "For battles, I'd"
@@ -147,6 +157,23 @@ CeruleanPokecenter1F_PlayerGotBikeVoucherText:
 	line "BIKE VOUCHER!"
 	done 
 
+CeruleanPokecenter1F_AideLeavesMovement1:
+	step LEFT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
+
+CeruleanPokecenter1F_AideLeavesMovement2:
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
+	step_end
+	
 CeruleanPokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
