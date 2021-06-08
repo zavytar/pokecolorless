@@ -351,6 +351,14 @@ YoungsterGroup:
 	db  14, SPEAROW
 	db -1 ; end
 
+	; YOUNGSTER (2)
+	db "JOSH@", TRAINERTYPE_NORMAL
+	db  11, RATTATA
+	db  12, RATTATA
+	db  11, ZUBAT
+	db -1 ; end
+
+
 SchoolboyGroup:
 	; SCHOOLBOY (1)
 	db "JACK@", TRAINERTYPE_NORMAL
@@ -654,7 +662,7 @@ LassGroup:
 
 	; LASS (6) - Mt Moon 1F
 	db "MIRIAM@", TRAINERTYPE_NORMAL
-	db 12, JIGGLYPUFF
+	db 12, BELLSPROUT
 	db 12, ODDISH
 	db -1 ; end
 
@@ -1399,14 +1407,14 @@ BugCatcherGroup:
 	db  9, WEEDLE
 	db -1 ; end
 
-	; BUG_CATCHER (5)
+	; BUG_CATCHER (6)
 	db "COLTON@", TRAINERTYPE_NORMAL
 	db  10, CATERPIE
 	db  10, WEEDLE
 	db  10, CATERPIE
 	db -1 ; end
 
-	; BUG_CATCHER (5)
+	; BUG_CATCHER (7)
 	db "GREG@", TRAINERTYPE_NORMAL
 	db  9, WEEDLE
 	db  9, KAKUNA
@@ -1414,10 +1422,23 @@ BugCatcherGroup:
 	db  9, METAPOD
 	db -1 ; end
 
-	; BUG_CATCHER (5)
+	; BUG_CATCHER (8)
 	db "JAMES@", TRAINERTYPE_NORMAL
 	db  11, CATERPIE
 	db  11, METAPOD
+	db -1 ; end
+
+	; BUG_CATCHER (9)
+	db "KENT@", TRAINERTYPE_NORMAL
+	db  12, WEEDLE
+	db  12, KAKUNA
+	db -1 ; end
+
+	; BUG_CATCHER (10)
+	db "ROBBIE@", TRAINERTYPE_NORMAL
+	db  11, CATERPIE
+	db  12, METAPOD
+	db	12, KAKUNA
 	db -1 ; end
 
 FisherGroup:
@@ -1916,13 +1937,15 @@ SailorGroup:
 
 SuperNerdGroup:
 	; SUPER_NERD (1)
-	db "STAN@", TRAINERTYPE_NORMAL
-	db 20, GRIMER
+	db "JOVAN@", TRAINERTYPE_NORMAL
+	db 10, VOLTORB
+	db 10, MAGNEMITE
 	db -1 ; end
 
 	; SUPER_NERD (2)
-	db "ERIC@", TRAINERTYPE_NORMAL
-	db 11, GRIMER
+	db "MIGUEL@", TRAINERTYPE_NORMAL
+	db 11, KOFFING
+	db 11, VOLTORB
 	db 11, GRIMER
 	db -1 ; end
 
@@ -2076,9 +2099,10 @@ GuitaristGroup:
 
 HikerGroup:
 	; HIKER (1)
-	db "ANTHONY@", TRAINERTYPE_NORMAL
-	db 16, GEODUDE
-	db 18, MACHAMP
+	db "MARCUS@", TRAINERTYPE_NORMAL
+	db 10, GEODUDE
+	db 10, GEODUDE
+	db 10, ONIX
 	db -1 ; end
 
 	; HIKER (2)
