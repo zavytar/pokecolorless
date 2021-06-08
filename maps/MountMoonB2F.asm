@@ -8,8 +8,16 @@ MountMoonB2F_MapScripts:
 
 	db 0 ; callbacks
 
-MountMoonB2F_Script:
-	end 
+TrainerSuperNerdMiguel:
+	trainer SUPER_NERD, SUPER_NERD_MIGUEL, EVENT_BEAT_SUPER_NERD_MIGUEL, SuperNerdMiguelSeenText, SuperNerdMiguelBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SuperNerdMiguelAfterBattleText
+	waitbutton
+	closetext
+	end
 
 MountMoonB2F_TM: 
 	opentext
@@ -26,6 +34,27 @@ MountMoonB2F_TM:
 MountMoonB2FNugget:
 	itemball NUGGET
 
+SuperNerdMiguelSeenText:
+	text "I'm looking for"
+	line "#MON fossils!"
+	done
+
+SuperNerdMiguelBeatenText:
+	text "Agh! Couldn't"
+	line "make it!"
+	done
+
+SuperNerdMiguelAfterBattleText:
+	text "Far away, on"
+	line "CINNABAR ISLAND,"
+	cont "there's a #MON"
+	cont "LAB."
+
+	para "They do research"
+	line "on regenerating"
+	cont "fossils."
+	done
+
 MountMoonB2F_MapEvents:
 	db 0, 0 ; filler
 
@@ -40,6 +69,6 @@ MountMoonB2F_MapEvents:
 	db 0 ; bg events
 
 	db 3 ; object events
-	object_event 14, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoonB2F_Script, -1 ; Super Nerd
+	object_event 14, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 2, 2, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerSuperNerdMiguel, -1 ; Super Nerd
 	object_event 29,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 4, MountMoonB2F_TM, EVENT_GOT_TM46_THIEF_AT_MOUNT_MOON_B2F ;TM46 - Thief
 	object_event 25, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMoonB2FNugget, EVENT_MOUNT_MOON_B2F_NUGGET

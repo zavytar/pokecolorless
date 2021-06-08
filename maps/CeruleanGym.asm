@@ -237,21 +237,25 @@ CeruleanGymGuyText:
 	text "Yo! CHAMP in"
 	line "making!"
 
-	para "MISTY uses water-"
-	line "type #MON."
+	para "GYM LEADER MISTY"
+	line "is a pro who uses"
+	cont "water #MON!"
 
-	para "Electric or grass-"
-	line "moves yould be"
-	cont "ideal!"
+	para "You can drain all"
+	line "their water with"
+	cont "plant #MON!"
+
+	para "Or, zap them with"
+	line "electricity!"
 	done
 
 CeruleanGymGuyWinText:
-	text "Hoo, you showed me"
-	line "how tough you are."
+	text "You beat MISTY!"
+	line "What'd I tell ya?"
 
-	para "As always, that"
-	line "was one heck of a"
-	cont "great battle!"
+	para "You and me, kid,"
+	line "we make a pretty"
+	cont "darn good team!"
 	done
 
 CeruleanGym_MapEvents:

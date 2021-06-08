@@ -145,24 +145,22 @@ Route4_Rocket3Text:
 	done 
 
 LassCrissySeenText:
-	text "I have a feeling"
-	line "that I can win."
-
-	para "Let's see if I'm"
-	line "right!"
+	text "I came to get my"
+	line "mushroom #MON!"
 	done
 
 LassCrissyBeatenText:
-	text "Aww, you are too"
-	line "strong."
+	text "Oh! My cute"
+	line "mushroom #MON!"
 	done
 
 LassCrissyAfterBattleText:
-	text "I heard CLEFAIRY"
-	line "appear at MT.MOON."
+	text "There might not"
+	line "be any more"
+	cont "mushrooms here."
 
-	para "But where could"
-	line "they be?"
+	para "I think I got"
+	line "them all."
 	done
 
 Route4_SignText:
