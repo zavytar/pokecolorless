@@ -24,7 +24,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw QuestionMarkDesc
+	dw BikeVoucherDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -348,6 +348,10 @@ WaterStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
+BikeVoucherDesc:
+	db	 "Exchange at BIKE"
+	next "SHOP for a BIKE."
+
 HPUpDesc:
 	db   "Raises the HP of"
 	next "one #MON.@"
@@ -506,7 +510,7 @@ SecretPotionDesc:
 
 SSTicketDesc:
 	db   "A ticket for the"
-	next "S.S.AQUA.@"
+	next "S.S.ANNE.@"
 
 MysteryEggDesc:
 	db   "An EGG obtained"

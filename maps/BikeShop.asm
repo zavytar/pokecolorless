@@ -11,6 +11,8 @@ BikeShop_MapScripts:
 
 BikeShopClerkScript:
 	faceplayer
+	checkitem BIKE_VOUCHER
+	iftrue .GotVoucher
 	opentext
 	checkevent EVENT_GOT_BICYCLE
 	iftrue .GotBicycle
@@ -22,14 +24,18 @@ BikeShopClerkScript:
 	closetext 
 	end 
 
-;	waitsfx
-;	giveitem BICYCLE
-;	writetext BorrowedABicycleText
-;	playsound SFX_KEY_ITEM
-;	waitsfx
-;	itemnotify
+.GotVoucher:
+	opentext
+	writetext BikeShopClerkVoucherText
+	waitbutton
+	waitsfx
+	giveitem BICYCLE
+	writetext BorrowedABicycleText
+	playsound SFX_KEY_ITEM
+	waitsfx
+	itemnotify
 ;	setflag ENGINE_BIKE_SHOP_CALL_ENABLED
-;	setevent EVENT_GOT_BICYCLE
+	setevent EVENT_GOT_BICYCLE
 .GotBicycle:
 	writetext BikeShopClerkFirstRateBikesText
 	waitbutton
@@ -60,6 +66,9 @@ BikeShopClerkIntroText:
 
 	text "It's a cool BIKE!"
 	line "Do you want it?"
+
+	para "It's yours for"
+	line "¥1,000,000."
 	done
 
 BikeShopClerkAgreedText:
@@ -67,6 +76,14 @@ BikeShopClerkAgreedText:
 	line "afford it!"
 	done
 
+BikeShopClerkVoucherText:
+	text "Oh, that's…"
+
+	para "A BIKE VOUCHER!"
+
+	para "OK! Here you go!"
+	done 
+	
 BorrowedABicycleText:
 	text "<PLAYER> exchanged"
 	line "the BIKE VOUCHER"

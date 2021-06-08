@@ -40,6 +40,7 @@ MountMoonPokecenter1F_MagikarpSalesmanScript:
     waitsfx
     givepoke MAGIKARP, 5
     closetext
+    setevent EVENT_BOUGHT_MAGIKARP_AT_MT_MOON
     end  
 
 .NoMoney:
@@ -69,7 +70,7 @@ MountMoonPokecenter1F_MagikarpSalesmanText1:
 
     para "You can have this"
     line "feisty MAGIKARP"
-    cont "for only $500!"
+    cont "for only ¥500!"
 
     para "What do you say?"
     done 
@@ -99,7 +100,7 @@ MountMoonPokecenter1F_MagikarpSalesmanText5:
 
 MountMoonPokecenter1F_PlayerGotMagikarpText:
     text "<PLAYER> paid a"
-    line "ridiculous $100"
+    line "ridiculous ¥500"
     cont "for a MAGIKARP…"
     done 
 

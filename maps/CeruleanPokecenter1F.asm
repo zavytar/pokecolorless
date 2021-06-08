@@ -2,6 +2,7 @@
 	const CERULEANPOKECENTER1F_NURSE
 	const CERULEANPOKECENTER1F_SUPER_NERD
 	const CERULEANPOKECENTER1F_GYM_GUY
+	const CERULEANPOKECENTER1F_OAKS_AIDE
 
 CeruleanPokecenter1F_MapScripts:
 	db 0 ; scene scripts
@@ -26,7 +27,22 @@ CeruleanPokecenter1F_OaksAideScript:
 	opentext
 	writetext CeruleanPokecenter1F_OaksAideText1
 	waitbutton
+	giveitem S_S_TICKET
+	writetext CeruleanPokecenter1F_PlayerGotSSTicketText
+	playsound SFX_KEY_ITEM
+	waitsfx
+	waitbutton
+	writetext CeruleanPokecenter1F_OaksAideText2
+	waitbutton 
+	giveitem BIKE_VOUCHER
+	writetext CeruleanPokecenter1F_PlayerGotBikeVoucherText
+	playsound SFX_KEY_ITEM
+	waitsfx
+	waitbutton
+	writetext CeruleanPokecenter1F_OaksAideText3
+	waitbutton 
 	closetext
+	disappear CERULEANPOKECENTER1F_OAKS_AIDE
 	clearevent EVENT_OAKS_AIDE_IN_CERULEAN_POKEMON_CENTER 
 	end 
 
@@ -86,8 +102,11 @@ CeruleanPokecenter1F_OaksAideText2:
 	cont "the S.S. ANNE!"
 
 	para "It's a real fancy"
-	line "party that you'll"
-	cont "probably suit you!"
+	line "party with many"
+	cont "trainers from all"
+	cont "over the world."
+
+	para "You'll love it!"
 	
 	para "Oh, and before I"
 	line "go, DAISY said to"
@@ -97,7 +116,35 @@ CeruleanPokecenter1F_OaksAideText2:
 CeruleanPokecenter1F_OaksAideText3:
 	text "Exchange that for"
 	line "a new bike in the"
-	cont "BIKE HOP!"
+	cont "BIKE SHOP!"
+
+	para "By the way, if"
+	line "you want, head"
+	cont "north to reach"
+	cont "BILL's place."
+
+	para "He's a #MON"
+	line "collector, who"
+	cont "invented the #MON"
+	cont "STORAGE SYSTEM."
+
+	para "Meeting would be"
+	line "useful for you"
+	cont "and your Gramps'"
+	cont "research!"
+
+	para "And with that,"
+	line "I'm off! See you!"
+	done 
+
+CeruleanPokecenter1F_PlayerGotSSTicketText:
+	text "<PLAYER> got the"
+	line "S.S. TICKET!"
+	done 
+
+CeruleanPokecenter1F_PlayerGotBikeVoucherText:
+	text "<PLAYER> got the"
+	line "BIKE VOUCHER!"
 	done 
 
 CeruleanPokecenter1F_MapEvents:
