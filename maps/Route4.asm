@@ -23,13 +23,13 @@ Route4_MapScripts:
 .DummyScene2:
 	end 
 
-TrainerLassX:
-	trainer PICNICKER, HOPE, EVENT_BEAT_PICNICKER_HOPE, PicnickerHopeSeenText, PicnickerHopeBeatenText, 0, .Script
+TrainerLassCrissy:
+	trainer LASS, LASS_CRISSY, EVENT_BEAT_LASS_CRISSY, LassCrissySeenText, LassCrissyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext PicnickerHopeAfterBattleText
+	writetext LassCrissyAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -144,7 +144,7 @@ Route4_Rocket3Text:
 	para "Stay out, kid!"
 	done 
 
-PicnickerHopeSeenText:
+LassCrissySeenText:
 	text "I have a feeling"
 	line "that I can win."
 
@@ -152,12 +152,12 @@ PicnickerHopeSeenText:
 	line "right!"
 	done
 
-PicnickerHopeBeatenText:
+LassCrissyBeatenText:
 	text "Aww, you are too"
 	line "strong."
 	done
 
-PicnickerHopeAfterBattleText:
+LassCrissyAfterBattleText:
 	text "I heard CLEFAIRY"
 	line "appear at MT.MOON."
 

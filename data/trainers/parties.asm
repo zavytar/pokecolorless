@@ -648,18 +648,18 @@ LassGroup:
 	db -1 ; end
 
 	; LASS (5) - Mt Moon 1F
-	db "ROBIN@", TRAINERTYPE_NORMAL
+	db "IRIS@", TRAINERTYPE_NORMAL
 	db 14, CLEFAIRY
 	db -1 ; end
 
 	; LASS (6) - Mt Moon 1F
-	db "ROBIN@", TRAINERTYPE_NORMAL
+	db "MIRIAM@", TRAINERTYPE_NORMAL
 	db 12, JIGGLYPUFF
 	db 12, ODDISH
 	db -1 ; end
 
 	; LASS (7) - Route 4
-	db "ROBIN@", TRAINERTYPE_NORMAL
+	db "CRISSY@", TRAINERTYPE_NORMAL
 	db 12, PARAS
 	db 12, PARAS
 	db -1 ; end
@@ -1401,17 +1401,23 @@ BugCatcherGroup:
 
 	; BUG_CATCHER (5)
 	db "COLTON@", TRAINERTYPE_NORMAL
-	db  9, WEEDLE
+	db  10, CATERPIE
+	db  10, WEEDLE
+	db  10, CATERPIE
 	db -1 ; end
 
 	; BUG_CATCHER (5)
 	db "GREG@", TRAINERTYPE_NORMAL
 	db  9, WEEDLE
+	db  9, KAKUNA
+	db  9, CATERPIE
+	db  9, METAPOD
 	db -1 ; end
 
 	; BUG_CATCHER (5)
 	db "JAMES@", TRAINERTYPE_NORMAL
-	db  9, WEEDLE
+	db  11, CATERPIE
+	db  11, METAPOD
 	db -1 ; end
 
 FisherGroup:

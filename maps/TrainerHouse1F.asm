@@ -21,7 +21,7 @@ TrainerHouse1F_TeacherScript:
 	closetext
 	winlosstext TrainerHouse1F_TeacherWinText, 0
 	setlasttalked TRAINERHOUSE1F_TEACHER
-	loadtrainer TEACHER, COLETTE
+	loadtrainer TEACHER, TEACHER_COLETTE
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_TEACHER_COLETTE
