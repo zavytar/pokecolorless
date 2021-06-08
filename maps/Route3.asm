@@ -70,35 +70,35 @@ TrainerLassRobin:
 	closetext
 	end
 
-TrainerBugcatcher11:
-	trainer BUG_CATCHER, OTIS, EVENT_BEAT_BUG_CATCHER_BENNY, BugCatcher11SeenText, BugCatcher11BeatenText, 0, .Script
+TrainerBugCatcherColton:
+	trainer BUG_CATCHER, BUG_CATCHER_COLTON, EVENT_BEAT_BUG_CATCHER_COLTON, BugCatcherColtonSeenText, BugCatcherColtonBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcher11AfterBattleText
+	writetext BugCatcherColtonAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugcatcher12:
-	trainer BUG_CATCHER, OTIS, EVENT_BEAT_FIREBREATHER_OTIS, BugCatcher12SeenText, BugCatcher12BeatenText, 0, .Script
+TrainerBugCatcherGreg:
+	trainer BUG_CATCHER, BUG_CATCHER_GREG, EVENT_BEAT_FIREBREATHER_OTIS, BugCatcherGregSeenText, BugCatcherGregBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcher12AfterBattleText
+	writetext BugCatcherGregAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugcatcher13:
-	trainer BUG_CATCHER, OTIS, EVENT_BEAT_FIREBREATHER_OTIS, BugCatcher13SeenText, BugCatcher13BeatenText, 0, .Script
+TrainerBugCatcherJames:
+	trainer BUG_CATCHER, OTIS, EVENT_BEAT_FIREBREATHER_OTIS, BugCatcherJamesSeenText, BugCatcherJamesBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcher13AfterBattleText
+	writetext BugCatcherJamesAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -143,18 +143,18 @@ Youngster2AfterBattleText:
 	cont "winter!"
 	done
 
-BugCatcher11SeenText:
+BugCatcherColtonSeenText:
 	text "Hey! Didn't I meet"
 	line "you back in"
 	cont "VIRIDIAN FOREST!"
 	done
 
-BugCatcher11BeatenText:
+BugCatcherColtonBeatenText:
 	text "I was beaten"
 	line "again!"
 	done
 
-BugCatcher11AfterBattleText:
+BugCatcherColtonAfterBattleText:
 	text "There are other"
 	line "kinds of #MON"
 	cont "that aren't bugs"
@@ -166,34 +166,34 @@ BugCatcher11AfterBattleText:
 	cont "but they got away…"
 	done
 
-BugCatcher12SeenText:
+BugCatcherGregSeenText:
 	text "You can fight my"
 	line "new #MON!"
 	done
 
-BugCatcher12BeatenText:
+BugCatcherGregBeatenText:
 	text "Done"
 	line "like dinner!"
 	done
 
-BugCatcher12AfterBattleText:
+BugCatcherGregAfterBattleText:
 	text "Trained #MON"
 	line "are stronger than"
 	cont "the wild ones!"
 	done
 
-BugCatcher13SeenText:
+BugCatcherJamesSeenText:
 	text "Are you a trainer?"
 	line "Let's fight!"
 	done
 
-BugCatcher13BeatenText:
+BugCatcherJamesBeatenText:
 	text "If I"
 	line "had new #MON,"
 	cont "I would've won!"
 	prompt
 
-BugCatcher13AfterBattleText:
+BugCatcherJamesAfterBattleText:
 	text "If a #MON BOX"
 	line "on the PC gets"
 	cont "full, just switch"
@@ -293,7 +293,7 @@ Route3_MapEvents:
 	object_event 12,  7, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassJanice, -1 ; LASS 1
 	object_event 17,  2, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLassSally, -1 ; LASS 2
 	object_event 26, 13, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLassRobin, -1 ; LASS 3
-	object_event  6,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerBugcatcher11, -1 ; BUG CATCHER 1
-	object_event 16,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugcatcher12, -1 ; BUG CATCHER 2
-	object_event 20,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugcatcher13, -1 ; BUG CATCHER 3
+	object_event  6,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherColton, -1 ; BUG CATCHER 1
+	object_event 16,  3, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherGreg, -1 ; BUG CATCHER 2
+	object_event 20,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerBugCatcherJames, -1 ; BUG CATCHER 3
 	object_event 47, 15, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 3, Route3_CooltrainerMScript, -1 ; COOLTRAINER M

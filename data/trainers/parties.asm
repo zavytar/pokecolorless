@@ -647,6 +647,22 @@ LassGroup:
 	db 14, JIGGLYPUFF
 	db -1 ; end
 
+	; LASS (5) - Mt Moon 1F
+	db "ROBIN@", TRAINERTYPE_NORMAL
+	db 14, CLEFAIRY
+	db -1 ; end
+
+	; LASS (6) - Mt Moon 1F
+	db "ROBIN@", TRAINERTYPE_NORMAL
+	db 12, JIGGLYPUFF
+	db 12, ODDISH
+	db -1 ; end
+
+	; LASS (7) - Route 4
+	db "ROBIN@", TRAINERTYPE_NORMAL
+	db 12, PARAS
+	db 12, PARAS
+	db -1 ; end
 
 JanineGroup:
 	; JANINE (1)
@@ -1380,6 +1396,21 @@ BugCatcherGroup:
 
 	; BUG_CATCHER (5)
 	db "BENNY@", TRAINERTYPE_NORMAL
+	db  9, WEEDLE
+	db -1 ; end
+
+	; BUG_CATCHER (5)
+	db "COLTON@", TRAINERTYPE_NORMAL
+	db  9, WEEDLE
+	db -1 ; end
+
+	; BUG_CATCHER (5)
+	db "GREG@", TRAINERTYPE_NORMAL
+	db  9, WEEDLE
+	db -1 ; end
+
+	; BUG_CATCHER (5)
+	db "JAMES@", TRAINERTYPE_NORMAL
 	db  9, WEEDLE
 	db -1 ; end
 

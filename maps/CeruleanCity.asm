@@ -1,10 +1,11 @@
 	object_const_def ; object_event constants
 	const CERULEANCITY_COOLTRAINER_M
-	const CERULEANCITY_SUPER_NERD
-	const CERULEANCITY_SLOWPOKE
-	const CERULEANCITY_COOLTRAINER_F
-	const CERULEANCITY_FISHER
-	const CERULEANCITY_YOUNGSTER
+	const CERULEANCITY_ROCKET
+	const CERULEANCITY_GUARD
+;	const CERULEANCITY_COOLTRAINER_F
+;	const CERULEANCITY_SLOWBRO
+;	const CERULEANCITY_LASS
+;	const CERULEANCITY_POKEFAN_M
 
 CeruleanCity_MapScripts:
 	db 0 ; scene scripts
@@ -24,8 +25,8 @@ CeruleanCity_CooltrainerMScript:
 	closetext
 	end
 
-CeruleanCity_SuperNerdScript:
-	jumptextfaceplayer CeruleanCity_SuperNerdText
+CeruleanCity_Script:
+	jumptext CeruleanCity_SchemeText
 
 CeruleanCity_Slowbro:
 	opentext
@@ -115,12 +116,28 @@ CeruleanCity_CooltrainerMText1:
 	cont "some sort there."
 	done
 
-CeruleanCity_SuperNerdText:
-	text "The CAPE in the"
-	line "north is a good"
+CeruleanCity_SchemeText:
+	text "GRUNT: …"
+	
+	para "Okay, remember to"
+	line "stick to the plan."
 
-	para "place for dates."
-	line "Girls like it!"
+	para "I'll hit the place"
+	line "and you monitor"
+	cont "the situation"
+	cont "from your spot."
+
+	para "???: Yes."
+
+	para "And if anyone gets"
+	line "past the five kids,"
+	para "I'll talk them"
+	line "into joining us!"
+
+	para "GRUNT: Perfect."
+
+	para "Now, on to getting"
+	line "that rare TM!"
 	done
 
 CeruleanCity_SlowbroText:
@@ -173,23 +190,20 @@ CeruleanGymSignText:
 	done
 
 CeruleanBikeShopSignText:
-	text "There's a notice"
-	line "here…"
-
-	para "The BIKE SHOP has"
-	line "moved to GOLDENROD"
-	cont "CITY in JOHTO…"
+	text "BIKE SHOP"
 	done
 
 CeruleanPoliceSignText:
 	text "There's a notice"
 	line "here…"
 
-	para "Stamp out thievery"
-	line "and make the city"
+	para "Look out for"
+	line "TEAM ROCKET!"
 
-	para "a friendlier, more"
-	line "cheerful place!"
+	para "If you encounter"
+	line "one of them, please"
+	para "report the incident"
+	line "to an OFFICER!"
 
 	para "CERULEAN POLICE"
 	done
@@ -201,6 +215,9 @@ CeruleanCapeSignText:
 
 CeruleanLockedDoorText:
 	text "It's locked…"
+
+	para "The people who live"
+	line "here must be out."
 	done
 
 CeruleanCity_MapEvents:
@@ -217,21 +234,21 @@ CeruleanCity_MapEvents:
 
 	db 0 ; coord events
 
-	db 6 ; bg events
+	db 8 ; bg events
 	bg_event 17, 29, BGEVENT_READ, CeruleanCitySign
 	bg_event 23, 19, BGEVENT_READ, CeruleanGymSign
 	bg_event 11, 25, BGEVENT_READ, CeruleanBikeShopSign
-;	bg_event 25, 17, BGEVENT_READ, CeruleanPoliceSign
+	bg_event 27, 21, BGEVENT_READ, CeruleanPoliceSign
 	bg_event 23, 11, BGEVENT_READ, CeruleanCapeSign
-;	bg_event 14, 29, BGEVENT_READ, CeruleanLockedDoor
+	bg_event 27, 11, BGEVENT_READ, CeruleanLockedDoor
 	bg_event 20, 17, BGEVENT_READ, CeruleanCityPokecenterSign
 	bg_event 26, 25, BGEVENT_READ, CeruleanCityMartSign
 ;	bg_event  2, 12, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
 
-	db 0 ; object events
-;	object_event 29, 24, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerMScript, -1
-;	object_event 23, 15, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCitySuperNerdScript, -1
-;	object_event 20, 32, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbro, -1
-;	object_event 21, 32, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
-;	object_event 13, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
+	db 5 ; object events
+	object_event 20,  5, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_Script, -1
+	object_event 21,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_Script, -1
+	object_event  4, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_Script, -1 ;guard
+	object_event 30, 26, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
+	object_event 29, 26, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbro, -1;	object_event 13, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
 ;	object_event  8, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityYoungsterScript, -1

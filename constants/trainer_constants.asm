@@ -110,6 +110,7 @@ KRIS EQU __enum__
 	trainerclass YOUNGSTER ; 16
 	const YOUNGSTER_BEN
 	const YOUNGSTER_CALVIN
+	const YOUNGSTER_JOSH
 
 	trainerclass SCHOOLBOY ; 17
 	const JACK1
@@ -159,10 +160,13 @@ KRIS EQU __enum__
 	const VANCE3
 
 	trainerclass LASS ; 19
-	const CARRIE
-	const JANICE
-	const SALLY
-	const ROBIN 
+	const LASS_CARRIE
+	const LASS_JANICE
+	const LASS_SALLY
+	const LASS_ROBIN 
+	const LASS_IRIS 
+	const LASS_MIRIAM 
+	const LASS_ROBIN 
 
 	trainerclass JANINE ; 1a
 	const JANINE1
@@ -293,7 +297,7 @@ KRIS EQU __enum__
 	const CLARISSA
 
 	trainerclass TEACHER ; 22
-	const COLETTE ;trainer school 
+	const TEACHER_COLETTE ;trainer school 
 	const HILLARY
 	const SHIRLEY
 
@@ -301,11 +305,13 @@ KRIS EQU __enum__
 	const SABRINA1
 
 	trainerclass BUG_CATCHER ; 24
-	const DON
-	const ROB
-	const ED
-	const WADE1
-	const BUG_CATCHER_BENNY
+	const BUG_CATCHER_DON
+	const BUG_CATCHER_ROB
+	const BUG_CATCHER_ED
+	const BUG_CATCHER_WADE1
+	const BUG_CATCHER_COLTON
+	const BUG_CATCHER_GREG
+	const BUG_CATCHER_JAMES
 	;
 	;
 	
@@ -360,8 +366,8 @@ KRIS EQU __enum__
 	const PARKER
 
 	trainerclass SWIMMERF ; 27
-	const ELAINE
-	const PAULA
+	const SWIMMER_ELAINE ;gym
+	const SWIMMER_PAULA  ;gym
 	const KAYLEE
 	const SUSIE
 	const DENISE
@@ -396,8 +402,8 @@ KRIS EQU __enum__
 	const HUEY4
 
 	trainerclass SUPER_NERD ; 29
-	const STAN
-	const ERIC
+	const SUPER_NERD_STAN
+	const SUPER_NERD_MIGUEL
 	const GREGG
 	const JAY
 	const DAVE
@@ -424,7 +430,7 @@ KRIS EQU __enum__
 	const VINCENT
 
 	trainerclass HIKER ; 2c
-	const ANTHONY1
+	const HIKER_MARCUS
 	const RUSSELL
 	const PHILLIP
 	const LEONARD
@@ -544,7 +550,7 @@ KRIS EQU __enum__
 	const TIFFANY4
 
 	trainerclass CAMPER ; 36
-	const JERRY
+	const CAMPER_JERRY
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1
