@@ -18,15 +18,18 @@ BikeShopClerkScript:
 	yesorno
 	iffalse .Refused
 	writetext BikeShopClerkAgreedText
-	buttonsound
-	waitsfx
-	giveitem BICYCLE
-	writetext BorrowedABicycleText
-	playsound SFX_KEY_ITEM
-	waitsfx
-	itemnotify
-	setflag ENGINE_BIKE_SHOP_CALL_ENABLED
-	setevent EVENT_GOT_BICYCLE
+	waitbutton
+	closetext 
+	end 
+
+;	waitsfx
+;	giveitem BICYCLE
+;	writetext BorrowedABicycleText
+;	playsound SFX_KEY_ITEM
+;	waitsfx
+;	itemnotify
+;	setflag ENGINE_BIKE_SHOP_CALL_ENABLED
+;	setevent EVENT_GOT_BICYCLE
 .GotBicycle:
 	writetext BikeShopClerkFirstRateBikesText
 	waitbutton
@@ -39,38 +42,35 @@ BikeShopClerkScript:
 	closetext
 	end
 
-BikeShopJustReleasedCompactBike:
-; unused
-	jumptext BikeShopJustReleasedCompactBikeText
+BikeShop_Customer1Script:
+	jumptextfaceplayer BikeShop_Customer1Text
+
+BikeShop_Customer2Script:
+	jumptextfaceplayer BikeShop_Customer2Text
 
 BikeShopBicycle:
 	jumptext BikeShopBicycleText
 
 BikeShopClerkIntroText:
-	text "…sigh… I moved"
-	line "here, but I can't"
+	text "Hi! Welcome to"
+	line "our BIKE SHOP."
 
-	para "sell my BICYCLES."
-	line "Why is that?"
+	para "Have we got just"
+	line "the BIKE for you!"
 
-	para "Could you ride a"
-	line "BICYCLE and adver-"
-	cont "tise for me?"
+	text "It's a cool BIKE!"
+	line "Do you want it?"
 	done
 
 BikeShopClerkAgreedText:
-	text "Really? Great!"
-
-	para "Give me your name"
-	line "and phone number,"
-
-	para "and I'll loan you"
-	line "a BICYCLE."
+	text "Sorry! You can't"
+	line "afford it!"
 	done
 
 BorrowedABicycleText:
-	text "<PLAYER> borrowed a"
-	line "BICYCLE."
+	text "<PLAYER> exchanged"
+	line "the BIKE VOUCHER"
+	cont "for a BICYCLE.@"
 	done
 
 BikeShopClerkFirstRateBikesText:
@@ -82,16 +82,27 @@ BikeShopClerkFirstRateBikesText:
 	done
 
 BikeShopClerkRefusedText:
-	text "…sigh… Oh, for"
-	line "the kindness of"
-	cont "people…"
+	text "Come back again"
+	line "sometime!"
 	done
 
-BikeShopJustReleasedCompactBikeText:
-	text "Just released!"
+BikeShop_Customer1Text:
+	text "A plain city BIKE"
+	line "is good enough"
+	cont "for me!"
 
-	para "First-rate compact"
-	line "BICYCLES!"
+	para "You can't put a"
+	line "shopping basket"
+	cont "on an MTB!"
+	done
+
+BikeShop_Customer2Text:
+	text "These BIKEs are"
+	line "cool, but they're"
+	cont "way expensive!"
+
+	para "If only I had a"
+	line "BIKE VOUCHER…"
 	done
 
 BikeShopBicycleText:
@@ -121,3 +132,5 @@ BikeShop_MapEvents:
 
 	db 1 ; object events
 	object_event  7,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BikeShopClerkScript, -1
+	object_event  2,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BikeShop_Customer1Script, -1
+	object_event  4,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BikeShop_Customer2Script, -1

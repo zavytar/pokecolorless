@@ -41,11 +41,30 @@ ElmPhoneCheckingEggText:
 ElmPhoneAssistantText:
 	text "Hello, <PLAY_G>?"
 
-	para "Did you see my"
-	line "assistant? He's at"
 
-	para "the #MON CENTER"
-	line "in VIOLET CITY."
+	para "How's everything"
+	line "coming along?"
+	
+	para "… …"
+	line "… …"
+
+	para "Two badges? That's"
+	line "impressive! Well"
+	cont "done!"
+
+	para "By the way, I"
+	line "sent one of my"
+	cont "AIDES to give you"
+	cont "a little present."
+
+	para "He should be at"
+	line "the #MON CENTER"
+	cont "in CERULEAN."
+
+	para "Anyway, I should"
+	line "get going! Keep"
+	cont "up the good"
+	cont "work, <PLAY_G>!"
 	done
 
 ElmPhoneEggUnhatchedText:

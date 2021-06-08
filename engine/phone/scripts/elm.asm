@@ -10,7 +10,7 @@ ElmPhoneCalleeScript:
 .next
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue .eggunhatched
-	checkevent EVENT_ELMS_AIDE_IN_LAB
+	checkevent EVENT_OAKS_AIDE_IN_CERULEAN_POKEMON_CENTER
 	iftrue .assistant
 ;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 ;	iftrue .checkingegg

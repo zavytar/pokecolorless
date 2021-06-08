@@ -22,6 +22,14 @@ CeruleanPokecenter1FSuperNerdScript:
 CeruleanPokecenter1FGymGuyScript:
 	jumptextfaceplayer CeruleanPokecenter1FGymGuyText
 
+CeruleanPokecenter1F_OaksAideScript:
+	opentext
+	writetext CeruleanPokecenter1F_OaksAideText1
+	waitbutton
+	closetext
+	clearevent EVENT_OAKS_AIDE_IN_CERULEAN_POKEMON_CENTER 
+	end 
+
 CeruleanPokecenter1FSuperNerdText:
 	text "For battles, I'd"
 	line "much rather use"
@@ -60,6 +68,38 @@ CeruleanPokecenter1FGymGuyText:
 	line "JOHTO accessible."
 	done
 
+CeruleanPokecenter1F_OaksAideText1:
+	text "Hi, <PLAYER>,"
+	line "remember me?"
+
+	para "I'm one of your"
+	line "Grandpa's AIDES."
+
+	para "He sent me here"
+	line "to give you some-"
+	cont "thing! Here!"
+	done 
+
+CeruleanPokecenter1F_OaksAideText2: 
+	text "That's a ticket"
+	line "for the party at"
+	cont "the S.S. ANNE!"
+
+	para "It's a real fancy"
+	line "party that you'll"
+	cont "probably suit you!"
+	
+	para "Oh, and before I"
+	line "go, DAISY said to"
+	cont "give you this too!"
+	done 	
+
+CeruleanPokecenter1F_OaksAideText3:
+	text "Exchange that for"
+	line "a new bike in the"
+	cont "BIKE HOP!"
+	done 
+
 CeruleanPokecenter1F_MapEvents:
 	db 0, 0 ; filler
 
@@ -72,7 +112,8 @@ CeruleanPokecenter1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event  3,  1, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanPokecenter1FNurseScript, -1
 	object_event  8,  4, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanPokecenter1FSuperNerdScript, -1
 	object_event  1,  5, SPRITE_GYM_GUY, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanPokecenter1FGymGuyScript, -1
+	object_event  4,  3, SPRITE_SCIENTIST, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanPokecenter1F_OaksAideScript, EVENT_OAKS_AIDE_IN_CERULEAN_POKEMON_CENTER 
