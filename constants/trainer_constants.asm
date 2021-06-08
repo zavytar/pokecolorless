@@ -305,15 +305,15 @@ KRIS EQU __enum__
 	const SABRINA1
 
 	trainerclass BUG_CATCHER ; 24
-	const BUG_CATCHER_DON
-	const BUG_CATCHER_ROB
-	const BUG_CATCHER_ED
-	const BUG_CATCHER_WADE1
+	const BUG_CATCHER_RICK
+	const BUG_CATCHER_DOUG
+	const BUG_CATCHER_CHARLIE
+	const BUG_CATCHER_SAMMY
 	const BUG_CATCHER_COLTON
 	const BUG_CATCHER_GREG
 	const BUG_CATCHER_JAMES
-	;
-	;
+	const BUG_CATCHER_KENT
+	const BUG_CATCHER_ROBBY
 	
 	trainerclass FISHER ; 25
 	const JUSTIN
@@ -402,7 +402,7 @@ KRIS EQU __enum__
 	const HUEY4
 
 	trainerclass SUPER_NERD ; 29
-	const SUPER_NERD_STAN
+	const SUPER_NERD_JOVAN
 	const SUPER_NERD_MIGUEL
 	const GREGG
 	const JAY
