@@ -2,7 +2,6 @@
 	const CERULEANGYM_MISTY
 	const CERULEANGYM_SWIMMER_GIRL1
 	const CERULEANGYM_SWIMMER_GIRL2
-;	const CERULEANGYM_SWIMMER_GUY
 	const CERULEANGYM_GYM_GUY
 
 CeruleanGym_MapScripts:
@@ -23,9 +22,8 @@ CeruleanGymMistyScript:
 	startbattle
 	reloadmapafterbattle
 	setevent EVENT_BEAT_MISTY
-	setevent EVENT_BEAT_SWIMMERF_ELAINE
-	setevent EVENT_BEAT_SWIMMERF_PAULA
-	setevent EVENT_BEAT_SWIMMERM_PARKER
+	setevent EVENT_BEAT_SWIMMERF_LOUISE
+	setevent EVENT_BEAT_SWIMMERF_DIANA
 	opentext
 	writetext ReceivedCascadeBadgeText
 	playsound SFX_GET_BADGE
@@ -47,24 +45,24 @@ CeruleanGymMistyScript:
 .done
 	end 
 
-TrainerSwimmerfElaine:
-	trainer SWIMMERF, SWIMMER_ELAINE, EVENT_BEAT_SWIMMERF_ELAINE, SwimmerfElaineSeenText, SwimmerfElaineBeatenText, 0, .Script
+TrainerSwimmerfLouise:
+	trainer SWIMMERF, SWIMMER_LOUISE, EVENT_BEAT_SWIMMERF_LOUISE, SwimmerFLouiseSeenText, SwimmerFLouiseBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext SwimmerfElaineAfterBattleText
+	writetext SwimmerFLouiseAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerSwimmerfPaula:
-	trainer SWIMMERF, SWIMMER_PAULA, EVENT_BEAT_SWIMMERF_PAULA, SwimmerfPaulaSeenText, SwimmerfPaulaBeatenText, 0, .Script
+TrainerSwimmerFDiana:
+	trainer SWIMMERF, SWIMMER_DIANA, EVENT_BEAT_SWIMMERF_DIANA, SwimmerFDianaSeenText, SwimmerFDianaBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext SwimmerfPaulaAfterBattleText
+	writetext SwimmerFDianaAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -171,34 +169,41 @@ MistyFightDoneText:
 	line "aquatic #MON!"
 	done
 
-SwimmerfElaineSeenText:
-	text "Sorry about being"
-	line "away. Let's get on"
-	cont "with it!"
+SwimmerFLouiseSeenText:
+	text "Splash!"
+
+	para "I'm first up!"
+	line "Let's do it!"
 	done
 
-SwimmerfElaineBeatenText:
-	text "I give up! You're"
-	line "the winner!"
+SwimmerFLouiseBeatenText:
+	text "That"
+	line "can't be!"
 	done
 
-SwimmerfElaineAfterBattleText:
-	text "I'll be swimming"
-	line "quietly."
+SwimmerFLouiseAfterBattleText:
+	text "MISTY is going to"
+	line "keep improving!"
+
+	para "She won't lose to"
+	line "someone like you!"
 	done
 
-SwimmerfPaulaSeenText:
-	text "Don't let my ele-"
-	line "gant swimming un-"
-	cont "nerve you."
+SwimmerFDianaSeenText:
+	text "I'm more than good"
+	line "enough to dispose"
+	cont "of you."
+
+	para "MISTY won't have to"
+	line "be bothered."
 	done
 
-SwimmerfPaulaBeatenText:
+SwimmerFDianaBeatenText:
 	text "Ooh, you calmly"
 	line "disposed of me…"
 	done
 
-SwimmerfPaulaAfterBattleText:
+SwimmerFDianaAfterBattleText:
 	text "Don't be too smug"
 	line "about beating me."
 
@@ -264,7 +269,6 @@ CeruleanGym_MapEvents:
 
 	db 4 ; object events
 	object_event  5,  3, SPRITE_MISTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanGymMistyScript, -1
-	object_event  6,  5, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerfElaine, -1
-	object_event  6,  9, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerSwimmerfPaula, -1
-;	object_event  8,  9, SPRITE_SWIMMER_GUY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermParker, -1
+	object_event  6,  5, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerSwimmerFLouise, -1
+	object_event  6,  9, SPRITE_SWIMMER_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 1, TrainerSwimmerFDiana, -1
 	object_event  7, 13, SPRITE_GYM_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanGymGuyScript, -1
