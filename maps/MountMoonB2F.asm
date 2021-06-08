@@ -11,7 +11,7 @@ MountMoonB2F_MapScripts:
 MountMoonB2F_Script:
 	end 
 
-MountMoonB2F_TM:
+MountMoonB2F_TM: 
 	opentext
 	verbosegiveitem TM_THIEF
 	iffalse .done

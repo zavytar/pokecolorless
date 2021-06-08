@@ -166,7 +166,7 @@ KRIS EQU __enum__
 	const LASS_ROBIN 
 	const LASS_IRIS 
 	const LASS_MIRIAM 
-	const LASS_ROBIN 
+	const LASS_CRISSY 
 
 	trainerclass JANINE ; 1a
 	const JANINE1
@@ -308,6 +308,7 @@ KRIS EQU __enum__
 	const BUG_CATCHER_RICK
 	const BUG_CATCHER_DOUG
 	const BUG_CATCHER_CHARLIE
+	const BUG_CATCHER_ANTHONY
 	const BUG_CATCHER_SAMMY
 	const BUG_CATCHER_COLTON
 	const BUG_CATCHER_GREG
@@ -366,8 +367,8 @@ KRIS EQU __enum__
 	const PARKER
 
 	trainerclass SWIMMERF ; 27
-	const SWIMMER_ELAINE ;gym
-	const SWIMMER_PAULA  ;gym
+	const SWIMMER_LOUISE ;gym
+	const SWIMMER_DIANA  ;gym
 	const KAYLEE
 	const SUSIE
 	const DENISE

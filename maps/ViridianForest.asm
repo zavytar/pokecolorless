@@ -4,6 +4,7 @@
 	const VIRIDIANFOREST_BUG_CATCHER3
 	const VIRIDIANFOREST_BUG_CATCHER4
 	const VIRIDIANFOREST_BUG_CATCHER5
+	const VIRIDIANFOREST_BUG_CATCHER6
 	const VIRIDIANFOREST_YOUNGSTER
 	const VIRIDIANFOREST_LASS
 	const VIRIDIANFOREST_POKE_BALL1
@@ -16,57 +17,68 @@ ViridianForest_MapScripts:
 
 	db 0 ; callbacks
 
-TrainerBugCatcher1:
-	trainer BUG_CATCHER, DON, EVENT_BEAT_BUG_CATCHER_DON, BugCatcher1SeenText, BugCatcher1BeatenText, 0, .Script
+TrainerBugCatcherRick:
+	trainer BUG_CATCHER, BUG_CATCHER_RICK, EVENT_BEAT_BUG_CATCHER_RICK, BugCatcherRickSeenText, BugCatcherRickBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcher1AfterBattleText
+	writetext BugCatcherRickAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugCatcher2:
-	trainer BUG_CATCHER, ROB, EVENT_BEAT_BUG_CATCHER_ROB, BugCatcher2SeenText, BugCatcher2BeatenText, 0, .Script
+TrainerBugCatcherDoug:
+	trainer BUG_CATCHER, BUG_CATCHER_DOUG, EVENT_BEAT_BUG_CATCHER_DOUG, BugCatcherDougSeenText, BugCatcherDougBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcher2AfterBattleText
+	writetext BugCatcherDougAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugCatcher3:
-	trainer BUG_CATCHER, ED, EVENT_BEAT_BUG_CATCHER_ED, BugCatcher3SeenText, BugCatcher3BeatenText, 0, .Script
+TrainerBugCatcherCharlie:
+	trainer BUG_CATCHER, BUG_CATCHER_CHARLIE, EVENT_BEAT_BUG_CATCHER_CHARLIE, BugCatcherCharlieSeenText, BugCatcherCharlieBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcher3AfterBattleText
+	writetext BugCatcherCharlieAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerBugCatcher4:
-	trainer BUG_CATCHER, WADE1, EVENT_BEAT_BUG_CATCHER_WADE, BugCatcher4SeenText, BugCatcher4BeatenText, 0, .Script
+TrainerBugCatcherAnthony:
+	trainer BUG_CATCHER, BUG_CATCHER_ANTHONY, EVENT_BEAT_BUG_CATCHER_ANTHONY, BugCatcherAnthonySeenText, BugCatcherAnthonyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext BugCatcher4AfterBattleText
+	writetext BugCatcherAnthonyAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerLass1:
-	trainer LASS, CARRIE, EVENT_BEAT_LASS_CARRIE, Lass1SeenText, Lass1BeatenText, 0, .Script
+TrainerBugCatcherSammy:
+	trainer BUG_CATCHER, BUG_CATCHER_SAMMY, EVENT_BEAT_BUG_CATCHER_SAMMY, BugCatcherSammySeenText, BugCatcherSammyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext Lass1AfterBattleText
+	writetext BugCatcherSammyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+TrainerLassCarrie:
+	trainer LASS, LASS_CARRIE, EVENT_BEAT_LASS_CARRIE, LassCarrieSeenText, LassCarrieBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext LassCarrieAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -97,79 +109,95 @@ ViridianForestPokeball:
 ViridianForest_Sign1:
 	jumptext ViridianForest_Sign1Text
 
-BugCatcher1SeenText:
+BugCatcherRickSeenText:
 	text "Hey! You have"
 	line "#MON! Come on!"
 	cont "Let's battle 'em!"
 	done
 
-BugCatcher2SeenText:
+BugCatcherDougSeenText:
 	text "Yo! You can't jam"
 	line "out if you're a"
 	cont "#MON trainer!"
 	done
 
-BugCatcher3SeenText:
+BugCatcherCharlieSeenText:
 	text "I'm gonna be the"
 	line "best. You just"
 	cont "can't beat me!"
 	done
 
-BugCatcher4SeenText:
+BugCatcherAnthonySeenText:
+	text "Hello. Allow me"
+	line "to battle your"
+	cont "#MON!"
+	done
+
+BugCatcherSammySeenText:
 	text "Hey, wait up!"
 	line "What's the hurry?"
 	done
 
-Lass1SeenText:
+LassCarrieSeenText:
 	text "Hi, do you have a"
 	line "PIKACHU?"
 	done
 
-BugCatcher1BeatenText:
+BugCatcherRickBeatenText:
 	text "No! CATERPIE"
 	line "can't cut it!"
 	done
 
-BugCatcher2BeatenText:
+BugCatcherDougBeatenText:
 	text "Huh?"
 	line "I ran out of"
 	cont "#MON!"
 	done
 
-BugCatcher3BeatenText:
+BugCatcherCharlieBeatenText:
 	text "After"
 	line "all I did..."
 	done
 
-BugCatcher4BeatenText:
+BugCatcherAnthonyBeatenText:
+	text "M-my bugs!"
+	done
+
+BugCatcherSammyBeatenText:
 	text "I give! You're"
 	line "good at this!"
 	done
 
-Lass1BeatenText:
+LassCarrieBeatenText:
 	text "Oh no,"
 	line "really?"
 	done
 
-BugCatcher1AfterBattleText:
+BugCatcherRickAfterBattleText:
 	text "Ssh! You'll scare"
 	line "the bugs away!"
 	done
 
-BugCatcher2AfterBattleText:
+BugCatcherDougAfterBattleText:
 	text "Darn! I'm going"
 	line "to catch some"
 	cont "stronger ones!"
 	done
 
-BugCatcher3AfterBattleText:
+BugCatcherCharlieAfterBattleText:
 	text "A METAPOD is cool"
 	line "because its"
 	cont "attack is its"
 	cont "defense!"
 	done
 
-BugCatcher4AfterBattleText:
+BugCatcherAnthonyAfterBattleText:
+	text "I got my PINSIR"
+	line "from a catching"
+	cont "contest in JOHTO."
+	done
+
+BugCatcherSammyAfterBattleText:
 	text "Sometimes, you"
 	line "can find stuff on"
 	cont "the ground!"
@@ -179,7 +207,7 @@ BugCatcher4AfterBattleText:
 	cont "dropped!"
 	done
 
-Lass1AfterBattleText:
+LassCarrieAfterBattleText:
 	text "I looked forever,"
 	line "but I never found"
 	cont "a PIKACHU here!"
@@ -229,14 +257,15 @@ ViridianForest_MapEvents:
 	bg_event  3,  3, BGEVENT_READ, ViridianForest_Sign1
 ;	bg_event 16, 41, BGEVENT_ITEM, ViridianForestHiddenAntidote
 
-	db 10 ; object events
-	object_event 29, 18, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcher1, -1 ;bug catcher 1
-	object_event  2, 12, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcher2, -1  ;bug catcher 2
-	object_event 27, 27, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcher3, -1  ;bug catcher 3
-	object_event 11,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcher4, -1  ;bug catcher 4
+	db 11 ; object events
+	object_event 29, 18, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherRick, -1 ;bug catcher 1
+	object_event  2, 12, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDoug, -1  ;bug catcher 2
+	object_event 27, 27, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherCharlie, -1  ;bug catcher 3
+	object_event 29, 29, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherAnthony, -1  ;bug catcher 4
+	object_event 11,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerBugCatcherSammy, -1  ;bug catcher 5
 	object_event 27, 36, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 3, ViridianForest_BugCatcherScript, -1  ;bug catcher 5
 	object_event 14, 42, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 3, ViridianForest_YoungsterScript, -1  ;youngster
-	object_event  2, 42, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerLass1, -1		;lass
+	object_event  2, 42, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 5, TrainerLassCarrie, -1		;lass
 	object_event 31, 42, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPotion, -1
 	object_event  2, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPokeball, -1
 	object_event 11, 25, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPotion2, -1

@@ -1370,32 +1370,32 @@ SabrinaGroup:
 
 BugCatcherGroup:
 	; BUG_CATCHER (1)
-	db "DON@", TRAINERTYPE_NORMAL
+	db "RICK@", TRAINERTYPE_NORMAL
 	db  6, WEEDLE
 	db  6, CATERPIE
 	db -1 ; end
 
 	; BUG_CATCHER (2)
-	db "ROB@", TRAINERTYPE_NORMAL
+	db "DOUG@", TRAINERTYPE_NORMAL
 	db  6, CATERPIE
 	db  6, CATERPIE
 	db -1 ; end
 
 	; BUG_CATCHER (3)
-	db "ED@", TRAINERTYPE_NORMAL
+	db "CHARLIE@", TRAINERTYPE_NORMAL
 	db  6, WEEDLE
 	db  7, KAKUNA
 	db  6, WEEDLE
 	db -1 ; end
 
 	; BUG_CATCHER (4)
-	db "WADE@", TRAINERTYPE_NORMAL
+	db "ANTHONY@", TRAINERTYPE_NORMAL
 	db  8, METAPOD
 	db  7, PINSIR
 	db -1 ; end
 
 	; BUG_CATCHER (5)
-	db "BENNY@", TRAINERTYPE_NORMAL
+	db "SAMMY@", TRAINERTYPE_NORMAL
 	db  9, WEEDLE
 	db -1 ; end
 

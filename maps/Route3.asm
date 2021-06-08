@@ -15,57 +15,57 @@ Route3_MapScripts:
 
 	db 0 ; callbacks
 
-TrainerYoungster1:
-	trainer YOUNGSTER, YOUNGSTER_BEN, EVENT_BEAT_YOUNGSTER_BEN, Youngster1SeenText, Youngster1BeatenText, 0, .Script
+TrainerYoungsterBen:
+	trainer YOUNGSTER, YOUNGSTER_BEN, EVENT_BEAT_YOUNGSTER_BEN, YoungsterBenSeenText, YoungsterBenBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext Youngster1AfterBattleText
+	writetext YoungsterBenAfterBattleText
 	waitbutton
 	closetext
 	end
 
-TrainerYoungster2:
-	trainer YOUNGSTER, YOUNGSTER_CALVIN, EVENT_BEAT_YOUNGSTER_CALVIN, Youngster2SeenText, Youngster2BeatenText, 0, .Script
+TrainerYoungsterCalvin:
+	trainer YOUNGSTER, YOUNGSTER_CALVIN, EVENT_BEAT_YOUNGSTER_CALVIN, YoungsterCalvinSeenText, YoungsterCalvinBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext Youngster2AfterBattleText
+	writetext YoungsterCalvinAfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerLassJanice:
-	trainer LASS, JANICE, EVENT_BEAT_LASS_JANICE, Lass2SeenText, Lass2BeatenText, 0, .Script
+	trainer LASS, JANICE, EVENT_BEAT_LASS_JANICE, LassJaniceSeenText, LassJaniceBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext Lass2AfterBattleText
+	writetext LassJaniceAfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerLassSally:
-	trainer LASS, SALLY, EVENT_BEAT_LASS_SALLY, Lass3SeenText, Lass3BeatenText, 0, .Script
+	trainer LASS, SALLY, EVENT_BEAT_LASS_SALLY, LassSallySeenText, LassSallyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext Lass3AfterBattleText
+	writetext LassSallyAfterBattleText
 	waitbutton
 	closetext
 	end
 
 TrainerLassRobin:
-	trainer LASS, ROBIN, EVENT_BEAT_LASS_ROBIN, Lass4SeenText, Lass4BeatenText, 0, .Script
+	trainer LASS, ROBIN, EVENT_BEAT_LASS_ROBIN, LassRobinSeenText, LassRobinBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
 	opentext
-	writetext Lass4AfterBattleText
+	writetext LassRobinAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -82,7 +82,7 @@ TrainerBugCatcherColton:
 	end
 
 TrainerBugCatcherGreg:
-	trainer BUG_CATCHER, BUG_CATCHER_GREG, EVENT_BEAT_FIREBREATHER_OTIS, BugCatcherGregSeenText, BugCatcherGregBeatenText, 0, .Script
+	trainer BUG_CATCHER, BUG_CATCHER_GREG, EVENT_BEAT_BUG_CATCHER_GREG, BugCatcherGregSeenText, BugCatcherGregBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -93,7 +93,7 @@ TrainerBugCatcherGreg:
 	end
 
 TrainerBugCatcherJames:
-	trainer BUG_CATCHER, OTIS, EVENT_BEAT_FIREBREATHER_OTIS, BugCatcherJamesSeenText, BugCatcherJamesBeatenText, 0, .Script
+	trainer BUG_CATCHER, BUG_CATCHER_JAMES, EVENT_BEAT_BUG_CATCHER_JAMES, BugCatcherJamesSeenText, BugCatcherJamesBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -109,35 +109,35 @@ Route3_CooltrainerMScript:
 Route3Sign:
 	jumptext Route3SignText
 
-Youngster1SeenText:
+YoungsterBenSeenText:
 	text "Hi! I like shorts!"
 	line "They're comfy and"
 	cont "easy to wear!"
 	done
 
-Youngster1BeatenText:
+YoungsterBenBeatenText:
 	text "I don't"
 	line "believe it!"
 	done
 
-Youngster1AfterBattleText:
+YoungsterBenAfterBattleText:
 	text "Are you storing"
 	line "your #MON on"
 	cont "PC? Each BOX can"
 	cont "hold 20 #MON!"
 	done
 
-Youngster2SeenText:
+YoungsterCalvinSeenText:
 	text "Hey! You're not"
 	line "wearing shorts!"
 	done
 
-Youngster2BeatenText:
+YoungsterCalvinBeatenText:
 	text "Lost!"
 	line "Lost! Lost!"
 	done
 
-Youngster2AfterBattleText:
+YoungsterCalvinAfterBattleText:
 	text "I always wear"
 	line "shorts, even in"
 	cont "winter!"
@@ -200,66 +200,50 @@ BugCatcherJamesAfterBattleText:
 	cont "to another BOX!"
 	done
 
-Lass2SeenText:
+LassJaniceSeenText:
 	text "You looked at me,"
 	line "didn't you?"
 	done
 
-Lass2BeatenText:
+LassJaniceBeatenText:
 	text "You're"
 	line "mean!"
 	done
 
-Lass2AfterBattleText:
+LassJaniceAfterBattleText:
 	text "Quit staring if"
 	line "you don't want to"
 	cont "fight!"
 	done
 
-Lass3SeenText:
+LassSallySeenText:
 	text "That look you"
 	line "gave me, it's so"
 	cont "intriguing!"
 	done
 
-Lass3BeatenText:
+LassSallyBeatenText:
 	text "Be nice!"
 	prompt
 
-Lass3AfterBattleText:
+LassSallyAfterBattleText:
 	text "Avoid fights by"
 	line "not letting"
 	cont "people see you!"
 	done
 
-Lass4SeenText:
+LassRobinSeenText:
 	text "Eek! Did you"
 	line "touch me?"
 	done
 
-Lass4BeatenText:
+LassRobinBeatenText:
 	text "That's it?"
 	done
 
-Lass4AfterBattleText:
+LassRobinAfterBattleText:
 	text "ROUTE 4 is at the"
 	line "foot of MT.MOON."
-	done
-
-FirebreatherOtisSeenText:
-	text "Ah! The weather's"
-	line "as fine as ever."
-	done
-
-FirebreatherOtisBeatenText:
-	text "It's sunny, but"
-	line "I'm all wet…"
-	done
-
-FirebreatherOtisAfterBattleText:
-	text "When it rains,"
-	line "it's hard to get"
-	cont "ignition…"
 	done
 
 Route3_CooltrainerMText:
@@ -288,8 +272,8 @@ Route3_MapEvents:
 	bg_event 49, 13, BGEVENT_READ, Route3Sign
 
 	db 9 ; object events
-	object_event 10,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerYoungster1, -1 ; YOUNGSTER 1
-	object_event 18,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungster2, -1 ; YOUNGSTER 2
+	object_event 10,  2, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 2, TrainerYoungsterBen, -1 ; YOUNGSTER 1
+	object_event 18,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerYoungsterCalvin, -1 ; YOUNGSTER 2
 	object_event 12,  7, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 1, TrainerLassJanice, -1 ; LASS 1
 	object_event 17,  2, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLassSally, -1 ; LASS 2
 	object_event 26, 13, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerLassRobin, -1 ; LASS 3
