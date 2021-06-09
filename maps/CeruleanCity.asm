@@ -223,9 +223,9 @@ CeruleanCity_MapEvents:
 	warp_event 30, 19, CERULEAN_GYM, 1
 	warp_event 25, 25, CERULEAN_MART, 2
 	warp_event 13, 25, BIKE_SHOP, 1
-	warp_event  9, 15, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 1
-	warp_event 25, 15, CERULEAN_MELANIES_HOUSE, 1
-	warp_event 13, 19, CERULEAN_TRADE_SPEECH_HOUSE, 1
+	warp_event  9, 11, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 1
+	warp_event 15, 11, CERULEAN_MELANIES_HOUSE, 1
+	warp_event 13, 15, CERULEAN_TRADE_SPEECH_HOUSE, 1
 
 	db 0 ; coord events
 

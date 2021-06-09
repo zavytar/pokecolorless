@@ -11,7 +11,18 @@ CeruleanGymBadgeSpeechHousePokefanMScript:
 
 CeruleanGymBadgeSpeechHousePokefanMText:
 	text "Are you collecting"
-	line "KANTO GYM BADGES?"
+	line "GYM BADGES?"
+
+	para "Some badges raise"
+	line "#MON's stats,"
+	cont "and some will make"
+	cont "them obey at a"
+	cont "higher level."
+
+	para "Also, most allow"
+	line "you to use HM"
+	cont "moves outside of"
+	cont "battle!"
 	done
 
 CeruleanGymBadgeSpeechHouse_MapEvents:

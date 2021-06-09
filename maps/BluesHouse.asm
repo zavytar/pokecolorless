@@ -62,6 +62,8 @@ BluesHouse_PokegearScript:
 	waitsfx
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_MAP_CARD
+	setflag ENGINE_PHONE_CARD
+	addcellnum PHONE_ELM
 	setscene SCENE_BLUESHOUSE_NOTHING
 	setevent EVENT_DAISY_AUX
 	writetext BluesHouse_DaisyText5 ; Explain Pokegear 
@@ -87,7 +89,11 @@ DaisyScript:
 	writetext BluesHouse_DaisyText3
 	waitbutton
 	closetext
+	playmusic MUSIC_HEAL
 	special HealParty
+	pause 60
+	special FadeInQuickly
+	special RestartMapMusic
 	end
 
 .ThreePM:
