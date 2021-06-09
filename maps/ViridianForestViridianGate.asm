@@ -3,12 +3,6 @@ ViridianForestViridianGate_MapScripts:
 
 	db 0 ; callbacks
 
-TrainerBugCatcherRob:
-
-TrainerBugCatcherEd:
-
-TrainerBugCatcherDoug:
-
 ViridianForestViridianGate_MapEvents:
 	db 0, 0 ; filler
 

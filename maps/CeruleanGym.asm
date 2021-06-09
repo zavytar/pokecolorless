@@ -24,7 +24,6 @@ CeruleanGymMistyScript:
 	setevent EVENT_BEAT_MISTY
 	setevent EVENT_BEAT_SWIMMERF_LOUISE
 	setevent EVENT_BEAT_SWIMMERF_DIANA
-	setevent EVENT_OAKS_AIDE_IN_CERULEAN_POKEMON_CENTER
 	opentext
 	writetext ReceivedCascadeBadgeText
 	playsound SFX_GET_BADGE
@@ -46,7 +45,7 @@ CeruleanGymMistyScript:
 .done
 	end 
 
-TrainerSwimmerfLouise:
+TrainerSwimmerFLouise:
 	trainer SWIMMERF, SWIMMER_LOUISE, EVENT_BEAT_SWIMMERF_LOUISE, SwimmerFLouiseSeenText, SwimmerFLouiseBeatenText, 0, .Script
 
 .Script:

@@ -1,5 +1,5 @@
 WadePhoneCalleeScript:
-	gettrainername STRING_BUFFER_3, BUG_CATCHER, WADE1
+	gettrainername STRING_BUFFER_3, BUG_CATCHER, BUG_CATCHER_COLTON
 	checkflag ENGINE_WADE
 	iftrue .WantsBattle
 	farscall PhoneScript_AnswerPhone_Male
@@ -37,7 +37,7 @@ WadePhoneCalleeScript:
 	farsjump UnknownScript_0xa0ab5
 
 WadePhoneCallerScript:
-	gettrainername STRING_BUFFER_3, BUG_CATCHER, WADE1
+	gettrainername STRING_BUFFER_3, BUG_CATCHER, BUG_CATCHER_COLTON
 	farscall PhoneScript_GreetPhone_Male
 	farscall PhoneScript_Random2
 	ifequal 0, .NoContest

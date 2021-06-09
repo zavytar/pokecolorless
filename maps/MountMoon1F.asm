@@ -58,7 +58,7 @@ TrainerLassMiriam:
 	end
 
 TrainerSuperNerdJovan:
-	trainer SUPER_NERD, SUPER_NERD_JOVAN, EVENT_BEAT_SUPER_NERD_JOVAN, SuperNerdJovanSeenText, SuperNervJovanBeatenText, 0, .Script
+	trainer SUPER_NERD, SUPER_NERD_JOVAN, EVENT_BEAT_SUPER_NERD_JOVAN, SuperNerdJovanSeenText, SuperNerdJovanBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -273,11 +273,11 @@ MountMoon1F_MapEvents:
 	db 0 ; bg events
 
 	db 8 ; object events
-	object_event  7, 24, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, 0, OBJECTTYPE_Trainer, 0, TrainerBugCatcherKent, -1 ; Bug Catcher 1
-	object_event 34, 25, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerBugCatcherRobby, -1 ; Bug Catcher 2
-	object_event 18, 25, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerLassIris, -1 ; Lass 1
-	object_event 29,  4, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerLassMiriam, -1 ; Lass 2
-	object_event 24, 30, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerSuperNerdJovan, -1 ; Super Nerd
-	object_event 14, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerYoungsterJosh, -1 ; Youngster
-	object_event  8,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TrainerHikerMarcus, -1 ; Hiker 1
+	object_event  7, 24, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerBugCatcherKent, -1 ; Bug Catcher 1
+	object_event 34, 25, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerBugCatcherRobby, -1 ; Bug Catcher 2
+	object_event 18, 25, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerLassIris, -1 ; Lass 1
+	object_event 29,  4, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerLassMiriam, -1 ; Lass 2
+	object_event 24, 30, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerSuperNerdJovan, -1 ; Super Nerd
+	object_event 14, 15, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerYoungsterJosh, -1 ; Youngster
+	object_event  8,  7, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerHikerMarcus, -1 ; Hiker 1
 	object_event 40,  4, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MountMoon1F_Hiker2Script, -1 ; Hiker 2

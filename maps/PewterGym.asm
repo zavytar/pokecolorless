@@ -47,7 +47,7 @@ PewterGymBrockScript:
 	end
 
 TrainerCamperJerry:
-	trainer CAMPER, JERRY, EVENT_BEAT_CAMPER_JERRY, CamperJerrySeenText, CamperJerryBeatenText, 0, .Script
+	trainer CAMPER, CAMPER_JERRY, EVENT_BEAT_CAMPER_JERRY, CamperJerrySeenText, CamperJerryBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

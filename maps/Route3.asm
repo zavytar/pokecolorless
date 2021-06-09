@@ -38,7 +38,7 @@ TrainerYoungsterCalvin:
 	end
 
 TrainerLassJanice:
-	trainer LASS, JANICE, EVENT_BEAT_LASS_JANICE, LassJaniceSeenText, LassJaniceBeatenText, 0, .Script
+	trainer LASS, LASS_JANICE, EVENT_BEAT_LASS_JANICE, LassJaniceSeenText, LassJaniceBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -49,7 +49,7 @@ TrainerLassJanice:
 	end
 
 TrainerLassSally:
-	trainer LASS, SALLY, EVENT_BEAT_LASS_SALLY, LassSallySeenText, LassSallyBeatenText, 0, .Script
+	trainer LASS, LASS_SALLY, EVENT_BEAT_LASS_SALLY, LassSallySeenText, LassSallyBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled
@@ -60,7 +60,7 @@ TrainerLassSally:
 	end
 
 TrainerLassRobin:
-	trainer LASS, ROBIN, EVENT_BEAT_LASS_ROBIN, LassRobinSeenText, LassRobinBeatenText, 0, .Script
+	trainer LASS, LASS_ROBIN, EVENT_BEAT_LASS_ROBIN, LassRobinSeenText, LassRobinBeatenText, 0, .Script
 
 .Script:
 	endifjustbattled

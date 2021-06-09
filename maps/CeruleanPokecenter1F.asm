@@ -46,13 +46,14 @@ CeruleanPokecenter1F_OaksAideScript:
 	readvar VAR_FACING
 	ifequal UP, .RunAround
 	turnobject PLAYER, DOWN 
-	applymovement CeruleanPokecenter1F_AideLeavesMovement1
+	applymovement CERULEANPOKECENTER1F_OAKS_AIDE, CeruleanPokecenter1F_AideLeavesMovement1
 	playsound SFX_EXIT_BUILDING
 	disappear CERULEANPOKECENTER1F_OAKS_AIDE
 	end 
 
 .RunAround:	
-	applymovement CeruleanPokecenter1F_AideLeavesMovement2:
+	applymovement CERULEANPOKECENTER1F_OAKS_AIDE, CeruleanPokecenter1F_AideLeavesMovement2
+	playsound SFX_EXIT_BUILDING
 	disappear CERULEANPOKECENTER1F_OAKS_AIDE
 	end
 

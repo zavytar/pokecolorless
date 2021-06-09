@@ -2,8 +2,8 @@
 	const CERULEANCITY_COOLTRAINER_M
 	const CERULEANCITY_ROCKET
 	const CERULEANCITY_GUARD
-;	const CERULEANCITY_COOLTRAINER_F
-;	const CERULEANCITY_SLOWBRO
+	const CERULEANCITY_COOLTRAINER_F
+	const CERULEANCITY_SLOWBRO
 ;	const CERULEANCITY_LASS
 ;	const CERULEANCITY_POKEFAN_M
 
@@ -18,14 +18,9 @@ CeruleanCity_MapScripts:
 	return
 
 CeruleanCity_CooltrainerMScript:
-	faceplayer
-	opentext
-;	writetext CeruleanCityCooltrainerMText1
-	waitbutton
-	closetext
-	end
+	jumptextfaceplayer CeruleanCity_CooltrainerMText1
 
-CeruleanCity_Script:
+CeruleanCity_SchemeScript:
 	jumptext CeruleanCity_SchemeText
 
 CeruleanCity_Slowbro:
@@ -229,7 +224,7 @@ CeruleanCity_MapEvents:
 	warp_event 25, 25, CERULEAN_MART, 2
 	warp_event 13, 25, BIKE_SHOP, 1
 ;	warp_event  9, 15, CERULEAN_GYM_BADGE_SPEECH_HOUSE, 1
-;	warp_event 25, 15, CERULEAN_POLICE_STATION, 1
+;	warp_event 25, 15, CERULEAN_MELANIES_HOUSE, 1
 ;	warp_event 13, 19, CERULEAN_TRADE_SPEECH_HOUSE, 1
 
 	db 0 ; coord events
@@ -246,9 +241,10 @@ CeruleanCity_MapEvents:
 ;	bg_event  2, 12, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
 
 	db 5 ; object events
-	object_event 20,  5, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_Script, -1
-	object_event 21,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_Script, -1
-	object_event  4, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_Script, -1 ;guard
-	object_event 30, 26, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
-	object_event 29, 26, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbro, -1;	object_event 13, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
+	object_event 20,  5, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_SchemeScript, -1
+	object_event 21,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_SchemeScript, -1
+	object_event  4, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_CooltrainerMScript, -1 ;guard
+	object_event 30, 26, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCity_CooltrainerFScript, -1
+	object_event 29, 26, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCity_Slowbro, -1
+;	object_event 13, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
 ;	object_event  8, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityYoungsterScript, -1

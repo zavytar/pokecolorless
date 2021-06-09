@@ -19,13 +19,13 @@ BugContestantPointers:
 ;   dbw 3rd-place mon, score
 
 BugContestant_BugCatcherDon:
-	db BUG_CATCHER, DON
+	db BUG_CATCHER, BUG_CATCHER_COLTON
 	dbw KAKUNA,     300
 	dbw METAPOD,    285
 	dbw CATERPIE,   226
 
 BugContestant_BugCatcherEd:
-	db BUG_CATCHER, ED
+	db BUG_CATCHER, BUG_CATCHER_JAMES
 	dbw BUTTERFREE, 286
 	dbw BUTTERFREE, 251
 	dbw CATERPIE,   237
@@ -43,13 +43,13 @@ BugContestant_PokefanMWilliam:
 	dbw VENONAT,    321
 
 BugContestant_BugCatcherBenny:
-	db BUG_CATCHER, BUG_CATCHER_BENNY
+	db BUG_CATCHER, BUG_CATCHER_SAMMY
 	dbw BUTTERFREE, 318
 	dbw WEEDLE,     295
 	dbw CATERPIE,   285
 
 BugContestant_CamperBarry:
-	db CAMPER, JERRY
+	db CAMPER, CAMPER_JERRY
 	dbw PINSIR,     366
 	dbw VENONAT,    329
 	dbw KAKUNA,     314
@@ -61,7 +61,7 @@ BugContestant_PicnickerCindy:
 	dbw CATERPIE,   264
 
 BugContestant_BugCatcherJosh:
-	db TEACHER, COLETTE
+	db TEACHER, TEACHER_COLETTE
 	dbw SCYTHER,    326
 	dbw BUTTERFREE, 292
 	dbw METAPOD,    282
