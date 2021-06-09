@@ -8,6 +8,9 @@ Route2NuggetHouse_Blocks:
 ViridianNicknameSpeechHouse_Blocks:
 PewterNidoranSpeechHouse_Blocks:
 PewterSnoozeSpeechHouse_Blocks:
+CeruleanGymBadgeSpeechHouse_Blocks:
+CeruleanMelaniesHouse_Blocks:
+CeruleanTradeSpeechHouse_Blocks:
 	INCBIN "maps/House1.blk"
 
 ViridianForestViridianGate_Blocks:
