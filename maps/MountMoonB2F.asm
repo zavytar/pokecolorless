@@ -2,6 +2,10 @@
 	const MOUNTMOONB2F_SUPERNERD
 	const MOUNTMOONB2F_TM
 	const MOUNTMOONB2F_ITEMBALL1
+	const MOUNTMOONB2F_ROCK1
+	const MOUNTMOONB2F_ROCK2
+	const MOUNTMOONB2F_ROCK3
+	const MOUNTMOONB2F_ROCK4
 
 MountMoonB2F_MapScripts:
 	db 0 ; scene scripts
@@ -33,6 +37,12 @@ MountMoonB2F_TM:
 
 MountMoonB2FNugget:
 	itemball NUGGET
+
+MtMoonB2F_Rock1:
+MtMoonB2F_Rock2:
+MtMoonB2F_Rock3:
+MtMoonB2F_Rock4:
+	jumpstd smashrock
 
 SuperNerdMiguelSeenText:
 	text "I'm looking for"
@@ -68,7 +78,11 @@ MountMoonB2F_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 7 ; object events
 	object_event 14, 12, SPRITE_SUPER_NERD, SPRITEMOVEDATA_SPINRANDOM_FAST, 2, 2, -1, -1, 0, OBJECTTYPE_TRAINER, 0, TrainerSuperNerdMiguel, -1 ; Super Nerd
 	object_event 29,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 4, MountMoonB2F_TM, EVENT_GOT_TM46_THIEF_AT_MOUNT_MOON_B2F ;TM46 - Thief
 	object_event 25, 22, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, MountMoonB2FNugget, EVENT_MOUNT_MOON_B2F_NUGGET
+	object_event 10, 18, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonB2F_Rock1, -1
+	object_event 12,  8, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonB2F_Rock2, -1
+	object_event 10, 10, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonB2F_Rock3, -1
+	object_event 14, 20, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MtMoonB2F_Rock4, -1
