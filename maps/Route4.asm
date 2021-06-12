@@ -54,12 +54,13 @@ Route4_RocketsScene:
 	appear ROUTE4_CASSIDY
 	applymovement ROUTE4_ROCKET2, Route4_RocketsEnterMovement1
 	turnobject ROUTE4_ROCKET2, RIGHT
+	turnobject PLAYER, DOWN
 	opentext 
 	writetext Route4_RocketsText1
 	waitbutton 
 	closetext
-	applymovement ROUTE4_BUTCH, Route4_RocketsEnterMovement1
-	applymovement ROUTE4_CASSIDY, Route4_RocketsEnterMovement1
+	applymovement ROUTE4_BUTCH, Route4_ButchEntersMovement
+	applymovement ROUTE4_CASSIDY, Route4_CassidyEntersMovement
 	turnobject ROUTE4_ROCKET2, UP
 	showemote EMOTE_SHOCK, ROUTE4_ROCKET2, 15
 	opentext 
@@ -87,11 +88,14 @@ Route4_RocketsScene:
 	waitbutton
 	closetext
 	applymovement ROUTE4_BUTCH, Route4_ButchApproachesPlayerMovement
+	turnobject PLAYER, LEFT 
 	applymovement ROUTE4_CASSIDY, Route4_CassidyApproachesPlayerMovement 
-	winlosstext Route4_RocketsWinLossText, 0
-	loadtrainer ROCKETAGENTS, BUTCH_AND_CASSIDY1
-	startbattle
-	reloadmapafterbattle
+	turnobject PLAYER, DOWN 
+	pause 15
+;	winlosstext Route4_RocketsWinLossText, 0
+;	loadtrainer ROCKETAGENTS, BUTCH_AND_CASSIDY1
+;	startbattle
+;	reloadmapafterbattle
 	showemote EMOTE_SHOCK, ROUTE4_CASSIDY, 15
 	showemote EMOTE_SHOCK, ROUTE4_BUTCH, 15
 	opentext 
@@ -99,6 +103,7 @@ Route4_RocketsScene:
 	waitbutton 
 	closetext
 	showemote EMOTE_SHADOW, ROUTE4_BUTCH, 15
+	turnobject PLAYER, LEFT 
 	opentext
 	writetext Route4_ButchText3
 	waitbutton
@@ -307,8 +312,6 @@ Route4_PlayerMovement2:
 	step RIGHT
 	step RIGHT
 	step RIGHT
-	step RIGHT
-	step RIGHT 
 	step_end
 
 Route4_RocketsEnterMovement1:
@@ -321,6 +324,15 @@ Route4_CassidyLeavesMovement:
 	step_end
 
 Route4_ButchEntersMovement:
+	step LEFT
+	step LEFT
+	step LEFT
+	step_end 
+
+Route4_CassidyEntersMovement:
+	step LEFT
+	step LEFT
+	step_end 
 
 Route4_RocketsEnterMovement2:
 	step LEFT
@@ -340,6 +352,7 @@ Route4_ButchApproachesPlayerMovement:
 	step LEFT
 	step LEFT
 	step LEFT
+	step LEFT
 	step UP 
 	step UP 
 	step UP
@@ -352,6 +365,8 @@ Route4_CassidyApproachesPlayerMovement:
 	step LEFT
 	step LEFT
 	step LEFT
+	step LEFT
+	step LEFT 
 	step LEFT
 	step UP 
 	step UP 
@@ -390,5 +405,5 @@ Route4_MapEvents:
 	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
 	object_event  2,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, Route4_Rocket1Script, EVENT_ROUTE_4_GUARD ;guard
 	object_event 14, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS
-	object_event 15, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS ;Butch
-	object_event 16, 10, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS ;Cassidy
+	object_event 14, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS ;Butch
+	object_event 14, 10, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS ;Cassidy
