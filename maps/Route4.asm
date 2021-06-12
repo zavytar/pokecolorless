@@ -92,10 +92,10 @@ Route4_RocketsScene:
 	applymovement ROUTE4_CASSIDY, Route4_CassidyApproachesPlayerMovement 
 	turnobject PLAYER, DOWN 
 	pause 15
-;	winlosstext Route4_RocketsWinLossText, 0
-;	loadtrainer ROCKETAGENTS, BUTCH_AND_CASSIDY1
-;	startbattle
-;	reloadmapafterbattle
+	winlosstext Route4_RocketsWinLossText, 0
+	loadtrainer ROCKETAGENTS, BUTCH_AND_CASSIDY1
+	startbattle
+	reloadmapafterbattle
 	showemote EMOTE_SHOCK, ROUTE4_CASSIDY, 15
 	showemote EMOTE_SHOCK, ROUTE4_BUTCH, 15
 	opentext 
@@ -110,6 +110,8 @@ Route4_RocketsScene:
 	closetext
 	applymovement ROUTE4_BUTCH, Route4_ButchLeavesMovement
 	applymovement ROUTE4_CASSIDY, Route4_CassidyLeavesMovement
+;	moveobject ROUTE4_BUTCH, 1, 1
+;	moveobject ROUTE4_CASSIDY, 1, 1
 	disappear ROUTE4_BUTCH
 	disappear ROUTE4_CASSIDY
 	clearevent EVENT_ROUTE_4_GUARD
@@ -118,6 +120,7 @@ Route4_RocketsScene:
 	waitbutton
 	closetext 
 	applymovement PLAYER, Route4_PlayerMovement2
+	appear ROUTE4_ROCKET1
 	setevent EVENT_ROUTE_4_ROCKETS
 	clearevent EVENT_ROUTE_4_GUARD
 	setscene SCENE_ROUTE4_NOTHING 
@@ -187,7 +190,7 @@ Route4_RocketsText1:
 
 Route4_RocketsText2:
 	text "What are you"
-	line "looking at, twerp?"
+	line "looking at, kid?"
 	done 
 
 Route4_RocketsText3:
@@ -251,7 +254,7 @@ Route4_CassidyText2:
 	cont "you get it?"
 
 	para "Don't you dare"
-	line "get cocky, you hear?"
+	line "get cocky, twerp!"
 	done 
 
 Route4_Rocket1Text:
@@ -403,7 +406,7 @@ Route4_MapEvents:
 	object_event 30,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerLassCrissy, -1
 	object_event 22,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 4, Route4_TM, EVENT_GOT_TM05_ROAR_AT_ROUTE_4
 	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
-	object_event  2,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, Route4_Rocket1Script, EVENT_ROUTE_4_GUARD ;guard
+	object_event  2,  6, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, Route4_Rocket1Script, EVENT_ROUTE_4_GUARD ;guard
 	object_event 14, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS
 	object_event 14, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS ;Butch
 	object_event 14, 10, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS ;Cassidy

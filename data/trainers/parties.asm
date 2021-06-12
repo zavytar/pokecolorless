@@ -3185,7 +3185,7 @@ GruntFGroup:
 
 RocketAgentsGroup:
 	; RocketAgents (1)
-	db "BUTCH and CASSIDY@", TRAINERTYPE_NORMAL
+	db "AGENTS@", TRAINERTYPE_NORMAL
 	db 16, MANKEY
 	db 16, RATICATE
 	db -1 ; end
