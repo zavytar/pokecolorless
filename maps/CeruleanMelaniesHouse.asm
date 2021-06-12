@@ -41,8 +41,8 @@ CeruleanMelaniesHouse_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warp events
-	warp_event  2,  7, CERULEAN_CITY, 2
-	warp_event  3,  7, CERULEAN_CITY, 2
+	warp_event  2,  7, CERULEAN_CITY, 6
+	warp_event  3,  7, CERULEAN_CITY, 6
 
 	db 0 ; coord events
 
@@ -50,4 +50,4 @@ CeruleanMelaniesHouse_MapEvents:
 
 	db 2 ; object events
 	object_event  5,  1, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanMelaniesHouse_MelanieScript, -1
-	object_event  5,  4, SPRITE_BULBASAUR, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanMelaniesHouse_BulbasaurScript, -1
+	object_event  6,  1, SPRITE_BULBASAUR, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanMelaniesHouse_BulbasaurScript, -1

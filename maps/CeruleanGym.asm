@@ -30,6 +30,7 @@ CeruleanGymMistyScript:
 	waitsfx
 ;	setflag ENGINE_CASCADEBADGE
 	setflag ENGINE_HIVEBADGE
+	specialphonecall SPECIALCALL_ASSISTANT
 	waitbutton
 	writetext MistyAfterBattleText
 	waitbutton

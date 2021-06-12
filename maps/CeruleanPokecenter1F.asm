@@ -136,8 +136,8 @@ CeruleanPokecenter1F_OaksAideText3:
 
 	para "He's a #MON"
 	line "collector, who"
-	cont "invented the #MON"
-	cont "STORAGE SYSTEM."
+	cont "invented the #-"
+	cont "MON STORAGE SYSTEM."
 
 	para "Meeting would be"
 	line "useful for you"

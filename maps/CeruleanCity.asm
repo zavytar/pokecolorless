@@ -1,11 +1,12 @@
 	object_const_def ; object_event constants
-	const CERULEANCITY_COOLTRAINER_M
+	const CERULEANCITY_COOLTRAINER_M1
 	const CERULEANCITY_ROCKET
 	const CERULEANCITY_GUARD
 	const CERULEANCITY_COOLTRAINER_F
 	const CERULEANCITY_SLOWBRO
-;	const CERULEANCITY_LASS
-;	const CERULEANCITY_POKEFAN_M
+	const CERULEANCITY_LASS
+	const CERULEANCITY_COOLTRAINER_M2
+	const CERULEAN_CITY_POKEFAN
 
 CeruleanCity_MapScripts:
 	db 0 ; scene scripts
@@ -17,8 +18,14 @@ CeruleanCity_MapScripts:
 	setflag ENGINE_FLYPOINT_CERULEAN
 	return
 
-CeruleanCity_CooltrainerMScript:
-	jumptextfaceplayer CeruleanCity_CooltrainerMText1
+CeruleanCity_CooltrainerM1Script:
+	jumptextfaceplayer CeruleanCity_CooltrainerM1Text1
+
+CeruleanCity_CooltrainerM2Script:
+	jumptextfaceplayer CeruleanCity_CooltrainerM2Text1
+
+CeruleanCity_PokefanScript:
+	jumptextfaceplayer CeruleanCity_PokefanText1
 
 CeruleanCity_SchemeScript:
 	jumptext CeruleanCity_SchemeText
@@ -53,18 +60,10 @@ CeruleanCity_CooltrainerFScript:
 	closetext
 	end
 
-CeruleanCity_FisherScript:
+CeruleanCity_LassScript:
 	faceplayer
 	opentext
-	writetext CeruleanCity_FisherText
-	waitbutton
-	closetext
-	end
-
-CeruleanCity_YoungsterScript:
-	faceplayer
-	opentext
-	writetext CeruleanCity_YoungsterText1
+	writetext CeruleanCity_LassText
 	waitbutton
 	closetext
 	end
@@ -96,19 +95,16 @@ CeruleanCityMartSign:
 ;CeruleanCityHiddenBerserkGene:
 ;	hiddenitem BERSERK_GENE, EVENT_FOUND_BERSERK_GENE_IN_CERULEAN_CITY
 
-CeruleanCity_CooltrainerMText1:
-	text "KANTO's POWER"
-	line "PLANT?"
+CeruleanCity_CooltrainerM1Text1:
+	text "This is CERULEAN"
+	line "CAVE! Horribly"
+	cont "strong #MON"
+	cont "live in there!"
 
-	para "It's near the end"
-	line "of ROUTE 9, the"
-
-	para "road that heads"
-	line "east from here."
-
-	para "I think there was"
-	line "an accident of"
-	cont "some sort there."
+	para "The #MON LEAGUE"
+	line "champion is the"
+	cont "only person who"
+	cont "is allowed in!"
 	done
 
 CeruleanCity_SchemeText:
@@ -125,7 +121,8 @@ CeruleanCity_SchemeText:
 	para "???: Yes."
 
 	para "And if anyone gets"
-	line "past the five kids,"
+	line "past the five"
+	cont "trainers,"
 	para "I'll talk them"
 	line "into joining us!"
 
@@ -137,6 +134,13 @@ CeruleanCity_SchemeText:
 
 CeruleanCity_SlowbroText:
 	text "SLOWBRO: Yarah?"
+	done
+
+CeruleanCity_PokefanText1:
+	text "You're making an"
+	line "encyclopedia on"
+	cont "#MON? That"
+	cont "sounds amusing."
 	done
 
 CeruleanCity_CooltrainerFText1:
@@ -154,18 +158,20 @@ CeruleanCity_CooltrainerFText3:
 	text "…"
 	done
 
-CeruleanCity_FisherText:
-	text "I'm a huge fan of"
-	line "CERULEAN GYM's"
-	cont "MISTY."
+CeruleanCity_LassText:
+	text "I want a bright"
+	line "red BICYCLE!"
+
+	para "I'll keep it at"
+	line "home, so it won't"
+	cont "get dirty!"
 	done
 
-CeruleanCity_YoungsterText1:
-	text "There used to be a"
-	line "cave here that had"
-
-	para "horribly powerful"
-	line "#MON in it."
+CeruleanCity_CooltrainerM2Text1:
+	text "You're a trainer"
+	line "too? Collecting,"
+	cont "fighting, it's a"
+	cont "tough life."
 	done
 
 CeruleanCitySignText:
@@ -240,11 +246,12 @@ CeruleanCity_MapEvents:
 	bg_event 26, 25, BGEVENT_READ, CeruleanCityMartSign
 ;	bg_event  2, 12, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
 
-	db 5 ; object events
+	db 7 ; object events
 	object_event 20,  5, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_STANDING_RIGHT, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_SchemeScript, -1
 	object_event 21,  5, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_SchemeScript, -1
-	object_event  4, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_CooltrainerMScript, -1 ;guard
+	object_event  4, 12, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCity_CooltrainerM1Script, -1 ;guard
 	object_event 30, 26, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCity_CooltrainerFScript, -1
 	object_event 29, 26, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCity_Slowbro, -1
-;	object_event 13, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
-;	object_event  8, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityYoungsterScript, -1
+	object_event  8, 24, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCity_LassScript, -1
+	object_event 31, 22, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCity_CooltrainerM2Script, -1
+	object_event 10, 19, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCity_PokefanScript, -1

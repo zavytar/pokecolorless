@@ -11,7 +11,7 @@ PewterGym_MapScripts:
 PewterGymBrockScript:
 	faceplayer
 	opentext
-	checkflag ENGINE_BOULDERBADGE
+	checkflag ENGINE_ZEPHYRBADGE
 	iftrue .FightDone
 	writetext BrockIntroText
 	waitbutton

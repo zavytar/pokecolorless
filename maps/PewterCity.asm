@@ -68,7 +68,7 @@ PewterCity_CheckBadge1:
 	writetext PewterCityCooltrainerMText2
 	waitbutton 
 	closetext
-	checkevent ENGINE_ZEPHYRBADGE
+	checkevent EVENT_BEAT_BROCK
 	iftrue .GotBoulderBadge
 	pause 15
 	opentext
@@ -115,7 +115,7 @@ PewterCityCooltrainerMScript:
 	writetext PewterCityCooltrainerMText2
 	waitbutton 
 	closetext
-	checkevent ENGINE_ZEPHYRBADGE
+	checkevent EVENT_BEAT_BROCK
 	iftrue .GotBoulderBadge
 	pause 15
 	opentext
@@ -144,6 +144,8 @@ PewterCityCooltrainerMScript:
 	closetext 
 	setscene SCENE_PEWTERCITY_NOTHING
 	setevent EVENT_PEWTER_CITY_BADGE_CHECK
+	setevent EVENT_ROUTE_4_ROCKETS
+	setevent EVENT_ROUTE_4_GUARD
 	end 
 
 PewterCitySign:
@@ -350,4 +352,4 @@ PewterCity_MapEvents:
 	object_event 32,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree1, -1
 	object_event 30,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree2, -1
 	object_event 26, 26, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PewterCityRepelScript, -1
-	object_event 36, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerMScript, EVENT_PEWTER_CITY_BADGE_CHECK
+	object_event 36, 16, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_SPINRANDOM_SLOW, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerMScript, -1

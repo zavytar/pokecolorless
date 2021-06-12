@@ -91,12 +91,13 @@ TrainerHikerMarcus:
 	end
 
 MountMoon1F_Hiker2Script:
+	faceplayer
 	checkitem TM_ROCK_SMASH
 	iftrue .AlreadyGotTM
 	opentext
 	writetext MountMoon1F_Hiker2Text1
 	waitbutton
-	verbosegiveitem TM_HEADBUTT
+	verbosegiveitem TM_ROCK_SMASH
 	iffalse .done 
 	writetext MountMoon1F_Hiker2Text2
 	waitbutton

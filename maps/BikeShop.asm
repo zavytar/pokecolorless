@@ -1,5 +1,7 @@
 	object_const_def ; object_event constants
 	const BIKESHOP_CLERK
+	const BIKESHOP_CUSTOMER1
+	const BIKESHOP_CUSTOMER2 
 
 BikeShop_MapScripts:
 	db 0 ; scene scripts
@@ -29,11 +31,12 @@ BikeShopClerkScript:
 	writetext BikeShopClerkVoucherText
 	waitbutton
 	waitsfx
-	giveitem BICYCLE
-	writetext BorrowedABicycleText
+	verbosegiveitem BICYCLE
+	iffalse .done
+;	writetext BorrowedABicycleText
 	playsound SFX_KEY_ITEM
 	waitsfx
-	itemnotify
+;	itemnotify
 ;	setflag ENGINE_BIKE_SHOP_CALL_ENABLED
 	setevent EVENT_GOT_BICYCLE
 .GotBicycle:
@@ -41,6 +44,9 @@ BikeShopClerkScript:
 	waitbutton
 	closetext
 	end
+
+.done:
+	end 
 
 .Refused:
 	writetext BikeShopClerkRefusedText
@@ -147,7 +153,7 @@ BikeShop_MapEvents:
 	bg_event  6,  6, BGEVENT_READ, BikeShopBicycle
 	bg_event  7,  6, BGEVENT_READ, BikeShopBicycle
 
-	db 1 ; object events
+	db 3 ; object events
 	object_event  7,  2, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BikeShopClerkScript, -1
 	object_event  2,  3, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BikeShop_Customer1Script, -1
 	object_event  4,  5, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, BikeShop_Customer2Script, -1
