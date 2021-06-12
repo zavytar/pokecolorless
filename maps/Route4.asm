@@ -4,7 +4,6 @@
 	const ROUTE4_POKE_BALL;	
 	const ROUTE4_ROCKET1
 	const ROUTE4_ROCKET2
-	const ROUTE4_ROCKET3
 	const ROUTE4_BUTCH
 	const ROUTE4_CASSIDY
 
@@ -50,23 +49,66 @@ Route4_RocketSceneBot:
 	applymovement PLAYER, Route4_PlayerMovement1Bot
 Route4_RocketsScene:
 	showemote EMOTE_SHOCK, PLAYER, 15
-	moveobject ROUTE4_ROCKET3, 10, 10
-	appear ROUTE4_ROCKET1
 	appear ROUTE4_ROCKET2
-	applymovement ROUTE4_ROCKET1, Route4_RocketsEnterMovement1
+	appear ROUTE4_BUTCH
+	appear ROUTE4_CASSIDY
 	applymovement ROUTE4_ROCKET2, Route4_RocketsEnterMovement1
-	applymovement ROUTE4_ROCKET3, Route4_RocketsEnterMovement1
-	turnobject ROUTE4_ROCKET1, RIGHT
+	turnobject ROUTE4_ROCKET2, RIGHT
 	opentext 
 	writetext Route4_RocketsText1
 	waitbutton 
 	closetext
-	applymovement ROUTE4_ROCKET1, Route4_RocketsEnterMovement2
-	disappear ROUTE4_ROCKET1
-	applymovement ROUTE4_ROCKET2, Route4_RocketsEnterMovement3
-	disappear ROUTE4_ROCKET2
-	applymovement ROUTE4_ROCKET3, Route4_RocketsEnterMovement4
+	applymovement ROUTE4_BUTCH, Route4_RocketsEnterMovement1
+	applymovement ROUTE4_CASSIDY, Route4_RocketsEnterMovement1
+	turnobject ROUTE4_ROCKET2, UP
+	showemote EMOTE_SHOCK, ROUTE4_ROCKET2, 15
 	opentext 
+	writetext Route4_RocketsText2
+	waitbutton
+	closetext
+	turnobject ROUTE4_ROCKET2, RIGHT
+	opentext
+	writetext Route4_RocketsText3
+	waitbutton 
+	closetext 
+	applymovement ROUTE4_ROCKET2, Route4_RocketsEnterMovement2
+	disappear ROUTE4_ROCKET2
+	turnobject ROUTE4_BUTCH, RIGHT 
+	showemote EMOTE_SAD, ROUTE4_BUTCH, 15
+	opentext 
+	writetext Route4_ButchText1
+	waitbutton
+	writetext Route4_CassidyText1
+	waitbutton
+	closetext
+	showemote EMOTE_HAPPY, ROUTE4_BUTCH, 15
+	opentext
+	writetext Route4_ButchText2
+	waitbutton
+	closetext
+	applymovement ROUTE4_BUTCH, Route4_ButchApproachesPlayerMovement
+	applymovement ROUTE4_CASSIDY, Route4_CassidyApproachesPlayerMovement 
+	winlosstext Route4_RocketsWinLossText, 0
+	loadtrainer ROCKETAGENTS, BUTCH_AND_CASSIDY1
+	startbattle
+	reloadmapafterbattle
+	showemote EMOTE_SHOCK, ROUTE4_CASSIDY, 15
+	showemote EMOTE_SHOCK, ROUTE4_BUTCH, 15
+	opentext 
+	writetext Route4_CassidyText2
+	waitbutton 
+	closetext
+	showemote EMOTE_SHADOW, ROUTE4_BUTCH, 15
+	opentext
+	writetext Route4_ButchText3
+	waitbutton
+	closetext
+	applymovement ROUTE4_BUTCH, Route4_ButchLeavesMovement
+	applymovement ROUTE4_CASSIDY, Route4_CassidyLeavesMovement
+	disappear ROUTE4_BUTCH
+	disappear ROUTE4_CASSIDY
+	clearevent EVENT_ROUTE_4_GUARD
+	opentext
 	writetext Route4_PlayerText2
 	waitbutton
 	closetext 
@@ -76,8 +118,8 @@ Route4_RocketsScene:
 	setscene SCENE_ROUTE4_NOTHING 
 	end
 
-Route4_Rocket3Script:
-	jumptextfaceplayer Route4_Rocket3Text
+Route4_Rocket1Script:
+	jumptextfaceplayer Route4_Rocket1Text
 
 
 Route4_Sign:
@@ -118,26 +160,96 @@ Route4_PlayerText2:
 	text "<PLAYER>: What's"
 	line "with those thugs?"
 
-	para "Whatever. Can't"
-	line "waste my time on"
-	cont "them! Got a lot"
-	cont "to accomplish!"
+	para "Whatever. It's"
+	line "not like I was"
+	cont "going back in"
+	cont "anyway!"
+
+	para "CERULEAN GYM"
+	line "is further ahead!"
+	
+	para "That GYM BADGE"
+	line "will be mine!"
 	done 
 
 Route4_RocketsText1:
-	text "This is it, guys."
+	text "This is it."
 	line "MOUNT MOON."
 
-	para "Lots of fossils"
-	line "for us to take!"
-	cont "We'll be rich!"
-
-	para "Now, CLYDE, stand"
-	line "guard here while"
-	cont "the others arrive!"
+	para "Time to set up"
+	line "operations."
 	done 
 
-Route4_Rocket3Text:
+Route4_RocketsText2:
+	text "What are you"
+	line "looking at, twerp?"
+	done 
+
+Route4_RocketsText3:
+	text "I'll go on ahead."
+	line "BIFF, you wrap"
+	cont "this up here!"
+	done 
+
+Route4_RocketsWinLossText:
+	text "BUTCH: N-No way…"
+
+	para "CASSIDY: This"
+	line "can't be!"
+	done 
+
+Route4_ButchText1:
+	text "BUTCH: Grr… It's"
+	line "BUTCH! Every"
+	cont "time…"
+	done 
+
+Route4_ButchText2:
+	text "BUTCH: Heheh…"
+	line "you're not wrong!"
+
+	para "You! Twerp!"
+	line "You're toast!"
+	done 
+
+Route4_ButchText3:
+	text "BUTCH: That's"
+	line "right! Consider"
+	cont "yourself lucky!"
+
+	para "But, for your own"
+	line "good, I'd stay"
+	cont "away from that"
+	cont "cave from now on."
+
+	para "CASSIDY! Time to"
+	line "blast off!"
+	done 
+
+Route4_CassidyText1:
+	text "CASSIDY: Forget"
+	line "it, BUTCH, just"
+	cont "take care of"
+	cont "the twerp!"
+
+	para "You can take your"
+	line "frustration on"
+	cont "him, too!"
+	done
+
+Route4_CassidyText2:
+	text "CASSIDY: …"
+	line "…"
+
+	para "Whatever! This"
+	line "was just a fluke,"
+	cont "you get it?"
+
+	para "Don't you dare"
+	line "get cocky, you hear?"
+	done 
+
+Route4_Rocket1Text:
 	text "We're pulling a"
 	line "big job here!"
 
@@ -200,11 +312,53 @@ Route4_PlayerMovement2:
 	step_end
 
 Route4_RocketsEnterMovement1:
+Route4_ButchLeavesMovement:
+Route4_CassidyLeavesMovement:
+	step LEFT
+	step LEFT
+	step LEFT
 	step LEFT
 	step_end
 
+Route4_ButchEntersMovement:
+
 Route4_RocketsEnterMovement2:
 	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step UP 
+	step UP 
+	step LEFT
+	step LEFT
+	step_end
+
+Route4_ButchApproachesPlayerMovement:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step UP 
+	step UP 
+	step UP
+	step RIGHT
+	step RIGHT
+	step_end
+
+Route4_CassidyApproachesPlayerMovement:
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step LEFT
+	step UP 
+	step UP 
+	step RIGHT
+	step RIGHT
+	step RIGHT
+	turn_head UP
 	step_end
 
 Route4_RocketsEnterMovement3:
@@ -222,7 +376,7 @@ Route4_MapEvents:
 	warp_event  2,  5, MOUNT_MOON_1F, 2
 
 	db 2 ; coord events
-	coord_event  3,  6, SCENE_ROUTE4_ROCKETS, Route4_RocketSceneTop	
+	coord_event  3,  6, SCENE_ROUTE4_ROCKETS, Route4_RocketSceneTop
 	coord_event  2,  7, SCENE_ROUTE4_ROCKETS, Route4_RocketSceneBot
 
 
@@ -230,12 +384,11 @@ Route4_MapEvents:
 	bg_event  3,  7, BGEVENT_READ, Route4_Sign
 	bg_event 10,  3, BGEVENT_ITEM, Route4HiddenUltraBall
 
-	db 8 ; object events
+	db 7 ; object events
 	object_event 30,  3, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerLassCrissy, -1
 	object_event 22,  4, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 4, Route4_TM, EVENT_GOT_TM05_ROAR_AT_ROUTE_4
 	object_event 26,  3, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route4HPUp, EVENT_ROUTE_4_HP_UP
-	object_event 11,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS
-	object_event 12,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS
-	object_event  2,  6, SPRITE_ROCKET, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, Route4_Rocket3Script, EVENT_ROUTE_4_GUARD
-	object_event  1,  1, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS ;Butch
-	object_event  1,  1, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS ;Cassidy
+	object_event  2,  6, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, Route4_Rocket1Script, EVENT_ROUTE_4_GUARD ;guard
+	object_event 14, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS
+	object_event 15, 10, SPRITE_ROCKET, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS ;Butch
+	object_event 16, 10, SPRITE_ROCKET_GIRL, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 4, ObjectEvent, EVENT_ROUTE_4_ROCKETS ;Cassidy
