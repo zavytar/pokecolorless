@@ -162,20 +162,47 @@ ElmPhoneDisasterText:
 	line "here now!"
 	done
 
-ElmPhoneEggAssistantText:
-	text "Hello, <PLAY_G>? We"
-	line "discovered some-"
+ElmPhoneEggAssistantText:  ; Oak call after beating Misty
+	text "Hello, <PLAY_G>?"
+	line "How is everything?"
 
-	para "thing about the"
-	line "EGG!"
+	para "… …"
+	line "What?"
 
-	para "My assistant is at"
-	line "the #MON CENTER"
+	para "You already got"
+	line "your second BADGE?"
 
-	para "in VIOLET CITY. "
-	line "Could you talk to"
-	cont "him?"
+	para "Well done!"
+
+	para "I had sent one"
+	cont "of my AIDES to"
+	cont "CERULEAN to"
+	cont "meet you when you"
+	cont "arrived."
 	done
+
+	para "But not only you"
+	line "got there faster,"
+	cont "but you also earned"
+	cont "a BADGE in the"
+	cont "meantime! Haha!"
+
+	para "Very well done!"
+
+	para "Anyway, he just"
+	line "told me he was"
+	cont "at the #MON"
+	cont "CENTER, so meet"
+	cont "him there!"
+
+	para "He'll be giving"
+	line "you something."
+	cont "Consider it a"
+	cont "gift from me!"
+
+	para "And, once again,"
+	line "congratulations!"
+	done 
 
 ElmPhoneRocketText:
 	text "<PLAY_G>, how are"
