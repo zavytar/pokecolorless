@@ -350,7 +350,7 @@ WaterStoneDesc:
 
 BikeVoucherDesc:
 	db	 "Exchange at BIKE"
-	next "SHOP for a BIKE."
+	next "SHOP for a BIKE.@"
 
 HPUpDesc:
 	db   "Raises the HP of"
