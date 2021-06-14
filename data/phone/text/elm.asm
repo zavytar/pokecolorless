@@ -9,24 +9,23 @@ ElmPhoneStartText:
 	cont "they are hurt."
 	done
 
-ElmPhoneSawMrPokemonText:
-	text "Hello, <PLAY_G>?"
+ElmPhoneSawMrPokemonText: ; Oak Hello
+	text "OAK: Hello there,"
+	line "<PLAYER>!"
+	
+	para "How is your #-"
+	line "DEX coming?"
 
-	para "Did you meet MR."
-	line "#MON? Great!"
-	cont "Come back safely!"
+	para "Let's see…"
 	done
 
-ElmPhonePokemonStolenText:
-	text "<PLAY_G>? I'm very"
-	line "upset now."
+ElmPhonePokemonStolenText: ; Oak Goodbye
+	text "Good luck out"
+	line "there, <PLAYER>!"
 
-	para "We had a #MON"
-	line "stolen from here."
-
-	para "How could anyone"
-	line "do that?"
-	done
+	para "Keep filling up"
+	line "that #DEX!"
+	done 
 
 ElmPhoneCheckingEggText:
 	text "Hello, <PLAY_G>?"

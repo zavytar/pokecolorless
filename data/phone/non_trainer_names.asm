@@ -8,8 +8,8 @@ NonTrainerCallerNames:
 	dw .buena
 
 .none:     db "----------@"
-.mom:      db "MOM:@"
+.mom:      db "DAISY:@"
 .bill:     db "BILL:@"
-.elm:      db "PROF.ELM:@"
+.elm:      db "PROF.OAK:@"
 .bikeshop: db "BIKE SHOP:@"
 .buena:    db "BUENA:<LF>   DISC JOCKEY@"

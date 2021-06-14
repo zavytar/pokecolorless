@@ -1,32 +1,39 @@
 ElmPhoneCalleeScript:
-	readvar VAR_SPECIALPHONECALL
-	ifequal SPECIALCALL_POKERUS, .pokerus
-	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
-	iftrue .discovery
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iffalse .next
-	checkevent EVENT_TOGEPI_HATCHED
-	iftrue .egghatched
-.next
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	iftrue .eggunhatched
-	checkevent EVENT_OAKS_AIDE_IN_CERULEAN_POKEMON_CENTER
-	iftrue .assistant
-;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-;	iftrue .checkingegg
-	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
-	iftrue .stolen
-;	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-;	iftrue .sawmrpokemon
-	farwritetext ElmPhoneStartText
+	farwritetext ElmPhoneSawMrPokemonText
+	waitbutton
+	special ProfOaksPCBoot
+	farwritetext ElmPhonePokemonStolenText
 	end
 
+
+;	readvar VAR_SPECIALPHONECALL
+;	ifequal SPECIALCALL_POKERUS, .pokerus
+;	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
+;	iftrue .discovery
+;	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+;	iffalse .next
+;	checkevent EVENT_TOGEPI_HATCHED
+;	iftrue .egghatched
+;.next
+;	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+;	iftrue .eggunhatched
+;	checkevent EVENT_OAKS_AIDE_IN_CERULEAN_POKEMON_CENTER
+;	iftrue .assistant
+;	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+;	iftrue .checkingegg
+;	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
+;	iftrue .stolen
+;	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+;	iftrue .sawmrpokemon
+;	farwritetext ElmPhoneStartText
+;	end
+
 .sawmrpokemon
-	farwritetext ElmPhoneSawMrPokemonText
+	farwritetext ElmPhoneSawMrPokemonText ;Oak Hello
 	end
 
 .stolen
-	farwritetext ElmPhonePokemonStolenText
+	farwritetext ElmPhonePokemonStolenText ;Oak Goodbye
 	end
 
 .checkingegg
