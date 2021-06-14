@@ -164,10 +164,12 @@ ReceivedCascadeBadgeText:
 
 MistyFightDoneText:
 	text "MISTY: TM11"
-	line "teaches SCALD!"
+	line "teaches ICY WIND!"
 
 	para "Use it on an"
-	line "aquatic #MON!"
+	line "aquatic #MON"
+	cont "to counter GRASS-"
+	cont "type #MON!"
 	done
 
 SwimmerFLouiseSeenText:
