@@ -125,7 +125,7 @@ Route4_RocketsScene:
 	applymovement PLAYER, Route4_PlayerMovement2
 	appear ROUTE4_ROCKET1
 	setevent EVENT_ROUTE_4_ROCKETS
-	clearevent EVENT_OAKS_AIDE_IN_CERULEAN_POKEMON_CENTER
+	setevent EVENT_OAKS_AIDE_IN_CERULEAN_POKEMON_CENTER
 	clearevent EVENT_ROUTE_4_GUARD
 	setscene SCENE_ROUTE4_NOTHING 
 	end

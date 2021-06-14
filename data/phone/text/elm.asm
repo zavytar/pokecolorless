@@ -175,12 +175,11 @@ ElmPhoneEggAssistantText:  ; Oak call after beating Misty
 	para "Well done!"
 
 	para "I had sent one"
-	cont "of my AIDES to"
+	line "of my AIDES to"
 	cont "CERULEAN to"
 	cont "meet you when you"
 	cont "arrived."
-	done
-
+	
 	para "But not only you"
 	line "got there faster,"
 	cont "but you also earned"
