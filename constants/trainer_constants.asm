@@ -111,6 +111,7 @@ KRIS EQU __enum__
 	const YOUNGSTER_BEN
 	const YOUNGSTER_CALVIN
 	const YOUNGSTER_JOSH
+	const YOUNGSTER_4
 
 	trainerclass SCHOOLBOY ; 17
 	const JACK1
@@ -167,12 +168,14 @@ KRIS EQU __enum__
 	const LASS_IRIS 
 	const LASS_MIRIAM 
 	const LASS_CRISSY 
+	const LASS_8
+	const LASS_9
 
 	trainerclass JANINE ; 1a
 	const JANINE1
 
 	trainerclass COOLTRAINERM ; 1b
-	const NICK
+	const COOLTRAINER_M_DAMIEN
 	const AARON
 	const PAUL
 	const CODY
@@ -315,6 +318,7 @@ KRIS EQU __enum__
 	const BUG_CATCHER_JAMES
 	const BUG_CATCHER_KENT
 	const BUG_CATCHER_ROBBY
+	const BUG_CATCHER_11
 	
 	trainerclass FISHER ; 25
 	const JUSTIN
@@ -552,6 +556,8 @@ KRIS EQU __enum__
 
 	trainerclass CAMPER ; 36
 	const CAMPER_JERRY
+	const CAMPER_2
+	const CAMPER_3
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1

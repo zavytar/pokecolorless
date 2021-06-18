@@ -65,6 +65,9 @@ Route22_Blocks:
 Route4_Blocks:
 	INCBIN "maps/Route4.blk"
 
+Route5_Blocks:
+	INCBIN "maps/Route5.blk"
+
 CeruleanCity_Blocks:
 	INCBIN "maps/CeruleanCity.blk"
 
@@ -76,6 +79,12 @@ CeruleanGym_Blocks:
 
 Route23_Blocks:
 	INCBIN "maps/Route23.blk"
+
+Route24_Blocks:
+	INCBIN "maps/Route24.blk"
+
+Route25_Blocks:
+	INCBIN "maps/Route25.blk"
 
 VictoryRoadGate_Blocks:
 	INCBIN "maps/VictoryRoadGate.blk"

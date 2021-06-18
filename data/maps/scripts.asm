@@ -83,6 +83,9 @@ INCLUDE "maps/CeruleanPokecenter1F.asm"
 INCLUDE "maps/CeruleanGymBadgeSpeechHouse.asm"
 INCLUDE "maps/CeruleanMelaniesHouse.asm"
 INCLUDE "maps/CeruleanTradeSpeechHouse.asm"
+INCLUDE "maps/Route5.asm"
+INCLUDE "maps/Route24.asm"
+INCLUDE "maps/Route25.asm"
 
 
 SECTION "Map Scripts 7", ROMX

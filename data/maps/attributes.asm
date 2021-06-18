@@ -136,7 +136,23 @@ ENDM
 	map_attributes CeruleanCity, CERULEAN_CITY, $2c, WEST
 	connection west, Route4, ROUTE_4, 4
 
+	map_attributes Route5, ROUTE_5, $2c, NORTH
+	connection north, CeruleanCity, CERULEAN_CITY, 4
+
+	map_attributes CeruleanCity, CERULEAN_CITY, $2c, WEST | NORTH | SOUTH
+	connection west, Route4, ROUTE_4, 4
+	connection north, Route24, ROUTE_24, 4
+;	connection east, Route9, ROUTE_9, 0	
+	connection south, Route5, ROUTE_5, 4
+
+	map_attributes CeruleanCity, CERULEAN_CITY, $2c, WEST
+	connection west, Route4, ROUTE_4, -4
+
 	map_attributes Route23, ROUTE_23, $0f, $2c
+
+	map_attributes Route24, ROUTE_24, $2c, EAST | SOUTH
+	connection east, Route25, ROUTE_25, 4
+	connection south, CeruleanCity, CERULEAN_CITY, 4
 
 	map_attributes OaksLab, OAKS_LAB, $00, 0
 	map_attributes BluesHouse, BLUES_HOUSE, $00, 0

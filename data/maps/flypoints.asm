@@ -16,7 +16,7 @@ KANTO_FLYPOINT EQU const_value
 	flypoint PALLET,       PALLET_TOWN
 	flypoint VIRIDIAN,     VIRIDIAN_CITY
 	flypoint PEWTER,       PEWTER_CITY
-;	flypoint CERULEAN,     CERULEAN_CITY
+	flypoint CERULEAN,     CERULEAN_CITY
 ;	flypoint VERMILION,    VERMILION_CITY
 ;	flypoint ROCK_TUNNEL,  ROCK_TUNNEL
 ;	flypoint LAVENDER,     LAVENDER_TOWN

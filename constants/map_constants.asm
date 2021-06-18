@@ -85,6 +85,11 @@ ENDM
 	map_const CERULEAN_GYM_BADGE_SPEECH_HOUSE,				 4,	 4 ; 7 
 	map_const CERULEAN_MELANIES_HOUSE, 						 4,  4 ; 8
 	map_const CERULEAN_TRADE_SPEECH_HOUSE,					 4,  4 ; 9
+	map_const ROUTE_5,										10,	18 ; 10
+	map_const ROUTE_24,                                     10, 18 ; 11
+	map_const ROUTE_25,                                     30,  9 ; 12
+
+
 	newgroup                                                      ; 11 (MapGroup_Indigo)
 
 	map_const INDIGO_PLATEAU,								10,  9 ;  1
