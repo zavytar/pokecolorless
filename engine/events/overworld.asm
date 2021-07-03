@@ -1740,6 +1740,18 @@ BikeFunction:
 	scf
 	ret
 
+Script_LoadPokePC:
+	reloadmappart
+	special UpdateTimePals
+	special PokemonCenterPC
+	reloadmappart
+	end
+
+Script_LoadPokePC_Register:
+	special PokemonCenterPC
+	reloadmappart
+	end
+
 Script_GetOnBike:
 	reloadmappart
 	special UpdateTimePals
@@ -1850,3 +1862,26 @@ CantCutScript:
 UnknownText_0xd1d0:
 	text_far UnknownText_0x1c0a05
 	text_end
+
+PokePCFunction:
+	call .LoadPokePC
+	and $7f
+	ld [wFieldMoveSucceeded], a
+	ret
+	
+.LoadPokePC:
+	ld a, [wPlayerState]
+	ld hl, Script_LoadPokePC
+	ld de, Script_LoadPokePC_Register
+	call .CheckIfRegistered
+	call QueueScript
+	ld a, $1
+	ret
+	
+.CheckIfRegistered:
+	ld a, [wUsingItemWithSelect]
+	and a
+	ret z
+	ld h, d
+	ld l, e
+	ret

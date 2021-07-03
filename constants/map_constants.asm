@@ -88,6 +88,7 @@ ENDM
 	map_const ROUTE_5,										10,	18 ; 10
 	map_const ROUTE_24,                                     10, 18 ; 11
 	map_const ROUTE_25,                                     30,  9 ; 12
+	map_const BILLS_HOUSE,									 5,  4 ; 13
 
 
 	newgroup                                                      ; 11 (MapGroup_Indigo)

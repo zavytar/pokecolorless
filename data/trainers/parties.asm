@@ -681,7 +681,7 @@ LassGroup:
 	; LASS (9) - Route 24
 	db "CRISSY@", TRAINERTYPE_NORMAL
 	db 12, PARAS
-	db 12, PARAS
+	db 12, PARAS 
 	db -1 ; end
 
 JanineGroup:

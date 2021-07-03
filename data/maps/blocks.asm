@@ -116,6 +116,9 @@ TradeCenter_Blocks:
 TimeCapsule_Blocks:
 	INCBIN "maps/TradeCenter.blk"
 
+BillsHouse_Blocks:
+	INCBIN "maps/BillsHouse.blk"
+
 ;VioletKylesHouse_Blocks:
 ;	INCBIN "maps/House2.blk"
 

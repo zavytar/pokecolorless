@@ -86,6 +86,7 @@ INCLUDE "maps/CeruleanTradeSpeechHouse.asm"
 INCLUDE "maps/Route5.asm"
 INCLUDE "maps/Route24.asm"
 INCLUDE "maps/Route25.asm"
+INCLUDE "maps/BillsHouse.asm"
 
 
 SECTION "Map Scripts 7", ROMX
